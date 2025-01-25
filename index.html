@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        .tableTop {
+            text-align: center;
+            align-items: center;
+        }
+
+        .table-item {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .table-cell {
+            width: 23%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .table-cell img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .table-cell .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2a9d8f;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .table-item-title {
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .item .table-cell {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .table-cell p {
+            margin: 0;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Mugwort</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+            
+        </ul>
+        <!-- End of Sidebar -->
+
+
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                                    
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-xl-12">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">경매장 최저가</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-item">
+
+                                        <div class="item">
+                                            <div class="table-cell">
+                                                <img src="허름한_검_카드.png" alt="허름한 검 카드">
+                                                <p>허름한 검 카드</p>
+                                                <div id="item-허름한 검 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="허름한_동전_카드.png" alt="허름한 동전 카드">
+                                                <p>허름한 동전 카드</p>
+                                                <div id="item-허름한 동전 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="허름한_잔_카드.png" alt="허름한 잔 카드">
+                                                <p>허름한 잔 카드</p>
+                                                <div id="item-허름한 잔 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="허름한_지팡이_카드.png" alt="허름한 지팡이 카드">
+                                                <p>허름한 지팡이 카드</p>
+                                                <div id="item-허름한 지팡이 카드" class="price">금액</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="table-cell">
+                                                <img src="검_카드.png" alt="검 카드">
+                                                <p>일반 검 카드</p>
+                                                <div id="item-검 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="동전_카드.png" alt="동전 카드">
+                                                <p>일반 동전 카드</p>
+                                                <div id="item-동전 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="잔_카드.png" alt="잔 카드">
+                                                <p>일반 잔 카드</p>
+                                                <div id="item-잔 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="지팡이_카드.png" alt="지팡이 카드">
+                                                <p>일반 지팡이 카드</p>
+                                                <div id="item-지팡이 카드" class="price">금액</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item">
+                                            <div class="table-cell">
+                                                <img src="운명의_검_카드.png" alt="운명의 검 카드">
+                                                <p>운명의 검 카드</p>
+                                                <div id="item-운명의 검 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="운명의_동전_카드.png" alt="운명의 동전 카드">
+                                                <p>운명의 동전 카드</p>
+                                                <div id="item-운명의 동전 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="운명의_잔_카드.png" alt="운명의 잔 카드">
+                                                <p>운명의 잔 카드</p>
+                                                <div id="item-운명의 잔 카드" class="price">금액</div>
+                                            </div>
+
+                                            <div class="table-cell">
+                                                <img src="운명의_지팡이_카드.png" alt="운명의 지팡이 카드">
+                                                <p>운명의 지팡이 카드</p>
+                                                <div id="item-운명의 지팡이 카드" class="price">금액</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   
+
+                </div>
+                <!-- /.container-fluid -->
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-s font-weight-bold text-primary text-uppercase mb-1">
+                                                폴룩스(개당)
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="item-폴룩스">금액</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <img src="폴룩스.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-s font-weight-bold text-primary text-uppercase mb-1">
+                                                기원석(개당)
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="item-기원석">금액</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <img src="기원석.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                    </div>
+
+
+
+                    
+            </div>
+            <!-- End of Main Content -->
+
+            
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="col-xl-12">
+                        <div class="card shadow mb-4">
+                            <div
+                                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    조각 & 결정<br>
+                                    (결정 제작 : 조각 * 15 & 완전체 제작 : 결정 * 8) 조각, 결정이외의 부속재료가 들어가니 확인 필요!
+
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-item">
+                                    <!-- 리겔, 아크투루스, 알타이르, 카노푸스, 폴라리스, 프로키온, 하다르 -->
+
+                                    <!-- 조각 -->
+                                    <div class="item">
+                                        <div class="table-cell">
+                                            <img src="리겔 조각.png" alt="리겔 조각">
+                                            <p>리겔 조각</p>
+                                            <div id="item-리겔 조각" class="price"></div><br>
+                                            <div>결정 제작</div>
+                                            <div id="item-리겔 조각-결정제작" class="price"></div><br>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="아크투루스 조각.png" alt="아크투루스 조각">
+                                            <p>아크투루스 조각</p>
+                                            <div id="item-아크투루스 조각" class="price"></div><br>
+                                            <div>결정 제작</div>
+                                            <div id="item-아크투루스 조각-결정제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="알타이르 조각.png" alt="알타이르 조각">
+                                            <p>알타이르 조각</p>
+                                            <div id="item-알타이르 조각" class="price"></div><br>
+                                            <div>결정 제작</div>
+                                            <div id="item-알타이르 조각-결정제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="카노푸스 조각.png" alt="카노푸스 조각">
+                                            <p>카노푸스 조각</p>
+                                            <div id="item-카노푸스 조각" class="price"></div><br>
+                                            <div>결정 제작</div>
+                                            <div id="item-카노푸스 조각-결정제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="폴라리스 조각.png" alt="폴라리스 조각">
+                                            <p>폴라리스 조각</p>
+                                            <div id="item-폴라리스 조각" class="price"></div><br>
+                                            <div>결정 제작</div>
+                                            <div id="item-폴라리스 조각-결정제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="프로키온 조각.png" alt="프로키온 조각">
+                                            <p>프로키온 조각</p>
+                                            <div id="item-프로키온 조각" class="price"></div><br>
+                                            <div>결정 제작</div>
+                                            <div id="item-프로키온 조각-결정제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="하다르 조각.png" alt="하다르 조각">
+                                            <p>하다르 조각</p>
+                                            <div id="item-하다르 조각" class="price"></div><br>
+                                            <div>결정 제작</div>
+                                            <div id="item-하다르 조각-결정제작" class="price"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 결정 -->
+                                    <div class="item">
+                                        <div class="table-cell">
+                                            <img src="리겔 결정.png" alt="리겔 결정">
+                                            <p>리겔 결정</p>
+                                            <div id="item-리겔 결정" class="price"></div><br>
+                                            <div>완전체 제작</div>
+                                            <div id="item-리겔 결정-완전체제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="아크투루스 결정.png" alt="아크투루스 결정">
+                                            <p>아크투루스 결정</p>
+                                            <div id="item-아크투루스 결정" class="price"></div><br>
+                                            <div>완전체 제작</div>
+                                            <div id="item-아크투루스 결정-완전체제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="알타이르 결정.png" alt="알타이르 결정">
+                                            <p>알타이르 결정</p>
+                                            <div id="item-알타이르 결정" class="price"></div><br>
+                                            <div>완전체 제작</div>
+                                            <div id="item-알타이르 결정-완전체제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="카노푸스 결정.png" alt="카노푸스 결정">
+                                            <p>카노푸스 결정</p>
+                                            <div id="item-카노푸스 결정" class="price"></div><br>
+                                            <div>완전체 제작</div>
+                                            <div id="item-카노푸스 결정-완전체제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="폴라리스 결정.png" alt="폴라리스 결정">
+                                            <p>폴라리스 결정</p>
+                                            <div id="item-폴라리스 결정" class="price"></div><br>
+                                            <div>완전체 제작</div>
+                                            <div id="item-폴라리스 결정-완전체제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="프로키온 결정.png" alt="프로키온 결정">
+                                            <p>프로키온 결정</p>
+                                            <div id="item-프로키온 결정" class="price"></div><br>
+                                            <div>완전체 제작</div>
+                                            <div id="item-프로키온 결정-완전체제작" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="하다르 결정.png" alt="하다르 결정">
+                                            <p>하다르 결정</p>
+                                            <div id="item-하다르 결정" class="price"></div><br>
+                                            <div>완전체 제작</div>
+                                            <div id="item-하다르 결정-완전체제작" class="price"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 완전체 -->
+                                    <div class="item">
+                                        <div class="table-cell">
+                                            <img src="리겔.png" alt="리겔">
+                                            <p>리겔</p>
+                                            <div id="item-리겔" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="아크투루스.png" alt="아크투루스">
+                                            <p>아크투루스</p>
+                                            <div id="item-아크투루스" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="알타이르.png" alt="알타이르">
+                                            <p>알타이르</p>
+                                            <div id="item-알타이르" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="카노푸스.png" alt="카노푸스">
+                                            <p>카노푸스</p>
+                                            <div id="item-카노푸스" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="폴라리스.png" alt="폴라리스">
+                                            <p>폴라리스</p>
+                                            <div id="item-폴라리스" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="프로키온.png" alt="프로키온">
+                                            <p>프로키온</p>
+                                            <div id="item-프로키온" class="price"></div>
+                                        </div>
+                                        <div class="table-cell">
+                                            <img src="하다르.png" alt="하다르">
+                                            <p>하다르</p>
+                                            <div id="item-하다르" class="price"></div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+
+            </div>
+            <!-- /.container-fluid -->
+
+            여기부터는 수정중~
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col">
+                                <div class="text-s font-weight-bold text-primary text-uppercase mb-1">
+                                    결정 부속재료
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="물이 든 병.png">
+                                    <span style="padding: 13px; text-align: left;">물이 든 병</span>
+                                    <div id="item-물이 든 병" style="padding: 13px;"></div>
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="발화석.png">
+                                    <span style="padding: 13px; text-align: left;">발화석(상점가)</span>
+                                    <div id="item-발화석" style="padding: 13px;">2,104</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col">
+                                <div class="text-s font-weight-bold text-primary text-uppercase mb-1">
+                                    완전체 부속재료
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="밀랍.png">
+                                    <span style="padding: 13px; text-align: left;">밀랍</span>
+                                    <div id="item-밀랍" style="padding: 13px;"></div>
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="스타 사파이어.png">
+                                    <span style="padding: 13px; text-align: left;">스타 사파이어(리겔)</span>
+                                    <div id="item-스타 사파이어" style="padding: 13px;"></div>
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="스피넬.png">
+                                    <span style="padding: 13px; text-align: left;">스피넬(아크투루스)</span>
+                                    <div id="item-스피넬" style="padding: 13px;"></div>
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="가넷.png">
+                                    <span style="padding: 13px; text-align: left;">가넷(알타이르)</span>
+                                    <div id="item-가넷" style="padding: 13px;"></div>
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="에메랄드.png">
+                                    <span style="padding: 13px; text-align: left;">에메랄드(카노푸스)</span>
+                                    <div id="item-에메랄드" style="padding: 13px;"></div>
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="재스퍼.png">
+                                    <span style="padding: 13px; text-align: left;">재스퍼(폴라리스)</span>
+                                    <div id="item-재스퍼" style="padding: 13px;"></div>
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="아쿠아마린.png">
+                                    <span style="padding: 13px; text-align: left;">아쿠아마린(프로키온)</span>
+                                    <div id="item-아쿠아마린" style="padding: 13px;"></div>
+                                </div>
+                                <div class="mb-0 font-weight-bold text-gray-800" style="display: flex;">
+                                    <img src="루비.png">
+                                    <span style="padding: 13px; text-align: left;">루비(하다르)</span>
+                                    <div id="item-루비" style="padding: 13px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Beom Eating Mugwort</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <!-- 멘르바용  -->
+    <script src="js/demo/menrva.js"></script>
+    <script>
+
+        // 변수저장
+        const API_KEY = 'live_70a08300adacee96ad7a0fb4b0692b0eaf8aa88ff4084440abc885a0b2b3fc12efe8d04e6d233bd35cf2fabdeb93fb0d';
+        const itemNames = ["폴룩스", "기원석"
+                            , "허름한 검 카드", "허름한 동전 카드", "허름한 잔 카드", "허름한 지팡이 카드"
+                            , "검 카드", "동전 카드", "잔 카드", "지팡이 카드"
+                            , "운명의 검 카드", "운명의 동전 카드", "운명의 잔 카드", "운명의 지팡이 카드"
+                            , "리겔", "리겔 조각", "리겔 결정"
+                            , "아크투루스", "아크투루스 조각", "아크투루스 결정"
+                            , "알타이르", "알타이르 조각", "알타이르 결정"
+                            , "카노푸스", "카노푸스 조각", "카노푸스 결정"
+                            , "폴라리스", "폴라리스 조각", "폴라리스 결정"
+                            , "프로키온", "프로키온 조각", "프로키온 결정"
+                            , "하다르", "하다르 조각", "하다르 결정"
+                            , "물이 든 병", "밀랍"
+                            , "스타 사파이어", "스피넬", "가넷", "에메랄드", "재스퍼", "아쿠아마린", "루비"];
+        let itemCategory = "";
+        let auctionWater = "";
+    
+        // api불러오기
+        itemNames.forEach(itemName => {
+            // 카테고리 담아주기
+            if(itemName == '폴룩스' || itemName == '기원석' 
+                || itemName == '리겔' || itemName == '아크투루스' || itemName == '알타이르' || itemName == '카노푸스' || itemName == '폴라리스' || itemName == '프로키온' || itemName == '하다르'){
+                itemCategory = '기타';
+    
+            }else if(itemName == '허름한 검 카드'|| itemName == '허름한 동전 카드'|| itemName == '허름한 잔 카드'|| itemName == '허름한 지팡이 카드'
+                       || itemName == '검 카드'|| itemName == '동전 카드'|| itemName == '잔 카드'|| itemName == '지팡이 카드'
+                       || itemName == '운명의 검 카드'|| itemName == '운명의 동전 카드'|| itemName == '운명의 잔 카드'|| itemName == '운명의 지팡이 카드'){
+                itemCategory = '기타 소모품';
+    
+            }else if(itemName == '물이 든 병' ||  itemName == '밀랍'){
+                itemCategory = '음식'
+
+            }else if(itemName == '스타 사파이어' || itemName == '스피넬' || itemName == '가넷' || itemName == '에메랄드'
+                    || itemName == '재스퍼' || itemName == '아쿠아마린' || itemName == '루비'){
+                itemCategory = '보석'
+
+            }
+    
+          // 최종 URL
+          const urlString = `https://open.api.nexon.com/mabinogi/v1/auction/list?auction_item_category=${encodeURIComponent(itemCategory)}&item_name=${encodeURIComponent(itemName)}`;
+          
+          fetch(urlString, {
+            headers: {
+              "x-nxopen-api-key": API_KEY 
+            }
+          })
+          .then(response => {
+            console.log(response.status); // 상태 코드 확인
+            return response.json();
+          })
+    
+          .then(data => {
+            
+            // console.log(data)
+    
+            // 경매 아이템 목록을 가져옴
+            const auctionItems = data.auction_item;
+            //console.log(auctionItems)
+      
+            // 가격 기준으로 오름차순 정렬하여 가장 저렴한 아이템 선택
+            const cheapestItem = auctionItems.sort((a, b) => a.auction_price_per_unit - b.auction_price_per_unit)[0];
+      
+            // 아이템 결과 출력
+            const targetDiv = document.getElementById(`item-${itemName}`);
+
+            // 아이템 결정 제작 출력
+            const crystalMakingDiv = document.getElementById(`item-${itemName}-결정제작`);
+
+            // 아이템 완전체 제작 출력
+            const stoneMakingDiv = document.getElementById(`item-${itemName}-완전체제작`);
+            
+            
+            if (cheapestItem) {
+                // 물이든병 저장
+                if(itemName == '물이 든 병'){
+                    auctionWater = auctionItems.sort((a, b) => a.auction_price_per_unit - b.auction_price_per_unit)[0];
+                    auctionWaterInt = auctionWater.auction_price_per_unit;
+                    //console.log('물이든병경매장',auctionWaterInt)
+                }
+                // 금액 가져오기
+                const pricePerUnit = cheapestItem.auction_price_per_unit;
+
+                targetDiv.innerHTML = `
+                    ${formatGold(pricePerUnit)}
+                `;
+                
+                // 조각 ==> 결정 제작 금액
+                if(itemName === '리겔 조각' || itemName === '아크투루스 조각' || itemName === '알타이르 조각'  || itemName === '카노푸스 조각'
+                     || itemName === '폴라리스 조각' || itemName === '프로키온 조각' || itemName === '하다르 조각'){
+
+                    // 자체수급 :: (조각*15개) + 발화석 2개
+                    const crystalMakingPrice = (pricePerUnit * 15)+2104;
+                    crystalMakingDiv.innerHTML = `<p>${formatGold(crystalMakingPrice)}</p>`;
+                }
+
+                // 결정 ==> 완전체 제작 금액
+                if(itemName === '리겔 결정' || itemName === '아크투루스 결정' || itemName === '알타이르 결정'  || itemName === '카노푸스 결정'
+                     || itemName === '폴라리스 결정' || itemName === '프로키온 결정' || itemName === '하다르 결정'){
+                    const stoneMakingPrice = pricePerUnit*8;
+                    stoneMakingDiv.innerHTML = `<p>${formatGold(stoneMakingPrice)}</p>`;
+                }
+
+                
+
+            } else {
+              targetDiv.innerHTML = `<p>새로고침 필요</p>`;
+            }
+
+    
+
+          })
+          .catch(error => {
+            const targetDiv = document.getElementById(`item-${itemName}`);
+            targetDiv.innerHTML = `${itemName} - 요청 중 오류 발생.</p>`;
+            console.error(`${itemName} 데이터 요청 중 오류 발생:`, error);
+          });
+        });
+
+        // Gold 포맷 함수
+        function formatGold(value) {
+            if (value >= 100000000) {
+                const billion = Math.floor(value / 100000000);
+                const remainder = value % 100000000;
+                const tenThousand = Math.floor(remainder / 10000);
+                const rest = remainder % 10000;
+                return `${billion}억${tenThousand > 0 ? tenThousand + '만' : ''}${rest > 0 ? rest.toLocaleString() : ''}`;
+            } else if (value >= 10000) {
+                const tenThousand = Math.floor(value / 10000);
+                const rest = value % 10000;
+                return `${tenThousand}만${rest > 0 ? rest.toLocaleString() : ''}`;
+            } else {
+                return `${value.toLocaleString()} `;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

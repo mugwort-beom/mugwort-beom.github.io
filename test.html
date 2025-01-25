@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        #page-top{
+            margin: 100px;
+        }
+
+        .tableTop{
+            height: 80px;
+            text-align: center;
+            align-items: center;
+        }
+
+        #polluxNameDiv{
+            border: 1px red;
+            border-radius: 30px;
+        }
+
+
+        .table {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border: 1px solid black;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+
+
+
+
+        .table-cell {
+            display: table-cell;
+            padding: 10px;
+            border: 1px solid green;
+            text-align: center;
+        }
+
+        .table-row {
+            display: table-row;
+            border: 1px solid violet;
+        }
+
+        .table-item {
+            display: table;
+            border: 1px solid #000;
+            border: 1px solid tomato;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- <input type="text" id="apiGet"><button id="apiGetBtn">가져오기</button><br><br> -->
+
+    <div class="table tableTop">
+        
+        <div class="header" style="border: 1px red solid; border-radius: 15px;"><img src="폴룩스.png">폴룩스</div>
+        <div class="header" style="text-align: left; justify-content: center;" id="item-폴룩스">최저가</div>
+
+        <div style="border: solid black 1px;" class="header"><img src="기원석.png">기원석</div>
+        <div style="border: solid black 1px;" class="header" id="item-기원석">최저가</div>
+    </div>
+
+    <div class="table-item">
+
+        <!-- 허름한 카드 -->
+        <div class="table-row" style="width: 80%;">
+            <div class="table-cell" style="width: 10%;">템명</div>
+            <div class="table-cell">
+                <img src="허름한_검_카드.png"><br>허름한 검 카드
+            </div>
+            <div class="table-cell">
+                <img src="허름한_동전_카드.png"><br>허름한 동전 카드
+            </div>
+            <div class="table-cell">
+                <img src="허름한_잔_카드.png"><br>허름한 잔 카드
+            </div>
+            <div class="table-cell">
+                <img src="허름한_지팡이_카드.png"><br>허름한 지팡이 카드
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">경매장 최소가</div>
+            <div class="table-cell" id="item-허름한 검 카드">금액</div>
+            <div class="table-cell" id="item-허름한 동전 카드">금액</div>
+            <div class="table-cell" id="item-허름한 잔 카드">금액</div>
+            <div class="table-cell" id="item-허름한 지팡이 카드">금액</div>
+        </div>
+
+        <!-- 일반 카드 -->
+        <div class="table-row">
+            <div class="table-cell">템명</div>
+            <div class="table-cell">
+                <img src="검_카드.png"><br>일반 검 카드
+            </div>
+            <div class="table-cell">
+                <img src="동전_카드.png"><br>일반 동전 카드
+            </div>
+            <div class="table-cell">
+                <img src="잔_카드.png"><br>일반 잔 카드
+            </div>
+            <div class="table-cell">
+                <img src="지팡이_카드.png"><br>일반 지팡이 카드
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">경매장 최소가</div>
+            <div class="table-cell" id="item-검 카드">금액</div>
+            <div class="table-cell" id="item-동전 카드">금액</div>
+            <div class="table-cell" id="item-잔 카드">금액</div>
+            <div class="table-cell" id="item-지팡이 카드">금액</div>
+        </div>
+
+        <!-- 운명의 카드 -->
+        <div class="table-row">
+            <div class="table-cell">템명</div>
+            <div class="table-cell">
+                <img src="운명의_검_카드.png"><br>운명의 검 카드
+            </div>
+            <div class="table-cell">
+                <img src="운명의_동전_카드.png"><br>운명의 동전 카드
+            </div>
+            <div class="table-cell">
+                <img src="운명의_잔_카드.png"><br>운명의 잔 카드
+            </div>
+            <div class="table-cell">
+                <img src="운명의_지팡이_카드.png"><br>운명의 지팡이 카드
+            </div>
+        </div>
+
+        <div class="table-row">
+            <div class="table-cell">경매장 최소가</div>
+            <div class="table-cell" id="item-운명의 검 카드">금액</div>
+            <div class="table-cell" id="item-운명의 동전 카드">금액</div>
+            <div class="table-cell" id="item-운명의 잔 카드">금액</div>
+            <div class="table-cell" id="item-운명의 지팡이 카드">금액</div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</body>
+
+<script>
+    // 변수저장
+    const API_KEY = 'live_70a08300adacee96ad7a0fb4b0692b0eaf8aa88ff4084440abc885a0b2b3fc12efe8d04e6d233bd35cf2fabdeb93fb0d';
+    const itemNames = ["폴룩스", "기원석", "허름한 검 카드", "허름한 동전 카드", "허름한 잔 카드", "허름한 지팡이 카드", "검 카드", "동전 카드", "잔 카드", "지팡이 카드", "운명의 검 카드", "운명의 동전 카드", "운명의 잔 카드", "운명의 지팡이 카드"];
+    let itemCategory = "";
+
+    // api불러오기
+    itemNames.forEach(itemName => {
+        // 카테고리 담아주기
+        if(itemName == '폴룩스' || itemName == '기원석'){
+            itemCategory = '기타';
+
+        }else if(itemName == '허름한 검 카드'|| itemName == '허름한 동전 카드'|| itemName == '허름한 잔 카드'|| itemName == '허름한 지팡이 카드'
+                   || itemName == '검 카드'|| itemName == '동전 카드'|| itemName == '잔 카드'|| itemName == '지팡이 카드'
+                   || itemName == '운명의 검 카드'|| itemName == '운명의 동전 카드'|| itemName == '운명의 잔 카드'|| itemName == '운명의 지팡이 카드'){
+            itemCategory = '기타 소모품';
+
+        }
+
+      // 최종 URL
+      const urlString = `https://open.api.nexon.com/mabinogi/v1/auction/list?auction_item_category=${encodeURIComponent(itemCategory)}&item_name=${encodeURIComponent(itemName)}`;
+      
+      fetch(urlString, {
+        headers: {
+          "x-nxopen-api-key": API_KEY 
+        }
+      })
+      .then(response => {
+        console.log(response.status); // 상태 코드 확인
+        return response.json();
+      })
+
+      .then(data => {
+        
+        console.log(data)
+
+        // 경매 아이템 목록을 가져옴
+        const auctionItems = data.auction_item;
+        //console.log(auctionItems)
+  
+        // 가격 기준으로 오름차순 정렬하여 가장 저렴한 아이템 선택
+        const cheapestItem = auctionItems.sort((a, b) => a.auction_price_per_unit - b.auction_price_per_unit)[0];
+  
+        // 아이템 결과 출력
+        const targetDiv = document.getElementById(`item-${itemName}`);
+
+        if (cheapestItem) {
+          targetDiv.innerHTML = `
+            <p>${cheapestItem.auction_price_per_unit.toLocaleString()} Gold</p>
+          `;
+
+
+        } else {
+          targetDiv.innerHTML = `<p>새로고침 필요</p>`;
+        }
+      })
+      .catch(error => {
+        const targetDiv = document.getElementById(`item-${itemName}`);
+        targetDiv.innerHTML = `${itemName} - 요청 중 오류 발생.</p>`;
+        console.error(`${itemName} 데이터 요청 중 오류 발생:`, error);
+      });
+    });
+  </script>
+
+   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</html>
