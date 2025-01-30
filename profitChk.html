@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>점부자 - 점성으로 부자되자 !</title>
+
+    <!-- Custom fonts for this template-->
+     <!-- Bootstrap CSS 링크 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/88a98b9d62.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .조각_결정_테이블 table{
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+        .조각_결정_테이블 td{
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+        .조각_결정_테이블 tr, th{
+            border: 1px solid #ccc;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+         <!-- Sidebar -->
+         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fa-brands fa-pagelines" style="color: #ffffff;"></i>
+                    <!--  <i class="fas"></i> -->
+                    
+                </div>
+                <div class="sidebar-brand-text mx-3">Mugwort</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span style="text-align: center;">점부자 - 경매장 최저가</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="profitChk.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span style="text-align: center;">점부자 - 이득/손해 확인</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+            
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800"></h1>
+                    <p class="mb-4"></p>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <div class="col-xl-12 col-lg-7">
+
+                            <!-- 부제목1 -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">조각/결정/완전체 이득&손해 확인</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="조각_결정_테이블">
+                                        <div id="최저가-물이 든 병" hidden>물이 든 병 금액</div>
+                                        <div id="최저가-폴룩스" hidden>폴룩스 금액</div>
+                                        <div id="최저가-밀랍" hidden>밀랍 금액</div>
+                                        <div id="최저가-스타 사파이어" hidden>스타 사파이어 금액</div>
+                                        <div id="최저가-스피넬" hidden>스피넬 금액</div>
+                                        <div id="최저가-가넷" hidden>가넷 금액</div>
+                                        <div id="최저가-에메랄드" hidden>에메랄드 금액</div>
+                                        <div id="최저가-재스퍼" hidden>재스퍼 금액</div>
+                                        <div id="최저가-아쿠아마린" hidden>아쿠아마린 금액</div>
+                                        <div id="최저가-루비" hidden>루비 금액</div>
+                                        <div id="최저가-리겔-완전체" hidden></div>
+
+                                        <table>
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; color: #f341b2;">리겔</th>
+                                                <th id="조각판매가격-리겔 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;"><span style="font-size: 10pt;">(*15)</span></span></th>
+                                                <th id="낚시조각제작-리겔 조각" style="width: 160px;">낚시조각제작</th>
+                                                <th id="경매장구매제작-리겔 조각" style="width: 160px;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 160px;">경매장최저가</th>
+
+                                                <th rowspan="3" style="width: 10px;"></th>
+
+                                                <th rowspan="2" style="width: 120px;">아크투루스</th>
+                                                <th id="조각판매가격-아크투루스 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;"><span style="font-size: 10pt;">(*15)</span></span></th>
+                                                <th id="낚시조각제작-아크투루스 조각" style="width: 160px;">낚시조각제작</th>
+                                                <th id="경매장구매제작-아크투루스 조각" style="width: 160px;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 160px;">경매장최저가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 리겔 -->
+                                                <td id="최저가-리겔 조각">경매장금액</td>
+                                                <td id="최저가-리겔 조각-낚시파밍">제작금액</td>
+                                                <td id="최저가-리겔 조각-경매장구매">제작금액</td>
+                                                <td rowspan="2" id="최저가-리겔 결정">금액</td>
+
+                                                <!-- 아크투루스 -->
+                                                <td id="최저가-아크투루스 조각">경매장금액</td>
+                                                <td id="최저가-아크투루스 조각-낚시파밍">제작금액</td>
+                                                <td id="최저가-아크투루스 조각-경매장구매">제작금액</td>
+                                                <td rowspan="2" id="최저가-아크투루스 결정">금액</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- 리겔 -->
+                                                <td id="리겔 조각-판정"></td>
+                                                <td id="최저가-리겔 조각-조각판매-순수익">순수익금액</td>
+                                                <td id="최저가-리겔 조각-낚시파밍-순수익"></td>
+                                                <td id="최저가-리겔 조각-경매장구매-순수익"></td>
+
+                                                <!-- 아크투루스 -->
+                                                <td id="아크투루스 조각-판정"></td>
+                                                <td id="최저가-아크투루스 조각-조각판매-순수익">순수익금액</td>
+                                                <td id="최저가-아크투루스 조각-낚시파밍-순수익"></td>
+                                                <td id="최저가-아크투루스 조각-경매장구매-순수익"></td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <br>
+                                        
+                                        <table>
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; color: #4d67e7;">알타이르</th>
+                                                <th id="조각판매가격-알타이르 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;"><span style="font-size: 10pt;">(*15)</span></span></th>
+                                                <th id="낚시조각제작-알타이르 조각" style="width: 160px;">낚시조각제작</th>
+                                                <th id="경매장구매제작-알타이르 조각" style="width: 160px;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 160px;">경매장최저가</th>
+
+                                                <th rowspan="3" style="width: 10px;"></th>
+
+                                                <th rowspan="2" style="width: 120px;">폴라리스</th>
+                                                <<th id="조각판매가격-폴라리스 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;"><span style="font-size: 10pt;">(*15)</span></span></th>
+                                                <th id="낚시조각제작-폴라리스 조각" style="width: 160px;">낚시조각제작</th>
+                                                <th id="경매장구매제작-폴라리스 조각" style="width: 160px;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 160px;">경매장최저가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 알타이르 -->
+                                                <td id="최저가-알타이르 조각">경매장금액</td>
+                                                <td id="최저가-알타이르 조각-낚시파밍">제작금액</td>
+                                                <td id="최저가-알타이르 조각-경매장구매">제작금액</td>
+                                                <td rowspan="2" id="최저가-알타이르 결정">금액</td>
+                                                
+                                                <!-- 폴라리스 -->
+                                                <td id="최저가-폴라리스 조각">경매장금액</td>
+                                                <td id="최저가-폴라리스 조각-낚시파밍">제작금액</td>
+                                                <td id="최저가-폴라리스 조각-경매장구매">제작금액</td>
+                                                <td rowspan="2" id="최저가-폴라리스 결정">금액</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- 알타이르 -->
+                                                <td id="알타이르 조각-판정"></td>
+                                                <td id="최저가-알타이르 조각-조각판매-순수익">순수익금액</td>
+                                                <td id="최저가-알타이르 조각-낚시파밍-순수익"></td>
+                                                <td id="최저가-알타이르 조각-경매장구매-순수익"></td>
+
+                                                <!-- 폴라리스 -->
+                                                <td id="폴라리스 조각-판정"></td>
+                                                <td id="최저가-폴라리스 조각-조각판매-순수익">순수익금액</td>
+                                                <td id="최저가-폴라리스 조각-낚시파밍-순수익"></td>
+                                                <td id="최저가-폴라리스 조각-경매장구매-순수익"></td>
+                                            </tr>
+                                        </table>
+
+                                        <br>
+
+                                        <table>
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; color: #a474e1;">카노푸스</th>
+                                                <th id="조각판매가격-카노푸스 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;"><span style="font-size: 10pt;">(*15)</span></span></th>
+                                                <th id="낚시조각제작-카노푸스 조각" style="width: 160px;">낚시조각제작</th>
+                                                <th id="경매장구매제작-카노푸스 조각" style="width: 160px;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 160px;">경매장최저가</th>
+
+                                                <th rowspan="3" style="width: 10px;"></th>
+
+                                                <th rowspan="2" style="width: 120px; color: #f39538;">프로키온</th>
+                                                <th id="조각판매가격-프로키온 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;"><span style="font-size: 10pt;">(*15)</span></span></th>
+                                                <th id="낚시조각제작-프로키온 조각" style="width: 160px;">낚시조각제작</th>
+                                                <th id="경매장구매제작-프로키온 조각" style="width: 160px;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 160px;">경매장최저가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 카노푸스 -->
+                                                <td id="최저가-카노푸스 조각">경매장금액</td>
+                                                <td id="최저가-카노푸스 조각-낚시파밍">제작금액</td>
+                                                <td id="최저가-카노푸스 조각-경매장구매">제작금액</td>
+                                                <td rowspan="2" id="최저가-카노푸스 결정">금액</td>
+                                                
+                                                <!-- 프로키온 -->
+                                                <td id="최저가-프로키온 조각">경매장금액</td>
+                                                <td id="최저가-프로키온 조각-낚시파밍">제작금액</td>
+                                                <td id="최저가-프로키온 조각-경매장구매">제작금액</td>
+                                                <td rowspan="2" id="최저가-프로키온 결정">금액</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- 카노푸스 -->
+                                                <td id="카노푸스 조각-판정"></td>
+                                                <td id="최저가-카노푸스 조각-조각판매-순수익">순수익금액</td>
+                                                <td id="최저가-카노푸스 조각-낚시파밍-순수익"></td>
+                                                <td id="최저가-카노푸스 조각-경매장구매-순수익"></td>
+
+                                                <!-- 프로키온 -->
+                                                <td id="프로키온 조각-판정"></td>
+                                                <td id="최저가-프로키온 조각-조각판매-순수익">순수익금액</td>
+                                                <td id="최저가-프로키온 조각-낚시파밍-순수익"></td>
+                                                <td id="최저가-프로키온 조각-경매장구매-순수익"></td>
+                                            </tr>
+                                        </table>
+
+                                        <br>
+
+                                        <table>
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px;">하다르</th>
+                                                <th id="조각판매가격-하다르 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;"><span style="font-size: 10pt;">(*15)</span></span></th>
+                                                <th id="낚시조각제작-하다르 조각" style="width: 160px;">낚시조각제작</th>
+                                                <th id="경매장구매제작-하다르 조각" style="width: 160px;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 160px;">경매장최저가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 하다르 -->
+                                                <td id="최저가-하다르 조각">경매장금액</td>
+                                                <td id="최저가-하다르 조각-낚시파밍">제작금액</td>
+                                                <td id="최저가-하다르 조각-경매장구매">제작금액</td>
+                                                <td rowspan="2" id="최저가-하다르 결정">금액</td>
+                                            </tr>
+                                            <tr>
+                                                <!-- 하다르 -->
+                                                <td id="하다르 조각-판정"></td>
+                                                <td id="최저가-하다르 조각-조각판매-순수익">순수익금액</td>
+                                                <td id="최저가-하다르 조각-낚시파밍-순수익"></td>
+                                                <td id="최저가-하다르 조각-경매장구매-순수익"></td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                     
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        
+                        <!-- Donut Chart -->
+                        <div class="col-xl-4 col-lg-5">
+                            여기부터는 수정중 <br>
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">허름한 카드 이득&손해 확인</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="조각_결정_테이블">
+                                        <table>
+                                            <tr>
+                                                <th rowspan="2"></th>
+                                                <th colspan="5">허름한 카드</th>
+                                            </tr>
+                                            <tr>
+                                                <th>수급조작 제작</th>
+                                                <th>조각 구입 후 제작 시</th>
+                                                <th>경매장가</th>
+                                                <th colspan="2">경매장 조각 제작시</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #f39538;">검</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #a474e1;">동전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:#f341b2;">잔</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #4d67e7;">지팡이</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <hr>
+                                    Styling for the donut chart can be found in the
+                                    <code>/js/demo/chart-pie-demo.js</code> file.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Donut Chart -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">일반 카드 이득&손해 확인</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="조각_결정_테이블">
+                                        <table>
+                                            <tr>
+                                                <th rowspan="2"></th>
+                                                <th colspan="5">일반 카드</th>
+                                            </tr>
+                                            <tr>
+                                                <th>수급조작 제작</th>
+                                                <th>조각 구입 후 제작 시</th>
+                                                <th>경매장가</th>
+                                                <th colspan="2">경매장 조각 제작시</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #f39538;">검</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #a474e1;">동전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:#f341b2;">잔</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #4d67e7;">지팡이</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <hr>
+                                    Styling for the donut chart can be found in the
+                                    <code>/js/demo/chart-pie-demo.js</code> file.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Donut Chart -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">운명의 카드 이득&손해 확인</h6>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="조각_결정_테이블">
+                                        <table>
+                                            <tr>
+                                                <th rowspan="2"></th>
+                                                <th colspan="5">운명의 카드</th>
+                                            </tr>
+                                            <tr>
+                                                <th>수급조작 제작</th>
+                                                <th>조각 구입 후 제작 시</th>
+                                                <th>경매장가</th>
+                                                <th colspan="2">경매장 조각 제작시</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #f39538;">검</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #a474e1;">동전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color:#f341b2;">잔</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th style="color: #4d67e7;">지팡이</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <hr>
+                                    Styling for the donut chart can be found in the
+                                    <code>/js/demo/chart-pie-demo.js</code> file.
+                                </div>
+                            </div>
+                        </div>
+                
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Beom Eating Mugwort</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Bootstrap JavaScript 링크 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            getApi();
+        }); 
+
+        // API 가져오기
+        function getApi(){
+            // 변수저장
+            const API_KEY = 'live_70a08300adacee96ad7a0fb4b0692b0eaf8aa88ff4084440abc885a0b2b3fc12efe8d04e6d233bd35cf2fabdeb93fb0d';
+            const itemNames = ["폴룩스", "기원석"
+                                , "물이 든 병", "밀랍"
+                                , "허름한 검 카드", "허름한 동전 카드", "허름한 잔 카드", "허름한 지팡이 카드"
+                                , "검 카드", "동전 카드", "잔 카드", "지팡이 카드"
+                                , "운명의 검 카드", "운명의 동전 카드", "운명의 잔 카드", "운명의 지팡이 카드"
+                                , "리겔", "리겔 조각", "리겔 결정"
+                                , "아크투루스", "아크투루스 조각", "아크투루스 결정"
+                                , "알타이르", "알타이르 조각", "알타이르 결정"
+                                , "카노푸스", "카노푸스 조각", "카노푸스 결정"
+                                , "폴라리스", "폴라리스 조각", "폴라리스 결정"
+                                , "프로키온", "프로키온 조각", "프로키온 결정"
+                                , "하다르", "하다르 조각", "하다르 결정"
+                                , "스타 사파이어", "스피넬", "가넷", "에메랄드", "재스퍼", "아쿠아마린", "루비"
+                                , "굵은 실뭉치", "최고급 가죽끈", "질긴 실"];
+            let itemCategory = "";
+            let auctionWater = 0; // 물이든병
+            let auctionPollux = 0; //폴룩스
+            let auction밀랍 = 0; // 밀랍
+            let acution스타사파이어 = 0;
+            let acution스피넬 = 0;
+            let acution가넷 = 0;
+            let acution에메랄드 = 0;
+            let acution재스퍼 = 0;
+            let acution아쿠아마린 = 0;
+            let acution루비 = 0;
+
+            let promises = [];
+        
+            // api불러오기
+            itemNames.forEach(itemName => {
+                // 카테고리 담아주기
+                if(itemName == '폴룩스' || itemName == '기원석' 
+                    || itemName == '리겔' || itemName == '아크투루스' || itemName == '알타이르' || itemName == '카노푸스' || itemName == '폴라리스' || itemName == '프로키온' || itemName == '하다르'){
+                    itemCategory = '기타';
+        
+                }else if(itemName == '허름한 검 카드'|| itemName == '허름한 동전 카드'|| itemName == '허름한 잔 카드'|| itemName == '허름한 지팡이 카드'
+                        || itemName == '검 카드'|| itemName == '동전 카드'|| itemName == '잔 카드'|| itemName == '지팡이 카드'
+                        || itemName == '운명의 검 카드'|| itemName == '운명의 동전 카드'|| itemName == '운명의 잔 카드'|| itemName == '운명의 지팡이 카드'){
+                    itemCategory = '기타 소모품';
+        
+                }else if(itemName == '물이 든 병' ||  itemName == '밀랍'){
+                    itemCategory = '음식'
+
+                }else if(itemName == '스타 사파이어' || itemName == '스피넬' || itemName == '가넷' || itemName == '에메랄드'
+                        || itemName == '재스퍼' || itemName == '아쿠아마린' || itemName == '루비'){
+                    itemCategory = '보석'
+
+                }else if(itemName == '굵은 실뭉치' || itemName == '최고급 가죽끈' || itemName == '질긴 실'){
+                    itemCategory = '천옷/방직'
+                }
+        
+                // 최종 URL
+                const urlString = `https://open.api.nexon.com/mabinogi/v1/auction/list?auction_item_category=${encodeURIComponent(itemCategory)}&item_name=${encodeURIComponent(itemName)}`;
+            
+                const promise = fetch(urlString, {
+                    headers: {
+                    "x-nxopen-api-key": API_KEY 
+                    }
+                })
+                .then(response => {
+                    console.log(response.status); // 상태 코드 확인
+                    return response.json();
+                })
+        
+                .then(data => {
+                    const auctionItems = data.auction_item;
+                    //console.log(auctionItems);
+            
+                    // 가격 기준으로 오름차순 정렬하여 가장 저렴한 아이템 선택
+                    const cheapestItem = auctionItems.sort((a, b) => a.auction_price_per_unit - b.auction_price_per_unit)[0];
+                    //console.log(cheapestItem);
+
+                    // Div가져오기
+                    const intact = document.getElementById(`최저가-${itemName}-완전체`);
+                    const piece = document.getElementById(`최저가-${itemName}`); 
+                    const piece_낚시파밍 = document.getElementById(`최저가-${itemName}-낚시파밍`); 
+                    const piece_경매장구매 = document.getElementById(`최저가-${itemName}-경매장구매`); 
+                    const crystal = document.getElementById(`최저가-${itemName}`); 
+
+                    // 경매장 최저가 금액 가져오기
+                    const auctionPrice = cheapestItem.auction_price_per_unit;
+                    
+                    // 부속재료들 변수저장
+                    if(cheapestItem.item_name == '물이 든 병'){
+                        auctionWater = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auctionWater)}`;
+                    
+                    }else if(cheapestItem.item_name == '폴룩스'){
+                        auctionPollux = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auctionPollux)}`;
+
+                    }else if(cheapestItem.item_name == '밀랍'){
+                        auction밀랍 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction밀랍)}`;
+
+                    }else if(cheapestItem.item_name == '스타 사파이어'){
+                        auction스타사파이어 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction스타사파이어)}`;
+
+                    }else if(cheapestItem.item_name == '스피넬'){
+                        auction스피넬 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction스피넬)}`;
+
+                    }else if(cheapestItem.item_name == '가넷'){
+                        auction가넷 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction가넷)}`;
+
+                    }else if(cheapestItem.item_name == '에메랄드'){
+                        auction에메랄드 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction에메랄드)}`;
+
+                    }else if(cheapestItem.item_name == '재스퍼'){
+                        auction재스퍼 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction재스퍼)}`;
+
+                    }else if(cheapestItem.item_name == '아쿠아마린'){
+                        auction아쿠아마린 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction아쿠아마린)}`;
+
+                    }else if(cheapestItem.item_name == '루비'){
+                        auction루비 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction루비)}`;
+
+                    }
+
+                
+                    // 리겔
+                    if(cheapestItem.item_name == '리겔 조각'){
+                        // 재료 자체 수급 = 낚시파밍
+                        const price_낚시파밍 = 2104 + auctionWater;
+
+                        piece.innerHTML = `${formatGold(auctionPrice*15)}`;
+                        piece_낚시파밍.innerHTML = `${formatGold(price_낚시파밍)}`;
+
+                        // 재료 경매장 구매 = 경매장구매 (물이 든 병+발화석)
+                        if (auctionWater === 0) {
+                            // 물이 든 병 가격이 0일 경우 새로 고침
+                            alert('가격을 불러오는 데 실패했습니다. 페이지를 새로 고칩니다.');
+
+                            location.reload();
+                        } else {
+                            // 재료 경매장파밍
+                            const price_경매장구매 = (auctionPrice * 15) + 2104 + auctionWater;
+                            piece_경매장구매.innerHTML = `${formatGold(price_경매장구매)}`;
+
+                        }
+
+                    }else if(cheapestItem.item_name == '리겔 결정'){
+                        crystal.innerHTML = `${formatGold(auctionPrice)}`
+
+
+                    }else if(cheapestItem.item_name == '리겔'){
+                        intact.innerHTML =  `${formatGold(auctionPrice)}`
+                    }
+
+
+                    // 아크투루스
+                    if(cheapestItem.item_name == '아크투루스 조각'){
+                        // 재료 자체 수급 
+                        const price_낚시파밍 = 2104 + auctionWater;
+                        
+                        piece.innerHTML = `${formatGold(auctionPrice*15)}`;
+                        piece_낚시파밍.innerHTML = `${formatGold(price_낚시파밍)}`;
+
+                        if (auctionWater === 0) {
+                            // 물이 든 병 가격이 0일 경우 새로 고침
+                            alert('가격을 불러오는 데 실패했습니다. 페이지를 새로 고칩니다.');
+                            location.reload();
+                        } else {
+                            const price_경매장구매 = (auctionPrice * 15) + 2104 + auctionWater;
+                            piece_경매장구매.innerHTML = `${formatGold(price_경매장구매)}`;
+                        }
+
+                    }else if(cheapestItem.item_name == '아크투루스 결정'){
+                        crystal.innerHTML = `${formatGold(auctionPrice)}`
+
+                    }else if(cheapestItem.item_name == '아크투루스'){
+                        intact.innerHTML =  `${formatGold(auctionPrice)}`
+
+                    }
+
+
+                    // 알타이르
+                    if(cheapestItem.item_name == '알타이르 조각'){
+                        // 재료 자체 수급 
+                        const price_낚시파밍 = 2104 + auctionWater;
+                        piece.innerHTML = `${formatGold(auctionPrice*15)}`;
+                        piece_낚시파밍.innerHTML = `${formatGold(price_낚시파밍)}`;
+
+                        if (auctionWater === 0) {
+                            // 물이 든 병 가격이 0일 경우 새로 고침
+                            alert('가격을 불러오는 데 실패했습니다. 페이지를 새로 고칩니다.');
+                            location.reload();
+                        } else {
+                            const price_경매장구매 = (auctionPrice * 15) + 2104 + auctionWater;
+                            piece_경매장구매.innerHTML = `${formatGold(price_경매장구매)}`;
+                        }
+
+                    }else if(cheapestItem.item_name == '알타이르 결정'){
+                        crystal.innerHTML = `${formatGold(auctionPrice)}`
+    
+                    }else if(cheapestItem.item_name == '알타이르'){
+                        intact.innerHTML =  `${formatGold(auctionPrice)}`
+
+                    }
+
+
+                    // 카노푸스
+                    if(cheapestItem.item_name == '카노푸스 조각'){
+                        // 재료 자체 수급 
+                        const price_낚시파밍 = 2104 + auctionWater;
+                        piece.innerHTML = `${formatGold(auctionPrice*15)}`;
+                        piece_낚시파밍.innerHTML = `${formatGold(price_낚시파밍)}`;
+
+                        if (auctionWater === 0) {
+                            // 물이 든 병 가격이 0일 경우 새로 고침
+                            alert('가격을 불러오는 데 실패했습니다. 페이지를 새로 고칩니다.');
+                            location.reload();
+                        } else {
+                            const price_경매장구매 = (auctionPrice * 15) + 2104 + auctionWater;
+                            piece_경매장구매.innerHTML = `${formatGold(price_경매장구매)}`;
+                        }
+
+                    }else if(cheapestItem.item_name == '카노푸스 결정'){
+                        crystal.innerHTML = `${formatGold(auctionPrice)}`
+
+                         
+
+
+                    }else if(cheapestItem.item_name == '카노푸스'){
+                        intact.innerHTML =  `${formatGold(auctionPrice)}`
+
+                    }
+
+                    // 폴라리스
+                    if(cheapestItem.item_name == '폴라리스 조각'){
+                        // 재료 자체 수급 
+                        const price_낚시파밍 = 2104 + auctionWater;
+                        piece.innerHTML = `${formatGold(auctionPrice*15)}`;
+                        piece_낚시파밍.innerHTML = `${formatGold(price_낚시파밍)}`;
+
+                        if (auctionWater === 0) {
+                            // 물이 든 병 가격이 0일 경우 새로 고침
+                            alert('가격을 불러오는 데 실패했습니다. 페이지를 새로 고칩니다.');
+                            location.reload();
+                        } else {
+                            const price_경매장구매 = (auctionPrice * 15) + 2104 + auctionWater;
+                            piece_경매장구매.innerHTML = `${formatGold(price_경매장구매)}`;
+                        }
+
+                    }else if(cheapestItem.item_name == '폴라리스 결정'){
+                        crystal.innerHTML = `${formatGold(auctionPrice)}`
+
+                    }
+
+
+                    // 프로키온
+                    if(cheapestItem.item_name == '프로키온 조각'){
+                        // 재료 자체 수급 
+                        const price_낚시파밍 = 2104 + auctionWater;
+                        piece.innerHTML = `${formatGold(auctionPrice*15)}`;
+                        piece_낚시파밍.innerHTML = `${formatGold(price_낚시파밍)}`;
+
+                        if (auctionWater === 0) {
+                            // 물이 든 병 가격이 0일 경우 새로 고침
+                            alert('가격을 불러오는 데 실패했습니다. 페이지를 새로 고칩니다.');
+                            location.reload();
+                        } else {
+                            const price_경매장구매 = (auctionPrice * 15) + 2104 + auctionWater;
+                            piece_경매장구매.innerHTML = `${formatGold(price_경매장구매)}`;
+                        }
+
+                    }else if(cheapestItem.item_name == '프로키온 결정'){
+                        crystal.innerHTML = `${formatGold(auctionPrice)}`
+
+                    }
+
+
+                    // 하다르
+                    if(cheapestItem.item_name == '하다르 조각'){
+                        // 재료 자체 수급 
+                        const price_낚시파밍 = 2104 + auctionWater;
+                        piece.innerHTML = `${formatGold(auctionPrice*15)}`;
+                        piece_낚시파밍.innerHTML = `${formatGold(price_낚시파밍)}`;
+
+                        if (auctionWater === 0) {
+                            // 물이 든 병 가격이 0일 경우 새로 고침
+                            alert('가격을 불러오는 데 실패했습니다. 페이지를 새로 고칩니다.');
+                            location.reload();
+                        } else {
+                            const price_경매장구매 = (auctionPrice * 15) + 2104 + auctionWater;
+                            piece_경매장구매.innerHTML = `${formatGold(price_경매장구매)}`;
+                        }
+
+                    }else if(cheapestItem.item_name == '하다르 결정'){
+                        crystal.innerHTML = `${formatGold(auctionPrice)}`
+
+                    }
+                })  
+            .catch(error => {
+                console.error(`${itemName} 데이터 요청 중 오류 발생:`, error);
+            });
+
+            promises.push(promise);
+
+            });
+
+
+            // 모든 요청이 완료되면 chkProfit() 호출
+            Promise.all(promises).then(() => {
+                chkProfit();  
+                // 모든 데이터가 로드된 후 실행
+            });
+
+        }
+        
+
+        function chkProfit(){
+            // api불러온 다음 실행되는 부분
+
+            /* 금액가져오기 */
+            const 밀랍_금액 = parseGold(document.getElementById(`최저가-밀랍`).innerHTML); 
+            const 스타사파이어_금액 = parseGold(document.getElementById(`최저가-스타 사파이어`).innerHTML); 
+            const 폴룩스_금액 = parseGold(document.getElementById(`최저가-폴룩스`).innerHTML); 
+
+
+            /*  리겔  */
+            let 리겔_산정_조각_낚시파밍 = parseGold(document.getElementById("최저가-리겔 조각-낚시파밍").innerHTML);
+            let 리겔_산정_조각_경매장구매 = parseGold(document.getElementById("최저가-리겔 조각-경매장구매").innerHTML);
+            //console.log('리겔_산정_조각_낚시파밍-->', 리겔_산정_조각_낚시파밍);
+            //console.log('리겔_산정_조각_경매장구매-->', 리겔_산정_조각_경매장구매);
+
+            let 리겔_산정_결정 = parseGold(document.getElementById("최저가-리겔 결정").innerHTML); 
+            let 리겔_산정_조각 = parseGold(document.getElementById("최저가-리겔 조각").innerHTML); 
+            console.log('리겔_산정_조각-->', 리겔_산정_조각);
+
+            let 리겔_낚시파밍_순수익Div = document.getElementById(`최저가-리겔 조각-낚시파밍-순수익`); 
+            let 리겔_낚시파밍_순수익 = 리겔_산정_결정 - 리겔_산정_조각_낚시파밍;
+            리겔_낚시파밍_순수익Div.innerHTML = `${formatGold(리겔_낚시파밍_순수익)}`;
+            리겔_낚시파밍_순수익Div.style.color = 리겔_낚시파밍_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('리겔_낚시파밍_순수익-->', 리겔_낚시파밍_순수익);
+
+            let 리겔_경매장구매_순수익Div = document.getElementById(`최저가-리겔 조각-경매장구매-순수익`); 
+            let 리겔_경매장구매_순수익 = 리겔_산정_결정 - 리겔_산정_조각_경매장구매;
+            리겔_경매장구매_순수익Div.innerHTML = `${formatGold(리겔_경매장구매_순수익)}`;
+            리겔_경매장구매_순수익Div.style.color = 리겔_경매장구매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('리겔_경매장구매_순수익-->', 리겔_경매장구매_순수익);
+
+            let 리겔_조각판매_순수익Div = document.getElementById(`최저가-리겔 조각-조각판매-순수익`); 
+            let 리겔_조각판매_순수익 = 리겔_산정_결정 - 리겔_산정_조각;
+            리겔_조각판매_순수익Div.innerHTML = `${formatGold(리겔_조각판매_순수익)}`;
+            리겔_조각판매_순수익Div.style.color = 리겔_조각판매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+
+            let 리겔_최고금액 = Math.max(리겔_조각판매_순수익, 리겔_낚시파밍_순수익, 리겔_경매장구매_순수익);
+            console.log('리겔_최고금액-->', 리겔_최고금액);
+
+            if(리겔_최고금액 === 리겔_조각판매_순수익){
+                let 리겔_조각_판정Div = document.getElementById(`리겔 조각-판정`); 
+                리겔_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">조각<br>판매 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`조각판매가격-리겔 조각`); 
+                let 최저가_리겔조각Div = document.getElementById(`최저가-리겔 조각`); 
+                리겔_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_리겔조각Div.style.backgroundColor = "#fcf2cf";
+
+            }else if(리겔_최고금액 === 리겔_낚시파밍_순수익){
+                let 리겔_조각_판정Div = document.getElementById(`리겔 조각-판정`); 
+                리겔_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">낚시조각<br>제작 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`낚시조각제작-리겔 조각`); 
+                let 최저가_리겔조각_낚시파밍Div = document.getElementById(`최저가-리겔 조각-낚시파밍`); 
+                리겔_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_리겔조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                
+            }else if(리겔_최고금액 === 리겔_경매장구매_순수익){
+                let 리겔_조각_판정Div = document.getElementById(`리겔 조각-판정`); 
+                리겔_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">경매장구매<br>제작 이득</span>';
+
+                let 경매장구매제작Div = document.getElementById(`경매장구매제작-리겔 조각`); 
+                let 최저가_리겔조각_경매장구매Div = document.getElementById(`최저가-리겔 조각-경매장구매`); 
+                리겔_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
+                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_리겔조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+            }
+
+            
+
+           
+
+
+            /* 리겔 완전체 */
+            // let 리겔_완전체 = parseGold(document.getElementById("최저가-리겔-완전체").innerHTML); 
+            // console.log('리겔_완전체', 리겔_완전체)
+
+            // let 리겔_결정_파밍제작_금액 = 밀랍_금액 + 스타사파이어_금액 + (폴룩스_금액*50);
+            // let 리겔_결정_파밍제작_금액Div = document.getElementById(`최저가-리겔 결정-낚시파밍`); 
+            // 리겔_결정_파밍제작_금액Div.innerHTML = `${formatGold(리겔_결정_파밍제작_금액)}`;
+
+            // let 리겔_결정_경매장구매_금액 = (리겔_산정_결정*8) + 밀랍_금액 + 스타사파이어_금액 + (폴룩스_금액*50);
+            // let 리겔_결정_경매장구매_금액Div = document.getElementById(`최저가-리겔 결정-경매장구매`); 
+            // 리겔_결정_경매장구매_금액Div.innerHTML = `${formatGold(리겔_결정_경매장구매_금액)}`;
+
+
+            // let 리겔_낚시파밍_완전체_순수익Div = document.getElementById(`최저가-리겔 결정-낚시파밍-순수익`); 
+            // let 리겔_낚시파밍_완전체_순수익 = 리겔_완전체 -리겔_결정_파밍제작_금액 ;
+            // 리겔_낚시파밍_완전체_순수익Div.innerHTML = `${formatGold(리겔_낚시파밍_완전체_순수익)}`;
+            // 리겔_낚시파밍_완전체_순수익Div.style.color = 리겔_낚시파밍_완전체_순수익 >= 0 ? "blue" : "red";
+
+            // let 리겔_경매장구매_완전체_순수익Div = document.getElementById(`최저가-리겔 결정-경매장구매-순수익`); 
+            // let 리겔_경매장구매_완전체_순수익 = 리겔_완전체 -리겔_결정_경매장구매_금액 ;
+            // 리겔_경매장구매_완전체_순수익Div.innerHTML = `${formatGold(리겔_경매장구매_완전체_순수익)}`;
+            // 리겔_경매장구매_완전체_순수익Div.style.color = 리겔_경매장구매_완전체_순수익 >= 0 ? "blue" : "red";
+          
+            // let 리겔_완전체_최고금액 = Math.max(리겔_완전체, 리겔_낚시파밍_완전체_순수익, 리겔_경매장구매_완전체_순수익);
+            // let 리겔_완전체_최고금액_문구 = "";
+            
+          
+
+
+
+
+            /*  아크투루스  */
+            let 아크투루스_산정_조각_낚시파밍 = parseGold(document.getElementById("최저가-아크투루스 조각-낚시파밍").innerHTML);
+            let 아크투루스_산정_조각_경매장구매 = parseGold(document.getElementById("최저가-아크투루스 조각-경매장구매").innerHTML);
+            //console.log('아크투루스_산정_조각_낚시파밍-->', 아크투루스_산정_조각_낚시파밍);
+            //console.log('아크투루스_산정_조각_경매장구매-->', 아크투루스_산정_조각_경매장구매);
+
+            let 아크투루스_산정_결정 = parseGold(document.getElementById("최저가-아크투루스 결정").innerHTML); 
+            let 아크투루스_산정_조각 = parseGold(document.getElementById("최저가-아크투루스 조각").innerHTML); 
+            console.log('아크투루스_산정_조각-->', 아크투루스_산정_조각);
+
+            let 아크투루스_낚시파밍_순수익Div = document.getElementById(`최저가-아크투루스 조각-낚시파밍-순수익`); 
+            let 아크투루스_낚시파밍_순수익 = 아크투루스_산정_결정 - 아크투루스_산정_조각_낚시파밍;
+            아크투루스_낚시파밍_순수익Div.innerHTML = `${formatGold(아크투루스_낚시파밍_순수익)}`;
+            아크투루스_낚시파밍_순수익Div.style.color = 아크투루스_낚시파밍_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('아크투루스_낚시파밍_순수익-->', 아크투루스_낚시파밍_순수익);
+
+            let 아크투루스_경매장구매_순수익Div = document.getElementById(`최저가-아크투루스 조각-경매장구매-순수익`); 
+            let 아크투루스_경매장구매_순수익 = 아크투루스_산정_결정 - 아크투루스_산정_조각_경매장구매;
+            아크투루스_경매장구매_순수익Div.innerHTML = `${formatGold(아크투루스_경매장구매_순수익)}`;
+            아크투루스_경매장구매_순수익Div.style.color = 아크투루스_경매장구매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('아크투루스_경매장구매_순수익-->', 아크투루스_경매장구매_순수익);
+
+            let 아크투루스_조각판매_순수익Div = document.getElementById(`최저가-아크투루스 조각-조각판매-순수익`); 
+            let 아크투루스_조각판매_순수익 = 아크투루스_산정_결정 - 아크투루스_산정_조각;
+            아크투루스_조각판매_순수익Div.innerHTML = `${formatGold(아크투루스_조각판매_순수익)}`;
+            아크투루스_조각판매_순수익Div.style.color = 아크투루스_조각판매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+
+            let 아크투루스_최고금액 = Math.max(아크투루스_조각판매_순수익, 아크투루스_낚시파밍_순수익, 아크투루스_경매장구매_순수익);
+            console.log('아크투루스_최고금액-->', 아크투루스_최고금액);
+
+            if(아크투루스_최고금액 === 아크투루스_조각판매_순수익){
+                let 아크투루스_조각_판정Div = document.getElementById(`아크투루스 조각-판정`); 
+                아크투루스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">조각<br>판매 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`조각판매가격-아크투루스 조각`); 
+                let 최저가_아크투루스조각Div = document.getElementById(`최저가-아크투루스 조각`); 
+                아크투루스_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_아크투루스조각Div.style.backgroundColor = "#fcf2cf";
+
+            }else if(아크투루스_최고금액 === 아크투루스_낚시파밍_순수익){
+                let 아크투루스_조각_판정Div = document.getElementById(`아크투루스 조각-판정`); 
+                아크투루스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">낚시조각<br>제작 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`낚시조각제작-아크투루스 조각`); 
+                let 최저가_아크투루스조각_낚시파밍Div = document.getElementById(`최저가-아크투루스 조각-낚시파밍`); 
+                아크투루스_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_아크투루스조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                
+            }else if(아크투루스_최고금액 === 아크투루스_경매장구매_순수익){
+                let 아크투루스_조각_판정Div = document.getElementById(`아크투루스 조각-판정`); 
+                아크투루스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">경매장구매<br>제작 이득</span>';
+
+                let 경매장구매제작Div = document.getElementById(`경매장구매제작-아크투루스 조각`); 
+                let 최저가_아크투루스조각_경매장구매Div = document.getElementById(`최저가-아크투루스 조각-경매장구매`); 
+                아크투루스_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
+                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_아크투루스조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+            }
+
+
+
+            
+
+            /*  알타이르  */
+            let 알타이르_산정_조각_낚시파밍 = parseGold(document.getElementById("최저가-알타이르 조각-낚시파밍").innerHTML);
+            let 알타이르_산정_조각_경매장구매 = parseGold(document.getElementById("최저가-알타이르 조각-경매장구매").innerHTML);
+            //console.log('알타이르_산정_조각_낚시파밍-->', 알타이르_산정_조각_낚시파밍);
+            //console.log('알타이르_산정_조각_경매장구매-->', 알타이르_산정_조각_경매장구매);
+
+            let 알타이르_산정_결정 = parseGold(document.getElementById("최저가-알타이르 결정").innerHTML); 
+            let 알타이르_산정_조각 = parseGold(document.getElementById("최저가-알타이르 조각").innerHTML); 
+            console.log('알타이르_산정_조각-->', 알타이르_산정_조각);
+
+            let 알타이르_낚시파밍_순수익Div = document.getElementById(`최저가-알타이르 조각-낚시파밍-순수익`); 
+            let 알타이르_낚시파밍_순수익 = 알타이르_산정_결정 - 알타이르_산정_조각_낚시파밍;
+            알타이르_낚시파밍_순수익Div.innerHTML = `${formatGold(알타이르_낚시파밍_순수익)}`;
+            알타이르_낚시파밍_순수익Div.style.color = 알타이르_낚시파밍_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('알타이르_낚시파밍_순수익-->', 알타이르_낚시파밍_순수익);
+
+            let 알타이르_경매장구매_순수익Div = document.getElementById(`최저가-알타이르 조각-경매장구매-순수익`); 
+            let 알타이르_경매장구매_순수익 = 알타이르_산정_결정 - 알타이르_산정_조각_경매장구매;
+            알타이르_경매장구매_순수익Div.innerHTML = `${formatGold(알타이르_경매장구매_순수익)}`;
+            알타이르_경매장구매_순수익Div.style.color = 알타이르_경매장구매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('알타이르_경매장구매_순수익-->', 알타이르_경매장구매_순수익);
+
+            let 알타이르_조각판매_순수익Div = document.getElementById(`최저가-알타이르 조각-조각판매-순수익`); 
+            let 알타이르_조각판매_순수익 = 알타이르_산정_결정 - 알타이르_산정_조각;
+            알타이르_조각판매_순수익Div.innerHTML = `${formatGold(알타이르_조각판매_순수익)}`;
+            알타이르_조각판매_순수익Div.style.color = 알타이르_조각판매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+
+            let 알타이르_최고금액 = Math.max(알타이르_조각판매_순수익, 알타이르_낚시파밍_순수익, 알타이르_경매장구매_순수익);
+            console.log('알타이르_최고금액-->', 알타이르_최고금액);
+
+            if(알타이르_최고금액 === 알타이르_조각판매_순수익){
+                let 알타이르_조각_판정Div = document.getElementById(`알타이르 조각-판정`); 
+                알타이르_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">조각<br>판매 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`조각판매가격-알타이르 조각`); 
+                let 최저가_알타이르조각Div = document.getElementById(`최저가-알타이르 조각`); 
+                알타이르_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_알타이르조각Div.style.backgroundColor = "#fcf2cf";
+
+            }else if(알타이르_최고금액 === 알타이르_낚시파밍_순수익){
+                let 알타이르_조각_판정Div = document.getElementById(`알타이르 조각-판정`); 
+                알타이르_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">낚시조각<br>제작 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`낚시조각제작-알타이르 조각`); 
+                let 최저가_알타이르조각_낚시파밍Div = document.getElementById(`최저가-알타이르 조각-낚시파밍`); 
+                알타이르_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_알타이르조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                
+            }else if(알타이르_최고금액 === 알타이르_경매장구매_순수익){
+                let 알타이르_조각_판정Div = document.getElementById(`알타이르 조각-판정`); 
+                알타이르_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">경매장구매<br>제작 이득</span>';
+
+                let 경매장구매제작Div = document.getElementById(`경매장구매제작-알타이르 조각`); 
+                let 최저가_알타이르조각_경매장구매Div = document.getElementById(`최저가-알타이르 조각-경매장구매`); 
+                알타이르_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
+                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_알타이르조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+            }
+
+
+            
+
+            /*  카노푸스  */
+            let 카노푸스_산정_조각_낚시파밍 = parseGold(document.getElementById("최저가-카노푸스 조각-낚시파밍").innerHTML);
+            let 카노푸스_산정_조각_경매장구매 = parseGold(document.getElementById("최저가-카노푸스 조각-경매장구매").innerHTML);
+            //console.log('카노푸스_산정_조각_낚시파밍-->', 카노푸스_산정_조각_낚시파밍);
+            //console.log('카노푸스_산정_조각_경매장구매-->', 카노푸스_산정_조각_경매장구매);
+
+            let 카노푸스_산정_결정 = parseGold(document.getElementById("최저가-카노푸스 결정").innerHTML); 
+            let 카노푸스_산정_조각 = parseGold(document.getElementById("최저가-카노푸스 조각").innerHTML); 
+            console.log('카노푸스_산정_조각-->', 카노푸스_산정_조각);
+
+            let 카노푸스_낚시파밍_순수익Div = document.getElementById(`최저가-카노푸스 조각-낚시파밍-순수익`); 
+            let 카노푸스_낚시파밍_순수익 = 카노푸스_산정_결정 - 카노푸스_산정_조각_낚시파밍;
+            카노푸스_낚시파밍_순수익Div.innerHTML = `${formatGold(카노푸스_낚시파밍_순수익)}`;
+            카노푸스_낚시파밍_순수익Div.style.color = 카노푸스_낚시파밍_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('카노푸스_낚시파밍_순수익-->', 카노푸스_낚시파밍_순수익);
+
+            let 카노푸스_경매장구매_순수익Div = document.getElementById(`최저가-카노푸스 조각-경매장구매-순수익`); 
+            let 카노푸스_경매장구매_순수익 = 카노푸스_산정_결정 - 카노푸스_산정_조각_경매장구매;
+            카노푸스_경매장구매_순수익Div.innerHTML = `${formatGold(카노푸스_경매장구매_순수익)}`;
+            카노푸스_경매장구매_순수익Div.style.color = 카노푸스_경매장구매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('카노푸스_경매장구매_순수익-->', 카노푸스_경매장구매_순수익);
+
+            let 카노푸스_조각판매_순수익Div = document.getElementById(`최저가-카노푸스 조각-조각판매-순수익`); 
+            let 카노푸스_조각판매_순수익 = 카노푸스_산정_결정 - 카노푸스_산정_조각;
+            카노푸스_조각판매_순수익Div.innerHTML = `${formatGold(카노푸스_조각판매_순수익)}`;
+            카노푸스_조각판매_순수익Div.style.color = 카노푸스_조각판매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+
+            let 카노푸스_최고금액 = Math.max(카노푸스_조각판매_순수익, 카노푸스_낚시파밍_순수익, 카노푸스_경매장구매_순수익);
+            console.log('카노푸스_최고금액-->', 카노푸스_최고금액);
+
+            if(카노푸스_최고금액 === 카노푸스_조각판매_순수익){
+                let 카노푸스_조각_판정Div = document.getElementById(`카노푸스 조각-판정`); 
+                카노푸스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">조각<br>판매 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`조각판매가격-카노푸스 조각`); 
+                let 최저가_카노푸스조각Div = document.getElementById(`최저가-카노푸스 조각`); 
+                카노푸스_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_카노푸스조각Div.style.backgroundColor = "#fcf2cf";
+
+            }else if(카노푸스_최고금액 === 카노푸스_낚시파밍_순수익){
+                let 카노푸스_조각_판정Div = document.getElementById(`카노푸스 조각-판정`); 
+                카노푸스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">낚시조각<br>제작 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`낚시조각제작-카노푸스 조각`); 
+                let 최저가_카노푸스조각_낚시파밍Div = document.getElementById(`최저가-카노푸스 조각-낚시파밍`); 
+                카노푸스_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_카노푸스조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                
+            }else if(카노푸스_최고금액 === 카노푸스_경매장구매_순수익){
+                let 카노푸스_조각_판정Div = document.getElementById(`카노푸스 조각-판정`); 
+                카노푸스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">경매장구매<br>제작 이득</span>';
+
+                let 경매장구매제작Div = document.getElementById(`경매장구매제작-카노푸스 조각`); 
+                let 최저가_카노푸스조각_경매장구매Div = document.getElementById(`최저가-카노푸스 조각-경매장구매`); 
+                카노푸스_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
+                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_카노푸스조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+            }
+
+
+            
+
+            /*  폴라리스  */
+            let 폴라리스_산정_조각_낚시파밍 = parseGold(document.getElementById("최저가-폴라리스 조각-낚시파밍").innerHTML);
+            let 폴라리스_산정_조각_경매장구매 = parseGold(document.getElementById("최저가-폴라리스 조각-경매장구매").innerHTML);
+            //console.log('폴라리스_산정_조각_낚시파밍-->', 폴라리스_산정_조각_낚시파밍);
+            //console.log('폴라리스_산정_조각_경매장구매-->', 폴라리스_산정_조각_경매장구매);
+
+            let 폴라리스_산정_결정 = parseGold(document.getElementById("최저가-폴라리스 결정").innerHTML); 
+            let 폴라리스_산정_조각 = parseGold(document.getElementById("최저가-폴라리스 조각").innerHTML); 
+            console.log('폴라리스_산정_조각-->', 폴라리스_산정_조각);
+
+            let 폴라리스_낚시파밍_순수익Div = document.getElementById(`최저가-폴라리스 조각-낚시파밍-순수익`); 
+            let 폴라리스_낚시파밍_순수익 = 폴라리스_산정_결정 - 폴라리스_산정_조각_낚시파밍;
+            폴라리스_낚시파밍_순수익Div.innerHTML = `${formatGold(폴라리스_낚시파밍_순수익)}`;
+            폴라리스_낚시파밍_순수익Div.style.color = 폴라리스_낚시파밍_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('폴라리스_낚시파밍_순수익-->', 폴라리스_낚시파밍_순수익);
+
+            let 폴라리스_경매장구매_순수익Div = document.getElementById(`최저가-폴라리스 조각-경매장구매-순수익`); 
+            let 폴라리스_경매장구매_순수익 = 폴라리스_산정_결정 - 폴라리스_산정_조각_경매장구매;
+            폴라리스_경매장구매_순수익Div.innerHTML = `${formatGold(폴라리스_경매장구매_순수익)}`;
+            폴라리스_경매장구매_순수익Div.style.color = 폴라리스_경매장구매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('폴라리스_경매장구매_순수익-->', 폴라리스_경매장구매_순수익);
+
+            let 폴라리스_조각판매_순수익Div = document.getElementById(`최저가-폴라리스 조각-조각판매-순수익`); 
+            let 폴라리스_조각판매_순수익 = 폴라리스_산정_결정 - 폴라리스_산정_조각;
+            폴라리스_조각판매_순수익Div.innerHTML = `${formatGold(폴라리스_조각판매_순수익)}`;
+            폴라리스_조각판매_순수익Div.style.color = 폴라리스_조각판매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+
+            let 폴라리스_최고금액 = Math.max(폴라리스_조각판매_순수익, 폴라리스_낚시파밍_순수익, 폴라리스_경매장구매_순수익);
+            console.log('폴라리스_최고금액-->', 폴라리스_최고금액);
+
+            if(폴라리스_최고금액 === 폴라리스_조각판매_순수익){
+                let 폴라리스_조각_판정Div = document.getElementById(`폴라리스 조각-판정`); 
+                폴라리스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">조각<br>판매 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`조각판매가격-폴라리스 조각`); 
+                let 최저가_폴라리스조각Div = document.getElementById(`최저가-폴라리스 조각`); 
+                폴라리스_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_폴라리스조각Div.style.backgroundColor = "#fcf2cf";
+
+            }else if(폴라리스_최고금액 === 폴라리스_낚시파밍_순수익){
+                let 폴라리스_조각_판정Div = document.getElementById(`폴라리스 조각-판정`); 
+                폴라리스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">낚시조각<br>제작 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`낚시조각제작-폴라리스 조각`); 
+                let 최저가_폴라리스조각_낚시파밍Div = document.getElementById(`최저가-폴라리스 조각-낚시파밍`); 
+                폴라리스_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_폴라리스조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                
+            }else if(폴라리스_최고금액 === 폴라리스_경매장구매_순수익){
+                let 폴라리스_조각_판정Div = document.getElementById(`폴라리스 조각-판정`); 
+                폴라리스_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">경매장구매<br>제작 이득</span>';
+
+                let 경매장구매제작Div = document.getElementById(`경매장구매제작-폴라리스 조각`); 
+                let 최저가_폴라리스조각_경매장구매Div = document.getElementById(`최저가-폴라리스 조각-경매장구매`); 
+                폴라리스_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
+                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_폴라리스조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+            }
+
+            
+
+            /*  프로키온  */
+            let 프로키온_산정_조각_낚시파밍 = parseGold(document.getElementById("최저가-프로키온 조각-낚시파밍").innerHTML);
+            let 프로키온_산정_조각_경매장구매 = parseGold(document.getElementById("최저가-프로키온 조각-경매장구매").innerHTML);
+            //console.log('프로키온_산정_조각_낚시파밍-->', 프로키온_산정_조각_낚시파밍);
+            //console.log('프로키온_산정_조각_경매장구매-->', 프로키온_산정_조각_경매장구매);
+
+            let 프로키온_산정_결정 = parseGold(document.getElementById("최저가-프로키온 결정").innerHTML); 
+            let 프로키온_산정_조각 = parseGold(document.getElementById("최저가-프로키온 조각").innerHTML); 
+            console.log('프로키온_산정_조각-->', 프로키온_산정_조각);
+
+            let 프로키온_낚시파밍_순수익Div = document.getElementById(`최저가-프로키온 조각-낚시파밍-순수익`); 
+            let 프로키온_낚시파밍_순수익 = 프로키온_산정_결정 - 프로키온_산정_조각_낚시파밍;
+            프로키온_낚시파밍_순수익Div.innerHTML = `${formatGold(프로키온_낚시파밍_순수익)}`;
+            프로키온_낚시파밍_순수익Div.style.color = 프로키온_낚시파밍_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('프로키온_낚시파밍_순수익-->', 프로키온_낚시파밍_순수익);
+
+            let 프로키온_경매장구매_순수익Div = document.getElementById(`최저가-프로키온 조각-경매장구매-순수익`); 
+            let 프로키온_경매장구매_순수익 = 프로키온_산정_결정 - 프로키온_산정_조각_경매장구매;
+            프로키온_경매장구매_순수익Div.innerHTML = `${formatGold(프로키온_경매장구매_순수익)}`;
+            프로키온_경매장구매_순수익Div.style.color = 프로키온_경매장구매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('프로키온_경매장구매_순수익-->', 프로키온_경매장구매_순수익);
+
+            let 프로키온_조각판매_순수익Div = document.getElementById(`최저가-프로키온 조각-조각판매-순수익`); 
+            let 프로키온_조각판매_순수익 = 프로키온_산정_결정 - 프로키온_산정_조각;
+            프로키온_조각판매_순수익Div.innerHTML = `${formatGold(프로키온_조각판매_순수익)}`;
+            프로키온_조각판매_순수익Div.style.color = 프로키온_조각판매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+
+            let 프로키온_최고금액 = Math.max(프로키온_조각판매_순수익, 프로키온_낚시파밍_순수익, 프로키온_경매장구매_순수익);
+            console.log('프로키온_최고금액-->', 프로키온_최고금액);
+
+            if(프로키온_최고금액 === 프로키온_조각판매_순수익){
+                let 프로키온_조각_판정Div = document.getElementById(`프로키온 조각-판정`); 
+                프로키온_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">조각<br>판매 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`조각판매가격-프로키온 조각`); 
+                let 최저가_프로키온조각Div = document.getElementById(`최저가-프로키온 조각`); 
+                프로키온_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_프로키온조각Div.style.backgroundColor = "#fcf2cf";
+
+            }else if(프로키온_최고금액 === 프로키온_낚시파밍_순수익){
+                let 프로키온_조각_판정Div = document.getElementById(`프로키온 조각-판정`); 
+                프로키온_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">낚시조각<br>제작 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`낚시조각제작-프로키온 조각`); 
+                let 최저가_프로키온조각_낚시파밍Div = document.getElementById(`최저가-프로키온 조각-낚시파밍`); 
+                프로키온_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_프로키온조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                
+            }else if(프로키온_최고금액 === 프로키온_경매장구매_순수익){
+                let 프로키온_조각_판정Div = document.getElementById(`프로키온 조각-판정`); 
+                프로키온_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">경매장구매<br>제작 이득</span>';
+
+                let 경매장구매제작Div = document.getElementById(`경매장구매제작-프로키온 조각`); 
+                let 최저가_프로키온조각_경매장구매Div = document.getElementById(`최저가-프로키온 조각-경매장구매`); 
+                프로키온_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
+                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_프로키온조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+            }
+
+
+            
+
+            /*  하다르  */
+            let 하다르_산정_조각_낚시파밍 = parseGold(document.getElementById("최저가-하다르 조각-낚시파밍").innerHTML);
+            let 하다르_산정_조각_경매장구매 = parseGold(document.getElementById("최저가-하다르 조각-경매장구매").innerHTML);
+            //console.log('하다르_산정_조각_낚시파밍-->', 하다르_산정_조각_낚시파밍);
+            //console.log('하다르_산정_조각_경매장구매-->', 하다르_산정_조각_경매장구매);
+
+            let 하다르_산정_결정 = parseGold(document.getElementById("최저가-하다르 결정").innerHTML); 
+            let 하다르_산정_조각 = parseGold(document.getElementById("최저가-하다르 조각").innerHTML); 
+            console.log('하다르_산정_조각-->', 하다르_산정_조각);
+
+            let 하다르_낚시파밍_순수익Div = document.getElementById(`최저가-하다르 조각-낚시파밍-순수익`); 
+            let 하다르_낚시파밍_순수익 = 하다르_산정_결정 - 하다르_산정_조각_낚시파밍;
+            하다르_낚시파밍_순수익Div.innerHTML = `${formatGold(하다르_낚시파밍_순수익)}`;
+            하다르_낚시파밍_순수익Div.style.color = 하다르_낚시파밍_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('하다르_낚시파밍_순수익-->', 하다르_낚시파밍_순수익);
+
+            let 하다르_경매장구매_순수익Div = document.getElementById(`최저가-하다르 조각-경매장구매-순수익`); 
+            let 하다르_경매장구매_순수익 = 하다르_산정_결정 - 하다르_산정_조각_경매장구매;
+            하다르_경매장구매_순수익Div.innerHTML = `${formatGold(하다르_경매장구매_순수익)}`;
+            하다르_경매장구매_순수익Div.style.color = 하다르_경매장구매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+            //console.log('하다르_경매장구매_순수익-->', 하다르_경매장구매_순수익);
+
+            let 하다르_조각판매_순수익Div = document.getElementById(`최저가-하다르 조각-조각판매-순수익`); 
+            let 하다르_조각판매_순수익 = 하다르_산정_결정 - 하다르_산정_조각;
+            하다르_조각판매_순수익Div.innerHTML = `${formatGold(하다르_조각판매_순수익)}`;
+            하다르_조각판매_순수익Div.style.color = 하다르_조각판매_순수익 >= 0 ? "cornflowerblue" : "indianred";
+
+            let 하다르_최고금액 = Math.max(하다르_조각판매_순수익, 하다르_낚시파밍_순수익, 하다르_경매장구매_순수익);
+            console.log('하다르_최고금액-->', 하다르_최고금액);
+
+            if(하다르_최고금액 === 하다르_조각판매_순수익){
+                let 하다르_조각_판정Div = document.getElementById(`하다르 조각-판정`); 
+                하다르_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">조각<br>판매 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`조각판매가격-하다르 조각`); 
+                let 최저가_하다르조각Div = document.getElementById(`최저가-하다르 조각`); 
+                하다르_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_하다르조각Div.style.backgroundColor = "#fcf2cf";
+
+            }else if(하다르_최고금액 === 하다르_낚시파밍_순수익){
+                let 하다르_조각_판정Div = document.getElementById(`하다르 조각-판정`); 
+                하다르_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">낚시조각<br>제작 이득</span>';
+
+                let 낚시조각제작Div = document.getElementById(`낚시조각제작-하다르 조각`); 
+                let 최저가_하다르조각_낚시파밍Div = document.getElementById(`최저가-하다르 조각-낚시파밍`); 
+                하다르_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
+                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_하다르조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                
+            }else if(하다르_최고금액 === 하다르_경매장구매_순수익){
+                let 하다르_조각_판정Div = document.getElementById(`하다르 조각-판정`); 
+                하다르_조각_판정Div.innerHTML = '<span style="font-size: 10pt; font-weight: bold;">경매장구매<br>제작 이득</span>';
+
+                let 경매장구매제작Div = document.getElementById(`경매장구매제작-하다르 조각`); 
+                let 최저가_하다르조각_경매장구매Div = document.getElementById(`최저가-하다르 조각-경매장구매`); 
+                하다르_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
+                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
+                최저가_하다르조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+            }
+         
+             
+
+        }
+    
+        // Gold 포맷 함수
+        function formatGold(value) {
+            value = Math.round(value); // 소수점 반올림 처리
+
+            let isNegative = value < 0; // 음수 여부 확인
+            value = Math.abs(value); // 절대값으로 변환 (계산 후 음수 적용)
+
+            if (value >= 100000000) {
+                const billion = Math.floor(value / 100000000);
+                const remainder = value % 100000000;
+                const tenThousand = Math.floor(remainder / 10000);
+                const rest = remainder % 10000;
+
+                let result = `${billion}억${tenThousand > 0 ? tenThousand + '만' : ''}${rest > 0 ? rest.toLocaleString() : ''}`;
+                return isNegative ? `-${result}` : result;
+            } else if (value >= 10000) {
+                const tenThousand = Math.floor(value / 10000);
+                const rest = value % 10000;
+
+                let result = `${tenThousand}만${rest > 0 ? rest.toLocaleString() : ''}`;
+                return isNegative ? `-${result}` : result;
+            } else {
+                return isNegative ? `-${value.toLocaleString()}` : value.toLocaleString();
+            }
+        }   
+
+
+
+        // Gold 포맷 함수 (한글->숫자)
+        function parseGold(goldString) {
+            let value = 0;
+
+            // 쉼표 제거
+            goldString = goldString.replace(/,/g, '');
+
+            // 억 단위 처리
+            let match = goldString.match(/([\d.]+)억/);
+            if (match) {
+                value += Math.round(parseFloat(match[1]) * 100000000);
+                goldString = goldString.replace(match[0], ''); // 처리한 부분 제거
+            }
+
+            // 만 단위 처리
+            match = goldString.match(/([\d.]+)만/);
+            if (match) {
+                value += Math.round(parseFloat(match[1]) * 10000);
+                goldString = goldString.replace(match[0], ''); // 처리한 부분 제거
+            }
+
+            // 나머지 숫자 처리 (억, 만이 없는 경우)
+            match = goldString.match(/([\d.]+)/); // 숫자만 추출
+            if (match) {
+                value += Math.round(parseFloat(match[1]));
+            }
+
+            return value;
+        }   
+
+         // 모든 툴팁 활성화
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+
+</body>
+
+</html>
