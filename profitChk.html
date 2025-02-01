@@ -98,10 +98,7 @@
             <!-- Main Content -->
             <div id="content">
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                </nav>
+               
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -111,12 +108,9 @@
                     <h1 class="h3 mb-2 text-gray-800"></h1>
                     <p class="mb-4"></p>
 
-                    <!-- Content Row -->
                     <div class="row">
-
-                        <div class="col-xl-12 col-lg-7">
-
-                            <!-- 부제목1 -->
+                        <div class="col-lg-4">
+                            <!-- Default Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">조각→결정</h6>
@@ -140,31 +134,17 @@
                                         <table style="font-size: 10pt;">
                                             <tr>
                                                 <th rowspan="2" style="width: 120px; color: #f341b2; font-size: 15pt;">리겔</th>
-                                                <th id="조각판매가격-리겔 조각" style="width: 130px; font-size: 11pt; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="조각판매가격-리겔 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
                                                 <th id="낚시조각제작-리겔 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
                                                 <th id="경매장구매제작-리겔 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
-
-                                                <th rowspan="3" style="width: 10px;"></th>
-
-                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">아크투루스</th>
-                                                <th id="조각판매가격-아크투루스 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
-                                                <th id="낚시조각제작-아크투루스 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
-                                                <th id="경매장구매제작-아크투루스 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
                                                 <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 리겔 -->
                                                 <td id="최저가-리겔 조각">경매장금액</td>
-                                                <td id="최저가-리겔 조각-낚시파밍"  data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
+                                                <td id="최저가-리겔 조각-낚시파밍" data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
                                                 <td id="최저가-리겔 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
                                                 <td rowspan="2" id="최저가-리겔 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
-
-                                                <!-- 아크투루스 -->
-                                                <td id="최저가-아크투루스 조각">경매장금액</td>
-                                                <td id="최저가-아크투루스 조각-낚시파밍"  data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
-                                                <td id="최저가-아크투루스 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
-                                                <td rowspan="2" id="최저가-아크투루스 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
                                             </tr>
                                             <tr>
                                                 <!-- 리겔 -->
@@ -172,7 +152,27 @@
                                                 <td id="최저가-리겔 조각-조각판매-순수익">순수익금액</td>
                                                 <td id="최저가-리겔 조각-낚시파밍-순수익" data-bs-toggle="tooltip" title="결정 경매장가 - 낚시조각제작가"></td>
                                                 <td id="최저가-리겔 조각-경매장구매-순수익" data-bs-toggle="tooltip" title="결정 경매장가 - 경매장구매제작가"></td>
+                                            </tr>
+                                        </table>
 
+                                        <br>
+
+                                        <table style="font-size: 10pt;">
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">아크투루스</th>
+                                                <th id="조각판매가격-아크투루스 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-아크투루스 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-아크투루스 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 아크투루스 -->
+                                                <td id="최저가-아크투루스 조각">경매장금액</td>
+                                                <td id="최저가-아크투루스 조각-낚시파밍" data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
+                                                <td id="최저가-아크투루스 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
+                                                <td rowspan="2" id="최저가-아크투루스 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
+                                            </tr>
+                                            <tr>
                                                 <!-- 아크투루스 -->
                                                 <td id="아크투루스 조각-판정"></td>
                                                 <td id="최저가-아크투루스 조각-조각판매-순수익">순수익금액</td>
@@ -180,23 +180,15 @@
                                                 <td id="최저가-아크투루스 조각-경매장구매-순수익" data-bs-toggle="tooltip" title="결정 경매장가 - 경매장구매제작가"></td>
                                             </tr>
                                         </table>
-                                         
+                                        
                                         <br>
-
+                                         
                                         <table style="font-size: 10pt;">
                                             <tr>
                                                 <th rowspan="2" style="width: 120px; color: #4d67e7; font-size: 15pt;">알타이르</th>
                                                 <th id="조각판매가격-알타이르 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
                                                 <th id="낚시조각제작-알타이르 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
                                                 <th id="경매장구매제작-알타이르 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
-
-                                                <th rowspan="3" style="width: 10px;"></th>
-
-                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">폴라리스</th>
-                                                <th id="조각판매가격-폴라리스 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
-                                                <th id="낚시조각제작-폴라리스 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
-                                                <th id="경매장구매제작-폴라리스 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
                                                 <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
                                             </tr>
                                             <tr>
@@ -205,12 +197,6 @@
                                                 <td id="최저가-알타이르 조각-낚시파밍" data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
                                                 <td id="최저가-알타이르 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
                                                 <td rowspan="2" id="최저가-알타이르 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
-                                                
-                                                <!-- 폴라리스 -->
-                                                <td id="최저가-폴라리스 조각">경매장금액</td>
-                                                <td id="최저가-폴라리스 조각-낚시파밍" data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
-                                                <td id="최저가-폴라리스 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
-                                                <td rowspan="2" id="최저가-폴라리스 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
                                             </tr>
                                             <tr>
                                                 <!-- 알타이르 -->
@@ -218,7 +204,27 @@
                                                 <td id="최저가-알타이르 조각-조각판매-순수익">순수익금액</td>
                                                 <td id="최저가-알타이르 조각-낚시파밍-순수익" data-bs-toggle="tooltip" title="결정 경매장가 - 낚시조각제작가"></td>
                                                 <td id="최저가-알타이르 조각-경매장구매-순수익" data-bs-toggle="tooltip" title="결정 경매장가 - 경매장구매제작가"></td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <br>
 
+                                        <table style="font-size: 10pt;">
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">폴라리스</th>
+                                                <th id="조각판매가격-폴라리스 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-폴라리스 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-폴라리스 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 폴라리스 -->
+                                                <td id="최저가-폴라리스 조각">경매장금액</td>
+                                                <td id="최저가-폴라리스 조각-낚시파밍" data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
+                                                <td id="최저가-폴라리스 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
+                                                <td rowspan="2" id="최저가-폴라리스 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
+                                            </tr>
+                                            <tr>
                                                 <!-- 폴라리스 -->
                                                 <td id="폴라리스 조각-판정"></td>
                                                 <td id="최저가-폴라리스 조각-조각판매-순수익">순수익금액</td>
@@ -236,14 +242,6 @@
                                                 <th id="낚시조각제작-카노푸스 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
                                                 <th id="경매장구매제작-카노푸스 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
                                                 <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
-
-                                                <th rowspan="3" style="width: 10px;"></th>
-
-                                                <th rowspan="2" style="width: 120px; color: #f39538; font-size: 15pt;">프로키온</th>
-                                                <th id="조각판매가격-프로키온 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
-                                                <th id="낚시조각제작-프로키온 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
-                                                <th id="경매장구매제작-프로키온 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 카노푸스 -->
@@ -251,12 +249,6 @@
                                                 <td id="최저가-카노푸스 조각-낚시파밍" data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
                                                 <td id="최저가-카노푸스 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
                                                 <td rowspan="2" id="최저가-카노푸스 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
-                                                
-                                                <!-- 프로키온 -->
-                                                <td id="최저가-프로키온 조각">경매장금액</td>
-                                                <td id="최저가-프로키온 조각-낚시파밍" data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
-                                                <td id="최저가-프로키온 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
-                                                <td rowspan="2" id="최저가-프로키온 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
                                             </tr>
                                             <tr>
                                                 <!-- 카노푸스 -->
@@ -264,7 +256,27 @@
                                                 <td id="최저가-카노푸스 조각-조각판매-순수익">순수익금액</td>
                                                 <td id="최저가-카노푸스 조각-낚시파밍-순수익" data-bs-toggle="tooltip" title="결정 경매장가 - 낚시조각제작가"></td>
                                                 <td id="최저가-카노푸스 조각-경매장구매-순수익" data-bs-toggle="tooltip" title="결정 경매장가 - 경매장구매제작가"></td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <br>
 
+                                        <table style="font-size: 10pt;">
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; color: #f39538; font-size: 15pt;">프로키온</th>
+                                                <th id="조각판매가격-프로키온 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-프로키온 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-프로키온 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 프로키온 -->
+                                                <td id="최저가-프로키온 조각">경매장금액</td>
+                                                <td id="최저가-프로키온 조각-낚시파밍" data-bs-toggle="tooltip" title="물이든병1+발화석2">제작금액</td>
+                                                <td id="최저가-프로키온 조각-경매장구매" data-bs-toggle="tooltip" title="(경매장조각*15)+물이든병1+발화석2">제작금액</td>
+                                                <td rowspan="2" id="최저가-프로키온 결정" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
+                                            </tr>
+                                            <tr>
                                                 <!-- 프로키온 -->
                                                 <td id="프로키온 조각-판정"></td>
                                                 <td id="최저가-프로키온 조각-조각판매-순수익">순수익금액</td>
@@ -272,7 +284,7 @@
                                                 <td id="최저가-프로키온 조각-경매장구매-순수익" data-bs-toggle="tooltip" title="결정 경매장가 - 경매장구매제작가"></td>
                                             </tr>
                                         </table>
-
+                                        
                                         <br>
 
                                         <table style="font-size: 10pt;">
@@ -300,12 +312,11 @@
                                         </table>
 
                                     </div>
-                                     
                                 </div>
                             </div>
-
-
-                            <!-- 완전체 이득&손해 확인 -->
+                        </div>
+                        <div class="col-lg-4">
+                            <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">완전체</h6>
@@ -318,28 +329,14 @@
                                                 <th id="결정판매가격-리겔 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
                                                 <th id="낚시결정제작-리겔 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
                                                 <th id="경매장구매제작-리겔 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt; font-size: 11pt;">완전체 경매장가</th>
-                                        
-                                                <th rowspan="3" style="width: 10px;"></th>
-                                        
-                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">아크투루스</th>
-                                                <th id="결정판매가격-아크투루스 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
-                                                <th id="낚시결정제작-아크투루스 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
-                                                <th id="경매장구매제작-아크투루스 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
                                                 <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 리겔 -->
                                                 <td id="최저가-리겔 결정-8">경매장금액</td>
-                                                <td id="최저가-리겔 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 스타 사파이어1 + 폴룩스50">제작금액</td>
-                                                <td id="최저가-리겔 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 스타 사파이어1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-리겔 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-리겔 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
                                                 <td rowspan="2" id="최저가-리겔-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
-                                        
-                                                <!-- 아크투루스 -->
-                                                <td id="최저가-아크투루스 결정-8">경매장금액</td>
-                                                <td id="최저가-아크투루스 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 스피넬1 + 폴룩스50">제작금액</td>
-                                                <td id="최저가-아크투루스 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 스피넬1 + 폴룩스50">제작금액</td>
-                                                <td rowspan="2" id="최저가-아크투루스-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
                                             </tr>
                                             <tr>
                                                 <!-- 리겔 -->
@@ -347,7 +344,27 @@
                                                 <td id="최저가-리겔 결정-결정판매-순수익">순수익금액</td>
                                                 <td id="최저가-리겔 결정-낚시파밍-순수익" data-bs-toggle="tooltip" title="완전체 경매장가 - 낚시결정제작가"></td>
                                                 <td id="최저가-리겔 결정-경매장구매-순수익" data-bs-toggle="tooltip" title="완전체 경매장가 - 경매장구매제작가"></td>
+                                            </tr>
+                                        </table>
                                         
+                                        <br>
+                                        
+                                        <table style="font-size: 10pt;">
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">아크투루스</th>
+                                                <th id="결정판매가격-아크투루스 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-아크투루스 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-아크투루스 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 아크투루스 -->
+                                                <td id="최저가-아크투루스 결정-8">경매장금액</td>
+                                                <td id="최저가-아크투루스 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-아크투루스 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td rowspan="2" id="최저가-아크투루스-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
+                                            </tr>
+                                            <tr>
                                                 <!-- 아크투루스 -->
                                                 <td id="아크투루스 결정-판정"></td>
                                                 <td id="최저가-아크투루스 결정-결정판매-순수익">순수익금액</td>
@@ -355,7 +372,7 @@
                                                 <td id="최저가-아크투루스 결정-경매장구매-순수익" data-bs-toggle="tooltip" title="완전체 경매장가 - 경매장구매제작가"></td>
                                             </tr>
                                         </table>
-
+                                        
                                         <br>
 
                                         <table style="font-size: 10pt;">
@@ -365,27 +382,13 @@
                                                 <th id="낚시결정제작-알타이르 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
                                                 <th id="경매장구매제작-알타이르 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
                                                 <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
-                                        
-                                                <th rowspan="3" style="width: 10px;"></th>
-                                        
-                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">폴라리스</th>
-                                                <th id="결정판매가격-폴라리스 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
-                                                <th id="낚시결정제작-폴라리스 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
-                                                <th id="경매장구매제작-폴라리스 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 알타이르 -->
                                                 <td id="최저가-알타이르 결정-8">경매장금액</td>
-                                                <td id="최저가-알타이르 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 가넷1 + 폴룩스50">제작금액</td>
-                                                <td id="최저가-알타이르 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 가넷1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-알타이르 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-알타이르 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
                                                 <td rowspan="2" id="최저가-알타이르-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
-                                        
-                                                <!-- 폴라리스 -->
-                                                <td id="최저가-폴라리스 결정-8">경매장금액</td>
-                                                <td id="최저가-폴라리스 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 재스퍼1 + 폴룩스50">제작금액</td>
-                                                <td id="최저가-폴라리스 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 재스퍼1 + 폴룩스50">제작금액</td>
-                                                <td rowspan="2" id="최저가-폴라리스-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
                                             </tr>
                                             <tr>
                                                 <!-- 알타이르 -->
@@ -393,7 +396,27 @@
                                                 <td id="최저가-알타이르 결정-결정판매-순수익">순수익금액</td>
                                                 <td id="최저가-알타이르 결정-낚시파밍-순수익" data-bs-toggle="tooltip" title="완전체 경매장가 - 낚시결정제작가"></td>
                                                 <td id="최저가-알타이르 결정-경매장구매-순수익" data-bs-toggle="tooltip" title="완전체 경매장가 - 경매장구매제작가"></td>
-                                        
+                                            </tr>
+                                        </table>
+
+                                        <br>
+
+                                        <table style="font-size: 10pt;">
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">폴라리스</th>
+                                                <th id="결정판매가격-폴라리스 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-폴라리스 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-폴라리스 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 폴라리스 -->
+                                                <td id="최저가-폴라리스 결정-8">경매장금액</td>
+                                                <td id="최저가-폴라리스 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-폴라리스 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td rowspan="2" id="최저가-폴라리스-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
+                                            </tr>
+                                            <tr>
                                                 <!-- 폴라리스 -->
                                                 <td id="폴라리스 결정-판정"></td>
                                                 <td id="최저가-폴라리스 결정-결정판매-순수익">순수익금액</td>
@@ -411,27 +434,13 @@
                                                 <th id="낚시결정제작-카노푸스 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
                                                 <th id="경매장구매제작-카노푸스 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
                                                 <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
-                                        
-                                                <th rowspan="3" style="width: 10px;"></th>
-                                        
-                                                <th rowspan="2" style="width: 120px; color: #f39538; font-size: 15pt;">프로키온</th>
-                                                <th id="결정판매가격-프로키온 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
-                                                <th id="낚시결정제작-프로키온 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
-                                                <th id="경매장구매제작-프로키온 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 카노푸스 -->
                                                 <td id="최저가-카노푸스 결정-8">경매장금액</td>
-                                                <td id="최저가-카노푸스 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 에메랄드1 + 폴룩스50">제작금액</td>
-                                                <td id="최저가-카노푸스 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 에메랄드1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-카노푸스 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-카노푸스 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
                                                 <td rowspan="2" id="최저가-카노푸스-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
-                                        
-                                                <!-- 프로키온 -->
-                                                <td id="최저가-프로키온 결정-8">경매장금액</td>
-                                                <td id="최저가-프로키온 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 아쿠아마린1 + 폴룩스50">제작금액</td>
-                                                <td id="최저가-프로키온 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 아쿠아마린1 + 폴룩스50">제작금액</td>
-                                                <td rowspan="2" id="최저가-프로키온-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
                                             </tr>
                                             <tr>
                                                 <!-- 카노푸스 -->
@@ -439,7 +448,27 @@
                                                 <td id="최저가-카노푸스 결정-결정판매-순수익">순수익금액</td>
                                                 <td id="최저가-카노푸스 결정-낚시파밍-순수익" data-bs-toggle="tooltip" title="완전체 경매장가 - 낚시결정제작가"></td>
                                                 <td id="최저가-카노푸스 결정-경매장구매-순수익" data-bs-toggle="tooltip" title="완전체 경매장가 - 경매장구매제작가"></td>
-                                        
+                                            </tr>
+                                        </table>
+
+                                        <br>
+
+                                        <table style="font-size: 10pt;">
+                                            <tr>
+                                                <th rowspan="2" style="width: 120px; color: #f39538; font-size: 15pt;">프로키온</th>
+                                                <th id="결정판매가격-프로키온 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-프로키온 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-프로키온 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
+                                            </tr>
+                                            <tr>
+                                                <!-- 프로키온 -->
+                                                <td id="최저가-프로키온 결정-8">경매장금액</td>
+                                                <td id="최저가-프로키온 결정-낚시파밍" data-bs-toggle="tooltip" title="물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td id="최저가-프로키온 결정-경매장구매" data-bs-toggle="tooltip" title="(경매장결정*8) + 물이든병1 + 발화석2 +밀랍1 + 루비1 + 폴룩스50">제작금액</td>
+                                                <td rowspan="2" id="최저가-프로키온-완전체" data-bs-toggle="tooltip" title="경매장 최저가">매물없음<br>(계산불가)</td>
+                                            </tr>
+                                            <tr>
                                                 <!-- 프로키온 -->
                                                 <td id="프로키온 결정-판정"></td>
                                                 <td id="최저가-프로키온 결정-결정판매-순수익">순수익금액</td>
@@ -476,20 +505,13 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-
-                        
-                        <!-- Donut Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            여기부터는 수정중 <br>
+                        <div class="col-lg-4">
+                            <!-- Default Card Example -->
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">허름한 카드 이득&손해 확인</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">허름한 카드 </h6>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="조각_결정_테이블">
                                         <table style="font-size: 10pt;">
@@ -537,21 +559,14 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <hr>
-                                    Styling for the donut chart can be found in the
-                                    <code>/js/demo/chart-pie-demo.js</code> file.
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Donut Chart -->
-                        <div class="col-xl-4 col-lg-5">
+                            <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">일반 카드 이득&손해 확인</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">일반 카드 </h6>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="조각_결정_테이블">
                                         <table style="font-size: 10pt;">
@@ -599,21 +614,14 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <hr>
-                                    Styling for the donut chart can be found in the
-                                    <code>/js/demo/chart-pie-demo.js</code> file.
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Donut Chart -->
-                        <div class="col-xl-4 col-lg-5">
+                            <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">운명의 카드 이득&손해 확인</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">운명의 카드 </h6>
                                 </div>
-                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="조각_결정_테이블">
                                         <table style="font-size: 10pt;">
@@ -661,14 +669,12 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <hr>
-                                    Styling for the donut chart can be found in the
-                                    <code>/js/demo/chart-pie-demo.js</code> file.
                                 </div>
                             </div>
                         </div>
-                
-
+                    </div>
+                    <!-- Content Row -->
+               
                 </div>
                 <!-- /.container-fluid -->
 
