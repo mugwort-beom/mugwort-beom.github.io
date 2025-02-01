@@ -509,7 +509,11 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
+
+                    굵은실뭉치 1개값<div id="최저가-굵은 실뭉치">굵은 실뭉치 금액</div>
+                    최고급가죽끈 1개값<div id="최저가-최고급 가죽끈">최고급 가죽끈 금액</div>
+                    질긴 실 1개값<div id="최저가-질긴 실">질긴 실 금액</div>
                     <div class="row">
                         <div class="col-lg-4">
                             <!-- Default Card Example -->
@@ -517,50 +521,44 @@
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">허름한 카드</h6>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="justify-items: center;">
                                     <div class="조각_결정_테이블">
-                                        <table style="font-size: 10pt;">
+                                        <table style="font-size: 11pt;">
                                             <tr>
-                                                <th rowspan="2"></th>
-                                                <th colspan="5">허름한 카드</th>
+                                                <th rowspan="2"></th> 
                                             </tr>
                                             <tr>
-                                                <th>수급조작 제작</th>
-                                                <th>조각 구입 후 제작 시</th>
-                                                <th>경매장가</th>
-                                                <th colspan="2">경매장 조각 제작시</th>
+                                                <th style="width: 105px;" data-bs-toggle="tooltip" title="종이10">자체수급<br><span style="font-size: 9pt;"></span></th>
+                                                <th style="width: 105px;" data-bs-toggle="tooltip" title="(경매장 조각*8)+(굵은 실*10)+종이">경매장구매<br><span style="font-size: 9pt;">(전부포함)</span></th>
+                                                <th style="width: 105px;" data-bs-toggle="tooltip" title="경매장 최저가">경매장가</th>
                                             </tr>
                                             <tr>
-                                                <th style="color: #f39538;">검</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #f39538; font-size: 13pt;">검</th> 
+                                                <td id="최저가-허름한 검 카드-낚시파밍">1</td>
+                                                <td id="최저가-허름한 검 카드-경매장구매">2</td>
+                                                <td id="최저가-허름한 검 카드">3</td>
+                                                
                                             </tr>
                                             <tr>
-                                                <th style="color: #a474e1;">동전</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #a474e1; font-size: 13pt;">동전</th> 
+                                                <td id="최저가-허름한 동전 카드-낚시파밍">4</td>
+                                                <td id="최저가-허름한 동전 카드-경매장구매">5</td>
+                                                <td id="최저가-허름한 동전 카드">6</td>
+                                                
                                             </tr>
                                             <tr>
-                                                <th style="color:#f341b2;">잔</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color:#f341b2; font-size: 13pt;">잔</th> 
+                                                <td id="최저가-허름한 잔 카드-낚시파밍">7</td>
+                                                <td id="최저가-허름한 잔 카드-경매장구매">8</td>
+                                                <td id="최저가-허름한 잔 카드">9</td>
+                                               
                                             </tr>
                                             <tr>
-                                                <th style="color: #4d67e7;">지팡이</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #4d67e7; font-size: 13pt;">지팡이</th> 
+                                                <td id="최저가-허름한 지팡이 카드-낚시파밍">10</td>
+                                                <td id="최저가-허름한 지팡이 카드-경매장구매">11</td>
+                                                <td id="최저가-허름한 지팡이 카드">12</td>
+                                               
                                             </tr>
                                         </table>
                                     </div>
@@ -573,50 +571,45 @@
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">일반 카드</h6>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="justify-items: center;">
                                     <div class="조각_결정_테이블">
-                                        <table style="font-size: 10pt;">
+                                        <table style="font-size: 11pt;">
                                             <tr>
-                                                <th rowspan="2"></th>
-                                                <th colspan="5">일반 카드</th>
+                                                <th rowspan="2"></th> 
                                             </tr>
                                             <tr>
-                                                <th>수급조작 제작</th>
-                                                <th>조각 구입 후 제작 시</th>
-                                                <th>경매장가</th>
-                                                <th colspan="2">경매장 조각 제작시</th>
+                                                <th style="width: 105px;" data-bs-toggle="tooltip" title="조각 부재료값 + 결정 부재료값">자체수급<br><span style="font-size: 9pt;">(조각부터)</span></th>
+                                                <th style="width: 105px;" data-bs-toggle="tooltip" title="결정 부재료값만">자체수급<br><span style="font-size: 9pt;">(결정부터)</span></th>
+                                                <th style="width: 105px;" data-bs-toggle="tooltip" title="(결정*5) + (최고급 가죽끈*10) + (종이*10)">경매장구매<br><span style="font-size: 9pt;">(전부포함)</span></th>
+                                                <th style="width: 105px;" data-bs-toggle="tooltip" title="경매장 최저가">경매장가</th>
                                             </tr>
                                             <tr>
-                                                <th style="color: #f39538;">검</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #f39538; font-size: 13pt;">검</th> 
+                                                <td id="최저가-검 카드-낚시파밍-조각부터">1</td>
+                                                <td id="최저가-검 카드-낚시파밍-결정부터">2</td>
+                                                <td id="최저가-검 카드-경매장구매">3</td>
+                                                <td id="최저가-검 카드">3</td> 
                                             </tr>
                                             <tr>
-                                                <th style="color: #a474e1;">동전</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #a474e1; font-size: 13pt;">동전</th> 
+                                                <td id="최저가-동전 카드-낚시파밍-조각부터">4</td>
+                                                <td id="최저가-동전 카드-낚시파밍-결정부터">5</td>
+                                                <td id="최저가-동전 카드-경매장구매">6</td>
+                                                <td id="최저가-동전 카드">6</td>
                                             </tr>
                                             <tr>
-                                                <th style="color:#f341b2;">잔</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color:#f341b2; font-size: 13pt;">잔</th> 
+                                                <td id="최저가-잔 카드-낚시파밍-조각부터">7</td>
+                                                <td id="최저가-잔 카드-낚시파밍-결정부터">8</td>
+                                                <td id="최저가-잔 카드-경매장구매">9</td>
+                                                <td id="최저가-잔 카드">9</td>
                                             </tr>
                                             <tr>
-                                                <th style="color: #4d67e7;">지팡이</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #4d67e7; font-size: 13pt;">지팡이</th> 
+                                                <td id="최저가-지팡이 카드-낚시파밍-조각부터">10</td>
+                                                <td id="최저가-지팡이 카드-낚시파밍-결정부터">11</td>
+                                                <td id="최저가-지팡이 카드-경매장구매">12</td>
+                                                <td id="최저가-지팡이 카드">12</td>
                                             </tr>
                                         </table>
                                     </div>
@@ -629,50 +622,46 @@
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">운명의 카드 </h6>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="justify-items: center;">
                                     <div class="조각_결정_테이블">
-                                        <table style="font-size: 10pt;">
+                                        <table style="font-size: 11pt;">
                                             <tr>
-                                                <th rowspan="2"></th>
-                                                <th colspan="5">운명의 카드</th>
+                                                <th rowspan="2"></th> 
                                             </tr>
                                             <tr>
-                                                <th>수급조작 제작</th>
-                                                <th>조각 구입 후 제작 시</th>
-                                                <th>경매장가</th>
-                                                <th colspan="2">경매장 조각 제작시</th>
+                                                <th style="width: 105px;"  data-bs-toggle="tooltip" title="(조각 부재료값*3) + (결정 부재료값*3) + 하다르 결정 부재료값 + (질긴 실*10) + (플룩스*100) + (종이*10)">자체수급<br><span style="font-size: 9pt;">(조각부터)</span></th>
+                                                <th style="width: 105px;"  data-bs-toggle="tooltip" title="(결정 부재료값*3) + 하다르 결정 부재료값 + (질긴 실*10) + (플룩스*100) + (종이*10)">자체수급<br><span style="font-size: 9pt;">(결정부터)</span></th>
+                                                <th style="width: 105px;"  data-bs-toggle="tooltip" title="(완전체*3) + (질긴 실*10) + (플룩스*100) + (종이*10)">경매장구매<br><span style="font-size: 9pt;">(전부포함)</span></th>
+                                                <th style="width: 105px;"  data-bs-toggle="tooltip" title="경매장 최저가">경매장가</th>
                                             </tr>
                                             <tr>
-                                                <th style="color: #f39538;">검</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #f39538; font-size: 13pt;">검</th>
+                                                <td id="최저가-운명의 검 카드-자체수급-조각부터">1</td>
+                                                <td id="최저가-운명의 검 카드-자체수급-결정부터">2</td>
+                                                <td id="최저가-운명의 검 카드-경매장구매">3</td>
+                                                <td id="최저가-운명의 검 카드">4</td> 
                                             </tr>
                                             <tr>
-                                                <th style="color: #a474e1;">동전</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #a474e1; font-size: 13pt;">동전</th>
+                                                <td id="최저가-운명의 동전 카드-자체수급-조각부터">1</td>
+                                                <td id="최저가-운명의 동전 카드-자체수급-결정부터">2</td>
+                                                <td id="최저가-운명의 동전 카드-경매장구매">3</td>
+                                                <td id="최저가-운명의 동전 카드">8</td> 
                                             </tr>
                                             <tr>
-                                                <th style="color:#f341b2;">잔</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color:#f341b2; font-size: 13pt;">잔</th>
+                                                <td id="최저가-운명의 잔 카드-자체수급-조각부터">1</td>
+                                                <td id="최저가-운명의 잔 카드-자체수급-결정부터">2</td>
+                                                <td id="최저가-운명의 잔 카드-경매장구매">3</td>
+                                                <td id="최저가-운명의 잔 카드">12</td>
+                                               
                                             </tr>
                                             <tr>
-                                                <th style="color: #4d67e7;">지팡이</th>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
+                                                <th style="color: #4d67e7; font-size: 13pt;">지팡이</th>
+                                                <td id="최저가-운명의 지팡이 카드-자체수급-조각부터">1</td>
+                                                <td id="최저가-운명의 지팡이 카드-자체수급-결정부터">2</td>
+                                                <td id="최저가-운명의 지팡이 카드-경매장구매">3</td>
+                                                <td id="최저가-운명의 지팡이 카드">16</td> 
                                             </tr>
                                         </table>
                                     </div>
@@ -692,7 +681,8 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Beom Eating Mugwort</span>
+                        <span style="margin-bottom: 30px;">Copyright &copy; 쑥먹은범</span><br>
+                        <span>도와주신 분들에게 감사한 마음을 담아 &#x2764;감자&모켠&태벽&킬브리안&#x2764;</span>
                     </div>
                 </div>
             </footer>
@@ -859,6 +849,66 @@
                     }else if(cheapestItem.item_name == '루비'){
                         auction루비 = cheapestItem.auction_price_per_unit;
                         piece.innerHTML = `${formatGold(auction루비)}`;
+
+                    }else if(cheapestItem.item_name == '허름한 검 카드'){
+                        auction허름검 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction허름검)}`;
+
+                    }else if(cheapestItem.item_name == '허름한 동전 카드'){
+                        auction허름동전 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction허름동전)}`;
+
+                    }else if(cheapestItem.item_name == '허름한 잔 카드'){
+                        auction허름잔 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction허름잔)}`;
+
+                    }else if(cheapestItem.item_name == '허름한 지팡이 카드'){
+                        auction허름지팡이 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction허름지팡이)}`;
+
+                    }else if(cheapestItem.item_name == '검 카드'){
+                        auction일반검 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction일반검)}`;
+
+                    }else if(cheapestItem.item_name == '동전 카드'){
+                        auction일반동전 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction일반동전)}`;
+
+                    }else if(cheapestItem.item_name == '잔 카드'){
+                        auction일반잔 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction일반잔)}`;
+
+                    }else if(cheapestItem.item_name == '지팡이 카드'){
+                        auction일반지팡이 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction일반지팡이)}`;
+
+                    }else if(cheapestItem.item_name == '운명의 검 카드'){
+                        auction운명검 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction운명검)}`;
+
+                    }else if(cheapestItem.item_name == '운명의 동전 카드'){
+                        auction운명동전 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction운명동전)}`;
+
+                    }else if(cheapestItem.item_name == '운명의 잔 카드'){
+                        auction운명잔 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction운명잔)}`;
+
+                    }else if(cheapestItem.item_name == '운명의 지팡이 카드'){
+                        auction운명지팡이 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction운명지팡이)}`;
+
+                    }else if(cheapestItem.item_name == '굵은 실뭉치'){
+                        auction굵은실뭉치 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction굵은실뭉치)}`;
+
+                    }else if(cheapestItem.item_name == '최고급 가죽끈'){
+                        auction최고급가죽끈 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction최고급가죽끈)}`;
+
+                    }else if(cheapestItem.item_name == '질긴 실'){
+                        auction질긴실 = cheapestItem.auction_price_per_unit;
+                        piece.innerHTML = `${formatGold(auction질긴실)}`;
 
                     }
 
@@ -1982,8 +2032,171 @@
                 낚시결정제작Div.style.backgroundColor = "#f8f9fc";
                 최저가_하다르결정Div.style.backgroundColor = "#f8f9fc";
             }
+
+
+            /* 허름한 카드 */
+            // 굵은 실뭉치
+            let 최저가_굵은실뭉치 =  parseGold(document.getElementById("최저가-굵은 실뭉치").innerHTML); 
+
+            // 허름한 카드 자체수급 (최저가-허름한 검 카드-낚시파밍)
+            let 허름_자체수급Price = 10; // 종이 10장 금액
+
+            let 허름_검_자체수급Div = document.getElementById(`최저가-허름한 검 카드-낚시파밍`); 
+            허름_검_자체수급Div.innerHTML= `${formatGold(허름_자체수급Price)}`;
+
+            let 허름_동전_자체수급Div = document.getElementById(`최저가-허름한 동전 카드-낚시파밍`); 
+            허름_동전_자체수급Div.innerHTML= `${formatGold(허름_자체수급Price)}`;
+
+            let 허름_잔_자체수급Div = document.getElementById(`최저가-허름한 잔 카드-낚시파밍`); 
+            허름_잔_자체수급Div.innerHTML= `${formatGold(허름_자체수급Price)}`;
+
+            let 허름_지팡이_자체수급Div = document.getElementById(`최저가-허름한 지팡이 카드-낚시파밍`); 
+            허름_지팡이_자체수급Div.innerHTML= `${formatGold(허름_자체수급Price)}`;
+
+            // 허름한 카드 경매장구매 (최저가-허름한 검 카드-경매장구매)
+            let 프로키온조각Price =  parseGold(document.getElementById("최저가-프로키온 조각-경매장구매").innerHTML);
+            let 허름_검_경매장구매Price = 프로키온조각Price + (최저가_굵은실뭉치*10) + 10;
+            let 허름_검_경매장구매Div = document.getElementById(`최저가-허름한 검 카드-경매장구매`); 
+            허름_검_경매장구매Div.innerHTML= `${formatGold(허름_검_경매장구매Price)}`;
+
+            // 허름한 동전 경매장구매 (최저가-허름한 동전 카드-경매장구매)
+            let 카노푸스Price =  parseGold(document.getElementById("최저가-카노푸스 조각-경매장구매").innerHTML);
+            let 허름_동전_경매장구매Price = 카노푸스Price + (최저가_굵은실뭉치*10) + 10;
+            let 허름_동전_경매장구매Div = document.getElementById(`최저가-허름한 동전 카드-경매장구매`); 
+            허름_동전_경매장구매Div.innerHTML= `${formatGold(허름_동전_경매장구매Price)}`;
+
+            // 허름한 잔 경매장구매 (최저가-허름한 잔 카드-경매장구매)
+            let 리겔Price =  parseGold(document.getElementById("최저가-리겔 조각-경매장구매").innerHTML);
+            let 허름_잔_경매장구매Price = 리겔Price + (최저가_굵은실뭉치*10) + 10;
+            let 허름_잔_경매장구매Div = document.getElementById(`최저가-허름한 잔 카드-경매장구매`); 
+            허름_잔_경매장구매Div.innerHTML= `${formatGold(허름_잔_경매장구매Price)}`;
+
+            // 허름한 지팡이 경매장구매 (최저가-허름한 지팡이 카드-경매장구매)
+            let 알타이르Price =  parseGold(document.getElementById("최저가-알타이르 조각-경매장구매").innerHTML);
+            let 허름_지팡이_경매장구매Price = 알타이르Price + (최저가_굵은실뭉치*10) + 10;
+            let 허름_지팡이_경매장구매Div = document.getElementById(`최저가-허름한 지팡이 카드-경매장구매`); 
+            허름_지팡이_경매장구매Div.innerHTML= `${formatGold(허름_지팡이_경매장구매Price)}`;
+
+
+            /* 일반 카드 */
+            // 최고급 가죽끈
+            let 최저가_최고급가죽끈 =  parseGold(document.getElementById("최저가-최고급 가죽끈").innerHTML); 
+            
+            // 일반 카드 자체수급 (최저가-검 카드-낚시파밍)
+            let 일반_조각_자체수급Price = 2104 + 물이든병_금액 + (최저가_최고급가죽끈*10) + 10; // 조각부재료(발화석2104, 물이든병) + 최고급가죽끈10개 + 종이 10장 금액10
+            let 일반_결정_자체수급Price = (최저가_최고급가죽끈*10) + 10; // 최고급가죽끈10개 + 종이 10장 금액
+
+            // 일반 카드 자체수급_조각부터
+            let 일반_검_조각부터_자체수급Div = document.getElementById(`최저가-검 카드-낚시파밍-조각부터`); 
+            일반_검_조각부터_자체수급Div.innerHTML= `${formatGold(일반_조각_자체수급Price)}`;
+
+            let 일반_동전_조각부터_자체수급Div = document.getElementById(`최저가-동전 카드-낚시파밍-조각부터`); 
+            일반_동전_조각부터_자체수급Div.innerHTML= `${formatGold(일반_조각_자체수급Price)}`;
+
+            let 일반_잔_조각부터_자체수급Div = document.getElementById(`최저가-잔 카드-낚시파밍-조각부터`); 
+            일반_잔_조각부터_자체수급Div.innerHTML= `${formatGold(일반_조각_자체수급Price)}`;
+
+            let 일반_지팡이_조각부터_자체수급Div = document.getElementById(`최저가-지팡이 카드-낚시파밍-조각부터`); 
+            일반_지팡이_조각부터_자체수급Div.innerHTML= `${formatGold(일반_조각_자체수급Price)}`;
+
+            // 일반 카드 자체수급_결정부터
+            let 일반_검_결정부터_자체수급Div = document.getElementById(`최저가-검 카드-낚시파밍-결정부터`); 
+            일반_검_결정부터_자체수급Div.innerHTML= `${formatGold(일반_결정_자체수급Price)}`;
+
+            let 일반_동전_결정부터_자체수급Div = document.getElementById(`최저가-동전 카드-낚시파밍-결정부터`); 
+            일반_동전_결정부터_자체수급Div.innerHTML= `${formatGold(일반_결정_자체수급Price)}`;
+
+            let 일반_잔_결정부터_자체수급Div = document.getElementById(`최저가-잔 카드-낚시파밍-결정부터`); 
+            일반_잔_결정부터_자체수급Div.innerHTML= `${formatGold(일반_결정_자체수급Price)}`;
+
+            let 일반_지팡이_결정부터_자체수급Div = document.getElementById(`최저가-지팡이 카드-낚시파밍-결정부터`); 
+            일반_지팡이_결정부터_자체수급Div.innerHTML= `${formatGold(일반_결정_자체수급Price)}`;
+
+
+            // 일반 카드 경매장구매 (부재료=최저가-프로키온 조각-경매장구매)
+            // 일반 검 카드 경매장 구매 (최저가-검 카드-경매장구매)
+            let 프로키온조각_15_Price =  parseGold(document.getElementById("최저가-프로키온 조각-경매장구매").innerHTML);
+            let 일반_검_경매장구매Div = document.getElementById(`최저가-검 카드-경매장구매`); 
+            일반_검_경매장구매Div.innerHTML= `${formatGold((프로키온조각_15_Price*5) + (최저가_최고급가죽끈*10) + 10)}`; // (조각*15가 하나니까 *5) + (최고급가죽끈*10) + 10종이
+
+            // 일반 동전 카드 경매장 구매 (최저가-동전 카드-경매장구매)
+            let 카노푸스조각_15_Price =  parseGold(document.getElementById("최저가-카노푸스 조각-경매장구매").innerHTML);
+            let 일반_동전_경매장구매Div = document.getElementById(`최저가-동전 카드-경매장구매`); 
+            일반_동전_경매장구매Div.innerHTML= `${formatGold((카노푸스조각_15_Price*5) + (최저가_최고급가죽끈*10) + 10)}`; // (조각*15) + (최고급가죽끈*10) + 10종이
+
+            // 일반 잔 카드 경매장 구매 (최저가-잔 카드-경매장구매)
+            let 리겔조각_15_Price =  parseGold(document.getElementById("최저가-리겔 조각-경매장구매").innerHTML);
+            let 일반_잔_경매장구매Div = document.getElementById(`최저가-잔 카드-경매장구매`); 
+            일반_잔_경매장구매Div.innerHTML= `${formatGold((리겔조각_15_Price*5) + (최저가_최고급가죽끈*10) + 10)}`; // (조각*15) + (최고급가죽끈*10) + 10종이
+
+            // 일반 지팡이 카드 경매장 구매 (최저가-지팡이 카드-경매장구매)
+            let 알타이르조각_15_Price =  parseGold(document.getElementById("최저가-알타이르 조각-경매장구매").innerHTML);
+            let 일반_지팡이_경매장구매Div = document.getElementById(`최저가-지팡이 카드-경매장구매`); 
+            일반_지팡이_경매장구매Div.innerHTML= `${formatGold((알타이르조각_15_Price*5) + (최저가_최고급가죽끈*10) + 10)}`; // (조각*15) + (최고급가죽끈*10) + 10종이
+
+
+            /* 운명의 카드 */
+            // 부재료 (질긴실10 / 하다르1개 / 플룩스100개/종이10개) + 완전체3개
+            let 최저가_질긴실 =  parseGold(document.getElementById("최저가-질긴 실").innerHTML); 
+            let 하다르조각_자체수급_15_Price = parseGold(document.getElementById("최저가-하다르 조각-낚시파밍").innerHTML);
+            let 하다르결정_자체수급_8_Price = parseGold(document.getElementById("최저가-하다르 결정-낚시파밍").innerHTML);
+            let 하다르결정_경매장구매_Price = parseGold(document.getElementById("최저가-하다르 결정-경매장구매").innerHTML);
+
+            
+            
+            // 운명 카드 자체수급_조각부터 (최저가-운명의 지팡이 카드-자체수급-조각부터)
+            let 운명_조각_자체수급Price = 일반_조각_자체수급Price + (최저가_질긴실*10) + 하다르조각_자체수급_15_Price + 하다르결정_자체수급_8_Price + (폴룩스_금액*100) + 10;
+
+            let 운명_검_조각부터_자체수급Div = document.getElementById(`최저가-운명의 검 카드-자체수급-조각부터`); 
+            운명_검_조각부터_자체수급Div.innerHTML= `${formatGold(운명_조각_자체수급Price)}`;
+
+            let 운명_동전_조각부터_자체수급Div = document.getElementById(`최저가-운명의 동전 카드-자체수급-조각부터`); 
+            운명_동전_조각부터_자체수급Div.innerHTML= `${formatGold(운명_조각_자체수급Price)}`;
+
+            let 운명_잔_조각부터_자체수급Div = document.getElementById(`최저가-운명의 잔 카드-자체수급-조각부터`); 
+            운명_잔_조각부터_자체수급Div.innerHTML= `${formatGold(운명_조각_자체수급Price)}`;
+
+            let 운명_지팡이_조각부터_자체수급Div = document.getElementById(`최저가-운명의 지팡이 카드-자체수급-조각부터`); 
+            운명_지팡이_조각부터_자체수급Div.innerHTML= `${formatGold(운명_조각_자체수급Price)}`;
+
+
+            // 운명 카드 자체수급_결정부터(최저가-운명의 지팡이 카드-자체수급-결정부터)
+            let 운명_결정_자체수급Price = 일반_결정_자체수급Price + (최저가_질긴실*10) + 하다르결정_자체수급_8_Price + (폴룩스_금액*100) + 10;
+
+            let 운명_검_결정부터_자체수급Div = document.getElementById(`최저가-운명의 검 카드-자체수급-결정부터`); 
+            운명_검_결정부터_자체수급Div.innerHTML= `${formatGold(운명_결정_자체수급Price)}`;
+
+            let 운명_동전_결정부터_자체수급Div = document.getElementById(`최저가-운명의 동전 카드-자체수급-결정부터`); 
+            운명_동전_결정부터_자체수급Div.innerHTML= `${formatGold(운명_결정_자체수급Price)}`;
+
+            let 운명_잔_결정부터_자체수급Div = document.getElementById(`최저가-운명의 잔 카드-자체수급-결정부터`); 
+            운명_잔_결정부터_자체수급Div.innerHTML= `${formatGold(운명_결정_자체수급Price)}`;
+
+            let 운명_지팡이_결정부터_자체수급Div = document.getElementById(`최저가-운명의 지팡이 카드-자체수급-결정부터`); 
+            운명_지팡이_결정부터_자체수급Div.innerHTML= `${formatGold(운명_결정_자체수급Price)}`;
+
+
+            // 운명 카드 경매장구매  (최저가-운명의 지팡이 카드-경매장구매)
+            // 완전체 3개 + 하다르결정_경매장구매_Price + 질긴실10개 + 플룩스100개 + 10종이
+
+            let 프로키온결정_8_Price =  parseGold(document.getElementById("최저가-프로키온 결정-경매장구매").innerHTML);
+            let 운명_검_경매장구매Div = document.getElementById(`최저가-운명의 검 카드-경매장구매`); 
+            운명_검_경매장구매Div.innerHTML= `${formatGold((프로키온결정_8_Price*3) + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
+
+            let 카노푸스결정_8_Price =  parseGold(document.getElementById("최저가-카노푸스 결정-경매장구매").innerHTML);
+            let 운명_동전_경매장구매Div = document.getElementById(`최저가-운명의 동전 카드-경매장구매`); 
+            운명_동전_경매장구매Div.innerHTML= `${formatGold((카노푸스결정_8_Price*3) + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
+
+            let 리겔결정_8_Price =  parseGold(document.getElementById("최저가-리겔 결정-경매장구매").innerHTML);
+            let 운명_잔_경매장구매Div = document.getElementById(`최저가-운명의 잔 카드-경매장구매`); 
+            운명_잔_경매장구매Div.innerHTML= `${formatGold((리겔결정_8_Price*3) + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
+
+            let 알타이르결정_8_Price =  parseGold(document.getElementById("최저가-알타이르 결정-경매장구매").innerHTML);
+            let 운명_지팡이_경매장구매Div = document.getElementById(`최저가-운명의 지팡이 카드-경매장구매`); 
+            운명_지팡이_경매장구매Div.innerHTML= `${formatGold((알타이르결정_8_Price*3) + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
+            
          
-             
+            
 
         }
     
