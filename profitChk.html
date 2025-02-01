@@ -31,6 +31,7 @@
             padding: 20px;
             border-radius: 10px;
             
+            
         }
         .조각_결정_테이블 td{
             padding: 8px;
@@ -118,12 +119,12 @@
                             <!-- 부제목1 -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">조각→결정 이득&손해 확인</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">조각→결정</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="조각_결정_테이블">
                                         <div id="최저가-물이 든 병" hidden>물이 든 병 금액</div>
-                                        <div id="최저가-폴룩스">폴룩스 금액</div>
+                                        <div id="최저가-폴룩스" hidden>폴룩스 금액</div>
                                         <div id="최저가-밀랍" hidden>밀랍 금액</div>
                                        
 
@@ -136,21 +137,21 @@
                                         <div id="최저가-루비" hidden>루비 금액</div>
                                       
                                         <!-- 조각 -> 결정 이득/손해 확인 -->
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
-                                                <th rowspan="2" style="width: 120px; color: #f341b2;">리겔</th>
-                                                <th id="조각판매가격-리겔 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;">(*15)</span></th>
-                                                <th id="낚시조각제작-리겔 조각" style="width: 160px;">낚시조각제작</th>
-                                                <th id="경매장구매제작-리겔 조각" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 160px;">결정 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; color: #f341b2; font-size: 15pt;">리겔</th>
+                                                <th id="조각판매가격-리겔 조각" style="width: 130px; font-size: 11pt; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-리겔 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-리겔 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
 
                                                 <th rowspan="3" style="width: 10px;"></th>
 
-                                                <th rowspan="2" style="width: 120px;">아크투루스</th>
-                                                <th id="조각판매가격-아크투루스 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;">(*15)</span></th>
-                                                <th id="낚시조각제작-아크투루스 조각" style="width: 160px;">낚시조각제작</th>
-                                                <th id="경매장구매제작-아크투루스 조각" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 160px;">결정 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">아크투루스</th>
+                                                <th id="조각판매가격-아크투루스 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-아크투루스 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-아크투루스 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 리겔 -->
@@ -182,21 +183,21 @@
                                          
                                         <br>
 
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
-                                                <th rowspan="2" style="width: 120px; color: #4d67e7;">알타이르</th>
-                                                <th id="조각판매가격-알타이르 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;">(*15)</span></th>
-                                                <th id="낚시조각제작-알타이르 조각" style="width: 160px;">낚시조각제작</th>
-                                                <th id="경매장구매제작-알타이르 조각" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 160px;">결정 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; color: #4d67e7; font-size: 15pt;">알타이르</th>
+                                                <th id="조각판매가격-알타이르 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-알타이르 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-알타이르 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
 
                                                 <th rowspan="3" style="width: 10px;"></th>
 
-                                                <th rowspan="2" style="width: 120px;">폴라리스</th>
-                                                <th id="조각판매가격-폴라리스 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;">(*15)</span></th>
-                                                <th id="낚시조각제작-폴라리스 조각" style="width: 160px;">낚시조각제작</th>
-                                                <th id="경매장구매제작-폴라리스 조각" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 160px;">결정 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">폴라리스</th>
+                                                <th id="조각판매가격-폴라리스 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-폴라리스 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-폴라리스 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 알타이르 -->
@@ -228,21 +229,21 @@
 
                                         <br>
 
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
-                                                <th rowspan="2" style="width: 120px; color: #a474e1;">카노푸스</th>
-                                                <th id="조각판매가격-카노푸스 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;">(*15)</span></th>
-                                                <th id="낚시조각제작-카노푸스 조각" style="width: 160px;">낚시조각제작</th>
-                                                <th id="경매장구매제작-카노푸스 조각" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 160px;">결정 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; color: #a474e1; font-size: 15pt;">카노푸스</th>
+                                                <th id="조각판매가격-카노푸스 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-카노푸스 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-카노푸스 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
 
                                                 <th rowspan="3" style="width: 10px;"></th>
 
-                                                <th rowspan="2" style="width: 120px; color: #f39538;">프로키온</th>
-                                                <th id="조각판매가격-프로키온 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;">(*15)</span></th>
-                                                <th id="낚시조각제작-프로키온 조각" style="width: 160px;">낚시조각제작</th>
-                                                <th id="경매장구매제작-프로키온 조각" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 160px;">결정 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; color: #f39538; font-size: 15pt;">프로키온</th>
+                                                <th id="조각판매가격-프로키온 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-프로키온 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-프로키온 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 카노푸스 -->
@@ -274,13 +275,13 @@
 
                                         <br>
 
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
-                                                <th rowspan="2" style="width: 120px;">하다르</th>
-                                                <th id="조각판매가격-하다르 조각" style="width: 160px;">조각판매가격<span style="font-size: 10pt;">(*15)</span></th>
-                                                <th id="낚시조각제작-하다르 조각" style="width: 160px;">낚시조각제작</th>
-                                                <th id="경매장구매제작-하다르 조각" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가" style="width: 160px;">결정 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">하다르</th>
+                                                <th id="조각판매가격-하다르 조각" style="width: 130px; font-size: 11pt;">조각판매가격(*15)</th>
+                                                <th id="낚시조각제작-하다르 조각" style="width: 130px; font-size: 11pt;">낚시조각제작</th>
+                                                <th id="경매장구매제작-하다르 조각" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가" style="width: 130px; font-size: 11pt;">결정 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 하다르 -->
@@ -307,25 +308,25 @@
                             <!-- 완전체 이득&손해 확인 -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">완전체 이득&손해 확인</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">완전체</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="조각_결정_테이블">
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
-                                                <th rowspan="2" style="width: 120px; color: #f341b2;">리겔</th>
-                                                <th id="결정판매가격-리겔 결정" style="width: 160px;">결정판매가격<span style="font-size: 10pt;">(*8)</span></th>
-                                                <th id="낚시결정제작-리겔 결정" style="width: 160px;">낚시결정제작</th>
-                                                <th id="경매장구매제작-리겔 결정" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 160px;">완전체 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; color: #f341b2; font-size: 15pt;">리겔</th>
+                                                <th id="결정판매가격-리겔 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-리겔 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-리겔 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt; font-size: 11pt;">완전체 경매장가</th>
                                         
                                                 <th rowspan="3" style="width: 10px;"></th>
                                         
-                                                <th rowspan="2" style="width: 120px;">아크투루스</th>
-                                                <th id="결정판매가격-아크투루스 결정" style="width: 160px;">결정판매가격<span style="font-size: 10pt;">(*8)</span></th>
-                                                <th id="낚시결정제작-아크투루스 결정" style="width: 160px;">낚시결정제작</th>
-                                                <th id="경매장구매제작-아크투루스 결정" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 160px;">완전체 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">아크투루스</th>
+                                                <th id="결정판매가격-아크투루스 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-아크투루스 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-아크투루스 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 리겔 -->
@@ -357,21 +358,21 @@
 
                                         <br>
 
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
-                                                <th rowspan="2" style="width: 120px; color: #4d67e7;">알타이르</th>
-                                                <th id="결정판매가격-알타이르 결정" style="width: 160px;">결정판매가격<span style="font-size: 10pt;">(*8)</span></th>
-                                                <th id="낚시결정제작-알타이르 결정" style="width: 160px;">낚시결정제작</th>
-                                                <th id="경매장구매제작-알타이르 결정" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 160px;">완전체 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; color: #4d67e7; font-size: 15pt;">알타이르</th>
+                                                <th id="결정판매가격-알타이르 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-알타이르 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-알타이르 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                         
                                                 <th rowspan="3" style="width: 10px;"></th>
                                         
-                                                <th rowspan="2" style="width: 120px;">폴라리스</th>
-                                                <th id="결정판매가격-폴라리스 결정" style="width: 160px;">결정판매가격<span style="font-size: 10pt;">(*8)</span></th>
-                                                <th id="낚시결정제작-폴라리스 결정" style="width: 160px;">낚시결정제작</th>
-                                                <th id="경매장구매제작-폴라리스 결정" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 160px;">완전체 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">폴라리스</th>
+                                                <th id="결정판매가격-폴라리스 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-폴라리스 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-폴라리스 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 알타이르 -->
@@ -403,21 +404,21 @@
 
                                         <br>
 
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
-                                                <th rowspan="2" style="width: 120px; color: #a474e1;">카노푸스</th>
-                                                <th id="결정판매가격-카노푸스 결정" style="width: 160px;">결정판매가격<span style="font-size: 10pt;">(*8)</span></th>
-                                                <th id="낚시결정제작-카노푸스 결정" style="width: 160px;">낚시결정제작</th>
-                                                <th id="경매장구매제작-카노푸스 결정" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 160px;">완전체 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; color: #a474e1; font-size: 15pt;">카노푸스</th>
+                                                <th id="결정판매가격-카노푸스 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-카노푸스 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-카노푸스 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                         
                                                 <th rowspan="3" style="width: 10px;"></th>
                                         
-                                                <th rowspan="2" style="width: 120px; color: #f39538;">프로키온</th>
-                                                <th id="결정판매가격-프로키온 결정" style="width: 160px;">결정판매가격<span style="font-size: 10pt;">(*8)</span></th>
-                                                <th id="낚시결정제작-프로키온 결정" style="width: 160px;">낚시결정제작</th>
-                                                <th id="경매장구매제작-프로키온 결정" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 160px;">완전체 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; color: #f39538; font-size: 15pt;">프로키온</th>
+                                                <th id="결정판매가격-프로키온 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-프로키온 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-프로키온 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 카노푸스 -->
@@ -449,13 +450,13 @@
 
                                         <br>
 
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
-                                                <th rowspan="2" style="width: 120px;">하다르</th>
-                                                <th id="결정판매가격-하다르 결정" style="width: 160px;">결정판매가격<span style="font-size: 10pt;">(*8)</span></th>
-                                                <th id="낚시결정제작-하다르 결정" style="width: 160px;">낚시결정제작</th>
-                                                <th id="경매장구매제작-하다르 결정" style="width: 160px;">경매장구매제작</th>
-                                                <th id="경매장최저가_완전체" style="width: 160px;">완전체 경매장가</th>
+                                                <th rowspan="2" style="width: 120px; font-size: 15pt;">하다르</th>
+                                                <th id="결정판매가격-하다르 결정" style="width: 130px; font-size: 11pt;">결정 경매장가(*8)</th>
+                                                <th id="낚시결정제작-하다르 결정" style="width: 130px; font-size: 11pt;">낚시결정제작</th>
+                                                <th id="경매장구매제작-하다르 결정" style="width: 130px; font-size: 11pt;">경매장구매제작</th>
+                                                <th id="경매장최저가_완전체" style="width: 130px; font-size: 11pt;">완전체 경매장가</th>
                                             </tr>
                                             <tr>
                                                 <!-- 하다르 -->
@@ -491,7 +492,7 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="조각_결정_테이블">
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
                                                 <th rowspan="2"></th>
                                                 <th colspan="5">허름한 카드</th>
@@ -553,7 +554,7 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="조각_결정_테이블">
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
                                                 <th rowspan="2"></th>
                                                 <th colspan="5">일반 카드</th>
@@ -615,7 +616,7 @@
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="조각_결정_테이블">
-                                        <table>
+                                        <table style="font-size: 10pt;">
                                             <tr>
                                                 <th rowspan="2"></th>
                                                 <th colspan="5">운명의 카드</th>
@@ -1039,9 +1040,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`조각판매가격-리겔 조각`); 
                 let 최저가_리겔조각Div = document.getElementById(`최저가-리겔 조각`); 
-                리겔_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_리겔조각Div.style.backgroundColor = "#fcf2cf";
+                리겔_조각판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_리겔조각Div.style.backgroundColor = "#f8f9fc";
 
             }else if(리겔_최고금액 === 리겔_낚시파밍_순수익){
                 let 리겔_조각_판정Div = document.getElementById(`리겔 조각-판정`); 
@@ -1049,9 +1050,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`낚시조각제작-리겔 조각`); 
                 let 최저가_리겔조각_낚시파밍Div = document.getElementById(`최저가-리겔 조각-낚시파밍`); 
-                리겔_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_리겔조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                리겔_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_리겔조각_낚시파밍Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(리겔_최고금액 === 리겔_경매장구매_순수익){
                 let 리겔_조각_판정Div = document.getElementById(`리겔 조각-판정`); 
@@ -1059,9 +1060,9 @@
 
                 let 경매장구매제작Div = document.getElementById(`경매장구매제작-리겔 조각`); 
                 let 최저가_리겔조각_경매장구매Div = document.getElementById(`최저가-리겔 조각-경매장구매`); 
-                리겔_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_리겔조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+                리겔_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                경매장구매제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_리겔조각_경매장구매Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1111,9 +1112,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`결정판매가격-리겔 결정`); 
                 let 최저가_리겔결정Div = document.getElementById(`최저가-리겔 결정-8`); 
-                최저가_리겔_결정_결정판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_리겔결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_리겔_결정_결정판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_리겔결정Div.style.backgroundColor = "#f8f9fc";
 
             }else if(리겔_완전체_최고금액 === 최저가_리겔_결정_낚시파밍_순수익Price){
                 let 리겔_결정_판정Div = document.getElementById(`리겔 결정-판정`); 
@@ -1121,9 +1122,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`낚시결정제작-리겔 결정`); 
                 let 최저가_리겔결정Div = document.getElementById(`최저가-리겔 결정-낚시파밍`); 
-                최저가_리겔_결정_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_리겔결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_리겔_결정_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_리겔결정Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(리겔_완전체_최고금액 === 최저가_리겔_결정_경매장구매_순수익Price){
                 let 리겔_결정_판정Div = document.getElementById(`리겔 결정-판정`); 
@@ -1131,9 +1132,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`경매장구매제작-리겔 결정`); 
                 let 최저가_리겔결정Div = document.getElementById(`최저가-리겔 결정-경매장구매`); 
-                최저가_리겔_결정_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_리겔결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_리겔_결정_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_리겔결정Div.style.backgroundColor = "#f8f9fc";
             }
             
           
@@ -1179,9 +1180,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`조각판매가격-아크투루스 조각`); 
                 let 최저가_아크투루스조각Div = document.getElementById(`최저가-아크투루스 조각`); 
-                아크투루스_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_아크투루스조각Div.style.backgroundColor = "#fcf2cf";
+                아크투루스_조각판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_아크투루스조각Div.style.backgroundColor = "#f8f9fc";
 
             }else if(아크투루스_최고금액 === 아크투루스_낚시파밍_순수익){
                 let 아크투루스_조각_판정Div = document.getElementById(`아크투루스 조각-판정`); 
@@ -1189,9 +1190,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`낚시조각제작-아크투루스 조각`); 
                 let 최저가_아크투루스조각_낚시파밍Div = document.getElementById(`최저가-아크투루스 조각-낚시파밍`); 
-                아크투루스_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_아크투루스조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                아크투루스_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_아크투루스조각_낚시파밍Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(아크투루스_최고금액 === 아크투루스_경매장구매_순수익){
                 let 아크투루스_조각_판정Div = document.getElementById(`아크투루스 조각-판정`); 
@@ -1199,9 +1200,9 @@
 
                 let 경매장구매제작Div = document.getElementById(`경매장구매제작-아크투루스 조각`); 
                 let 최저가_아크투루스조각_경매장구매Div = document.getElementById(`최저가-아크투루스 조각-경매장구매`); 
-                아크투루스_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_아크투루스조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+                아크투루스_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                경매장구매제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_아크투루스조각_경매장구매Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1251,9 +1252,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`결정판매가격-아크투루스 결정`); 
                 let 최저가_아크투루스결정Div = document.getElementById(`최저가-아크투루스 결정-8`); 
-                최저가_아크투루스_결정_결정판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_아크투루스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_아크투루스_결정_결정판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_아크투루스결정Div.style.backgroundColor = "#f8f9fc";
 
             }else if(아크투루스_완전체_최고금액 === 최저가_아크투루스_결정_낚시파밍_순수익Price){
                 let 아크투루스_결정_판정Div = document.getElementById(`아크투루스 결정-판정`); 
@@ -1261,9 +1262,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`낚시결정제작-아크투루스 결정`); 
                 let 최저가_아크투루스결정Div = document.getElementById(`최저가-아크투루스 결정-낚시파밍`); 
-                최저가_아크투루스_결정_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_아크투루스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_아크투루스_결정_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_아크투루스결정Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(아크투루스_완전체_최고금액 === 최저가_아크투루스_결정_경매장구매_순수익Price){
                 let 아크투루스_결정_판정Div = document.getElementById(`아크투루스 결정-판정`); 
@@ -1271,9 +1272,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`경매장구매제작-아크투루스 결정`); 
                 let 최저가_아크투루스결정Div = document.getElementById(`최저가-아크투루스 결정-경매장구매`); 
-                최저가_아크투루스_결정_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_아크투루스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_아크투루스_결정_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_아크투루스결정Div.style.backgroundColor = "#f8f9fc";
             }
             
 
@@ -1318,9 +1319,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`조각판매가격-알타이르 조각`); 
                 let 최저가_알타이르조각Div = document.getElementById(`최저가-알타이르 조각`); 
-                알타이르_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_알타이르조각Div.style.backgroundColor = "#fcf2cf";
+                알타이르_조각판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_알타이르조각Div.style.backgroundColor = "#f8f9fc";
 
             }else if(알타이르_최고금액 === 알타이르_낚시파밍_순수익){
                 let 알타이르_조각_판정Div = document.getElementById(`알타이르 조각-판정`); 
@@ -1328,9 +1329,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`낚시조각제작-알타이르 조각`); 
                 let 최저가_알타이르조각_낚시파밍Div = document.getElementById(`최저가-알타이르 조각-낚시파밍`); 
-                알타이르_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_알타이르조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                알타이르_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_알타이르조각_낚시파밍Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(알타이르_최고금액 === 알타이르_경매장구매_순수익){
                 let 알타이르_조각_판정Div = document.getElementById(`알타이르 조각-판정`); 
@@ -1338,9 +1339,9 @@
 
                 let 경매장구매제작Div = document.getElementById(`경매장구매제작-알타이르 조각`); 
                 let 최저가_알타이르조각_경매장구매Div = document.getElementById(`최저가-알타이르 조각-경매장구매`); 
-                알타이르_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_알타이르조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+                알타이르_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                경매장구매제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_알타이르조각_경매장구매Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1390,9 +1391,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`결정판매가격-알타이르 결정`); 
                 let 최저가_알타이르결정Div = document.getElementById(`최저가-알타이르 결정-8`); 
-                최저가_알타이르_결정_결정판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_알타이르결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_알타이르_결정_결정판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_알타이르결정Div.style.backgroundColor = "#f8f9fc";
 
             }else if(알타이르_완전체_최고금액 === 최저가_알타이르_결정_낚시파밍_순수익Price){
                 let 알타이르_결정_판정Div = document.getElementById(`알타이르 결정-판정`); 
@@ -1400,9 +1401,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`낚시결정제작-알타이르 결정`); 
                 let 최저가_알타이르결정Div = document.getElementById(`최저가-알타이르 결정-낚시파밍`); 
-                최저가_알타이르_결정_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_알타이르결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_알타이르_결정_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_알타이르결정Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(알타이르_완전체_최고금액 === 최저가_알타이르_결정_경매장구매_순수익Price){
                 let 알타이르_결정_판정Div = document.getElementById(`알타이르 결정-판정`); 
@@ -1410,9 +1411,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`경매장구매제작-알타이르 결정`); 
                 let 최저가_알타이르결정Div = document.getElementById(`최저가-알타이르 결정-경매장구매`); 
-                최저가_알타이르_결정_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_알타이르결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_알타이르_결정_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_알타이르결정Div.style.backgroundColor = "#f8f9fc";
             }
             
 
@@ -1457,9 +1458,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`조각판매가격-카노푸스 조각`); 
                 let 최저가_카노푸스조각Div = document.getElementById(`최저가-카노푸스 조각`); 
-                카노푸스_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_카노푸스조각Div.style.backgroundColor = "#fcf2cf";
+                카노푸스_조각판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_카노푸스조각Div.style.backgroundColor = "#f8f9fc";
 
             }else if(카노푸스_최고금액 === 카노푸스_낚시파밍_순수익){
                 let 카노푸스_조각_판정Div = document.getElementById(`카노푸스 조각-판정`); 
@@ -1467,9 +1468,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`낚시조각제작-카노푸스 조각`); 
                 let 최저가_카노푸스조각_낚시파밍Div = document.getElementById(`최저가-카노푸스 조각-낚시파밍`); 
-                카노푸스_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_카노푸스조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                카노푸스_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_카노푸스조각_낚시파밍Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(카노푸스_최고금액 === 카노푸스_경매장구매_순수익){
                 let 카노푸스_조각_판정Div = document.getElementById(`카노푸스 조각-판정`); 
@@ -1477,9 +1478,9 @@
 
                 let 경매장구매제작Div = document.getElementById(`경매장구매제작-카노푸스 조각`); 
                 let 최저가_카노푸스조각_경매장구매Div = document.getElementById(`최저가-카노푸스 조각-경매장구매`); 
-                카노푸스_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_카노푸스조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+                카노푸스_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                경매장구매제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_카노푸스조각_경매장구매Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1528,9 +1529,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`결정판매가격-카노푸스 결정`); 
                 let 최저가_카노푸스결정Div = document.getElementById(`최저가-카노푸스 결정-8`); 
-                최저가_카노푸스_결정_결정판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_카노푸스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_카노푸스_결정_결정판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_카노푸스결정Div.style.backgroundColor = "#f8f9fc";
 
             }else if(카노푸스_완전체_최고금액 === 최저가_카노푸스_결정_낚시파밍_순수익Price){
                 let 카노푸스_결정_판정Div = document.getElementById(`카노푸스 결정-판정`); 
@@ -1538,9 +1539,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`낚시결정제작-카노푸스 결정`); 
                 let 최저가_카노푸스결정Div = document.getElementById(`최저가-카노푸스 결정-낚시파밍`); 
-                최저가_카노푸스_결정_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_카노푸스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_카노푸스_결정_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_카노푸스결정Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(카노푸스_완전체_최고금액 === 최저가_카노푸스_결정_경매장구매_순수익Price){
                 let 카노푸스_결정_판정Div = document.getElementById(`카노푸스 결정-판정`); 
@@ -1548,9 +1549,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`경매장구매제작-카노푸스 결정`); 
                 let 최저가_카노푸스결정Div = document.getElementById(`최저가-카노푸스 결정-경매장구매`); 
-                최저가_카노푸스_결정_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_카노푸스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_카노푸스_결정_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_카노푸스결정Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1597,9 +1598,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`조각판매가격-폴라리스 조각`); 
                 let 최저가_폴라리스조각Div = document.getElementById(`최저가-폴라리스 조각`); 
-                폴라리스_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_폴라리스조각Div.style.backgroundColor = "#fcf2cf";
+                폴라리스_조각판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_폴라리스조각Div.style.backgroundColor = "#f8f9fc";
 
             }else if(폴라리스_최고금액 === 폴라리스_낚시파밍_순수익){
                 let 폴라리스_조각_판정Div = document.getElementById(`폴라리스 조각-판정`); 
@@ -1607,9 +1608,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`낚시조각제작-폴라리스 조각`); 
                 let 최저가_폴라리스조각_낚시파밍Div = document.getElementById(`최저가-폴라리스 조각-낚시파밍`); 
-                폴라리스_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_폴라리스조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                폴라리스_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_폴라리스조각_낚시파밍Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(폴라리스_최고금액 === 폴라리스_경매장구매_순수익){
                 let 폴라리스_조각_판정Div = document.getElementById(`폴라리스 조각-판정`); 
@@ -1617,9 +1618,9 @@
 
                 let 경매장구매제작Div = document.getElementById(`경매장구매제작-폴라리스 조각`); 
                 let 최저가_폴라리스조각_경매장구매Div = document.getElementById(`최저가-폴라리스 조각-경매장구매`); 
-                폴라리스_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_폴라리스조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+                폴라리스_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                경매장구매제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_폴라리스조각_경매장구매Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1668,9 +1669,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`결정판매가격-폴라리스 결정`); 
                 let 최저가_폴라리스결정Div = document.getElementById(`최저가-폴라리스 결정-8`); 
-                최저가_폴라리스_결정_결정판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_폴라리스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_폴라리스_결정_결정판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_폴라리스결정Div.style.backgroundColor = "#f8f9fc";
 
             }else if(폴라리스_완전체_최고금액 === 최저가_폴라리스_결정_낚시파밍_순수익Price){
                 let 폴라리스_결정_판정Div = document.getElementById(`폴라리스 결정-판정`); 
@@ -1678,9 +1679,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`낚시결정제작-폴라리스 결정`); 
                 let 최저가_폴라리스결정Div = document.getElementById(`최저가-폴라리스 결정-낚시파밍`); 
-                최저가_폴라리스_결정_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_폴라리스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_폴라리스_결정_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_폴라리스결정Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(폴라리스_완전체_최고금액 === 최저가_폴라리스_결정_경매장구매_순수익Price){
                 let 폴라리스_결정_판정Div = document.getElementById(`폴라리스 결정-판정`); 
@@ -1688,9 +1689,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`경매장구매제작-폴라리스 결정`); 
                 let 최저가_폴라리스결정Div = document.getElementById(`최저가-폴라리스 결정-경매장구매`); 
-                최저가_폴라리스_결정_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_폴라리스결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_폴라리스_결정_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_폴라리스결정Div.style.backgroundColor = "#f8f9fc";
             }
             
 
@@ -1735,9 +1736,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`조각판매가격-프로키온 조각`); 
                 let 최저가_프로키온조각Div = document.getElementById(`최저가-프로키온 조각`); 
-                프로키온_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_프로키온조각Div.style.backgroundColor = "#fcf2cf";
+                프로키온_조각판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_프로키온조각Div.style.backgroundColor = "#f8f9fc";
 
             }else if(프로키온_최고금액 === 프로키온_낚시파밍_순수익){
                 let 프로키온_조각_판정Div = document.getElementById(`프로키온 조각-판정`); 
@@ -1745,9 +1746,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`낚시조각제작-프로키온 조각`); 
                 let 최저가_프로키온조각_낚시파밍Div = document.getElementById(`최저가-프로키온 조각-낚시파밍`); 
-                프로키온_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_프로키온조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                프로키온_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_프로키온조각_낚시파밍Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(프로키온_최고금액 === 프로키온_경매장구매_순수익){
                 let 프로키온_조각_판정Div = document.getElementById(`프로키온 조각-판정`); 
@@ -1755,9 +1756,9 @@
 
                 let 경매장구매제작Div = document.getElementById(`경매장구매제작-프로키온 조각`); 
                 let 최저가_프로키온조각_경매장구매Div = document.getElementById(`최저가-프로키온 조각-경매장구매`); 
-                프로키온_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_프로키온조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+                프로키온_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                경매장구매제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_프로키온조각_경매장구매Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1806,9 +1807,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`결정판매가격-프로키온 결정`); 
                 let 최저가_프로키온결정Div = document.getElementById(`최저가-프로키온 결정-8`); 
-                최저가_프로키온_결정_결정판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_프로키온결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_프로키온_결정_결정판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_프로키온결정Div.style.backgroundColor = "#f8f9fc";
 
             }else if(프로키온_완전체_최고금액 === 최저가_프로키온_결정_낚시파밍_순수익Price){
                 let 프로키온_결정_판정Div = document.getElementById(`프로키온 결정-판정`); 
@@ -1816,9 +1817,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`낚시결정제작-프로키온 결정`); 
                 let 최저가_프로키온결정Div = document.getElementById(`최저가-프로키온 결정-낚시파밍`); 
-                최저가_프로키온_결정_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_프로키온결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_프로키온_결정_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_프로키온결정Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(프로키온_완전체_최고금액 === 최저가_프로키온_결정_경매장구매_순수익Price){
                 let 프로키온_결정_판정Div = document.getElementById(`프로키온 결정-판정`); 
@@ -1826,9 +1827,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`경매장구매제작-프로키온 결정`); 
                 let 최저가_프로키온결정Div = document.getElementById(`최저가-프로키온 결정-경매장구매`); 
-                최저가_프로키온_결정_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_프로키온결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_프로키온_결정_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_프로키온결정Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1873,9 +1874,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`조각판매가격-하다르 조각`); 
                 let 최저가_하다르조각Div = document.getElementById(`최저가-하다르 조각`); 
-                하다르_조각판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_하다르조각Div.style.backgroundColor = "#fcf2cf";
+                하다르_조각판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_하다르조각Div.style.backgroundColor = "#f8f9fc";
 
             }else if(하다르_최고금액 === 하다르_낚시파밍_순수익){
                 let 하다르_조각_판정Div = document.getElementById(`하다르 조각-판정`); 
@@ -1883,9 +1884,9 @@
 
                 let 낚시조각제작Div = document.getElementById(`낚시조각제작-하다르 조각`); 
                 let 최저가_하다르조각_낚시파밍Div = document.getElementById(`최저가-하다르 조각-낚시파밍`); 
-                하다르_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시조각제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_하다르조각_낚시파밍Div.style.backgroundColor = "#fcf2cf";
+                하다르_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시조각제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_하다르조각_낚시파밍Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(하다르_최고금액 === 하다르_경매장구매_순수익){
                 let 하다르_조각_판정Div = document.getElementById(`하다르 조각-판정`); 
@@ -1893,9 +1894,9 @@
 
                 let 경매장구매제작Div = document.getElementById(`경매장구매제작-하다르 조각`); 
                 let 최저가_하다르조각_경매장구매Div = document.getElementById(`최저가-하다르 조각-경매장구매`); 
-                하다르_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                경매장구매제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_하다르조각_경매장구매Div.style.backgroundColor = "#fcf2cf";
+                하다르_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                경매장구매제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_하다르조각_경매장구매Div.style.backgroundColor = "#f8f9fc";
             }
 
 
@@ -1944,9 +1945,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`결정판매가격-하다르 결정`); 
                 let 최저가_하다르결정Div = document.getElementById(`최저가-하다르 결정-8`); 
-                최저가_하다르_결정_결정판매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_하다르결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_하다르_결정_결정판매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_하다르결정Div.style.backgroundColor = "#f8f9fc";
 
             }else if(하다르_완전체_최고금액 === 최저가_하다르_결정_낚시파밍_순수익Price){
                 let 하다르_결정_판정Div = document.getElementById(`하다르 결정-판정`); 
@@ -1954,9 +1955,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`낚시결정제작-하다르 결정`); 
                 let 최저가_하다르결정Div = document.getElementById(`최저가-하다르 결정-낚시파밍`); 
-                최저가_하다르_결정_낚시파밍_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_하다르결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_하다르_결정_낚시파밍_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_하다르결정Div.style.backgroundColor = "#f8f9fc";
                 
             }else if(하다르_완전체_최고금액 === 최저가_하다르_결정_경매장구매_순수익Price){
                 let 하다르_결정_판정Div = document.getElementById(`하다르 결정-판정`); 
@@ -1964,9 +1965,9 @@
 
                 let 낚시결정제작Div = document.getElementById(`경매장구매제작-하다르 결정`); 
                 let 최저가_하다르결정Div = document.getElementById(`최저가-하다르 결정-경매장구매`); 
-                최저가_하다르_결정_경매장구매_순수익Div.style.backgroundColor = "#fcf2cf";
-                낚시결정제작Div.style.backgroundColor = "#fcf2cf";
-                최저가_하다르결정Div.style.backgroundColor = "#fcf2cf";
+                최저가_하다르_결정_경매장구매_순수익Div.style.backgroundColor = "#f8f9fc";
+                낚시결정제작Div.style.backgroundColor = "#f8f9fc";
+                최저가_하다르결정Div.style.backgroundColor = "#f8f9fc";
             }
          
              
