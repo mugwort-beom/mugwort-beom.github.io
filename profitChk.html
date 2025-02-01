@@ -631,7 +631,7 @@
                                             <tr>
                                                 <th style="width: 105px;"  data-bs-toggle="tooltip" title="(조각 부재료값*3) + (결정 부재료값*3) + 하다르 결정 부재료값 + (질긴 실*10) + (플룩스*100) + (종이*10)">자체수급<br><span style="font-size: 9pt;">(조각부터)</span></th>
                                                 <th style="width: 105px;"  data-bs-toggle="tooltip" title="(결정 부재료값*3) + 하다르 결정 부재료값 + (질긴 실*10) + (플룩스*100) + (종이*10)">자체수급<br><span style="font-size: 9pt;">(결정부터)</span></th>
-                                                <th style="width: 105px;"  data-bs-toggle="tooltip" title="(완전체*3) + (질긴 실*10) + (플룩스*100) + (종이*10)">경매장구매<br><span style="font-size: 9pt;">(전부포함)</span></th>
+                                                <th style="width: 105px;"  data-bs-toggle="tooltip" title="(완전체*3) + (하다르 완전체*1) + (질긴 실*10) + (플룩스*100) + (종이*10)">경매장구매<br><span style="font-size: 9pt;">(전부포함)</span></th>
                                                 <th style="width: 105px;"  data-bs-toggle="tooltip" title="경매장 최저가">경매장가</th>
                                             </tr>
                                             <tr>
@@ -2177,23 +2177,28 @@
 
 
             // 운명 카드 경매장구매  (최저가-운명의 지팡이 카드-경매장구매)
-            // 완전체 3개 + 하다르결정_경매장구매_Price + 질긴실10개 + 플룩스100개 + 10종이
+            // 완전체 3개 + 최저가_하다르_완전체 + 질긴실10개 + 플룩스100개 + 10종이
+            let 최저가_프로키온_완전체 = parseGold(document.getElementById("최저가-프로키온-완전체").innerHTML);
+            let 최저가_카노푸스_완전체 = parseGold(document.getElementById("최저가-카노푸스-완전체").innerHTML);
+            let 최저가_리겔_완전체 = parseGold(document.getElementById("최저가-리겔-완전체").innerHTML);
+            let 최저가_알타이르_완전체 = parseGold(document.getElementById("최저가-알타이르-완전체").innerHTML);
+            let 최저가_하다르_완전체 = parseGold(document.getElementById("최저가-하다르-완전체").innerHTML);
 
             let 프로키온결정_8_Price =  parseGold(document.getElementById("최저가-프로키온 결정-경매장구매").innerHTML);
             let 운명_검_경매장구매Div = document.getElementById(`최저가-운명의 검 카드-경매장구매`); 
-            운명_검_경매장구매Div.innerHTML= `${formatGold((프로키온결정_8_Price*3) + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
+            운명_검_경매장구매Div.innerHTML= `${formatGold((최저가_프로키온_완전체*3) + 최저가_하다르_완전체 + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
 
             let 카노푸스결정_8_Price =  parseGold(document.getElementById("최저가-카노푸스 결정-경매장구매").innerHTML);
             let 운명_동전_경매장구매Div = document.getElementById(`최저가-운명의 동전 카드-경매장구매`); 
-            운명_동전_경매장구매Div.innerHTML= `${formatGold((카노푸스결정_8_Price*3) + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
+            운명_동전_경매장구매Div.innerHTML= `${formatGold((최저가_카노푸스_완전체*3) + 최저가_하다르_완전체 + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
 
             let 리겔결정_8_Price =  parseGold(document.getElementById("최저가-리겔 결정-경매장구매").innerHTML);
             let 운명_잔_경매장구매Div = document.getElementById(`최저가-운명의 잔 카드-경매장구매`); 
-            운명_잔_경매장구매Div.innerHTML= `${formatGold((리겔결정_8_Price*3) + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
+            운명_잔_경매장구매Div.innerHTML= `${formatGold((최저가_리겔_완전체*3) + 최저가_하다르_완전체 + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
 
             let 알타이르결정_8_Price =  parseGold(document.getElementById("최저가-알타이르 결정-경매장구매").innerHTML);
             let 운명_지팡이_경매장구매Div = document.getElementById(`최저가-운명의 지팡이 카드-경매장구매`); 
-            운명_지팡이_경매장구매Div.innerHTML= `${formatGold((알타이르결정_8_Price*3) + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
+            운명_지팡이_경매장구매Div.innerHTML= `${formatGold((최저가_알타이르_완전체*3) + 최저가_하다르_완전체 + (최저가_질긴실*10) + (폴룩스_금액*100) + 10)}`;
             
          
             
