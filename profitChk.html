@@ -643,8 +643,8 @@
                                                 <th rowspan="2"></th> 
                                             </tr>
                                             <tr>
-                                                <th style="width: 105px;" id="운명-자체수급-조각부터-타이틀"  data-bs-toggle="tooltip" data-bs-html="true" title="1. 조각→결정(32개) : (물이든병1 + 발화석2) * 32<br>2. 결정→완전체(4개) : (밀랍1 + 보석1 + (플록스*50)) * 4<br>조각부터 직접 수급=낚시로 조각을 얻음">자체수급<br><span style="font-size: 9pt;">(조각부터)</span></th>
-                                                <th style="width: 105px;" id="운명-자체수급-결정부터-타이틀"  data-bs-toggle="tooltip" data-bs-html="true" title="1. 결정→완전체(4개) : (밀랍1 + 보석1 + (플록스*50)) * 4<br>결정부터 직접수급=낚시로 결정을 얻음">자체수급<br><span style="font-size: 9pt;">(결정부터)</span></th>
+                                                <th style="width: 105px;" id="운명-자체수급-조각부터-타이틀"  data-bs-toggle="tooltip" data-bs-html="true" title="1. 조각→결정(32개) : (물이든병1 + 발화석2) * 32<br>2. 결정→완전체(4개) : (밀랍1 + 보석1 + (플록스*50)) * 4<br>3. 완전체→카드(1개) : 질긴 실 10개 + 플록스 100개 + 종이 10장<br>조각부터 직접 수급=낚시로 조각을 얻음">자체수급<br><span style="font-size: 9pt;">(조각부터)</span></th>
+                                                <th style="width: 105px;" id="운명-자체수급-결정부터-타이틀"  data-bs-toggle="tooltip" data-bs-html="true" title="1. 결정→완전체(4개) : (밀랍1 + 보석1 + (플록스*50)) * 4<br>2. 완전체→카드(1개) : 질긴 실 10개 + 플록스 100개 + 종이 10장<br>결정부터 직접수급=낚시로 결정을 얻음">자체수급<br><span style="font-size: 9pt;">(결정부터)</span></th>
                                                 <th style="width: 105px;" id="일반-경매장구매-타이틀"  data-bs-toggle="tooltip" data-bs-html="true" title="(완전체*3) + (하다르 완전체*1) + (질긴 실*10) + (플룩스*100) + (종이*10)<br>모든 재료를 경매장구매하여 제작한 금액">경매장구매<br><span style="font-size: 9pt;">(전부포함)</span></th>
                                                 <th style="width: 105px;"  data-bs-toggle="tooltip" title="경매장 최저가">경매장가</th>
                                             </tr>
@@ -684,6 +684,81 @@
                         </div>
                     </div>
                     <!-- Content Row -->
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <!-- Default Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">
+                                        결정 몇 개 만들 수 있는지 알려줄게 !
+                                    </h6>
+                                </div>
+                                <div class="card-body" style="height: 600px; background-image: url(도우미_감자_배경2.png); background-size: 100% 100%; background-repeat: no-repeat; width: 100%;">
+                                    <div>
+                                        <table style="margin-left: 35%; margin-top: 20%; width: 360px;">
+                                            <tr>
+                                                <td style="text-align: center;">조각 몇 개있어?</td>
+                                                <td><input type="number" style="width: 80px;" id="도우미감자_조각개수" oninput="도우미감자계산하기()">개</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <div id="도우미감자_문구출력" style="text-align: center;">
+                                                        
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <!-- Default Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">계산도우미 모켠/킬브</h6>
+                                </div>
+                                <div class="card-body" style="height: 600px; background-image: url(도우미_모켠킬브_배경.png); background-size: 100% 100%; background-repeat: no-repeat; width: 100%;">
+                                    <div>
+                                        <table style=" margin-left: 30%; margin-top: 30%;">
+                                            
+                                            <tr>
+                                                <td colspan="3" style="color: #000;">
+                                                    모켠이랑 킬부는 쉬는 중이야!
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <!-- Default Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">계산도우미 태벽</h6>
+                                </div>
+                                <div class="card-body" style="height: 600px; background-image: url(도우미_태벽_배경.png); background-size: 100% 100%; background-repeat: no-repeat; width: 100%;">
+                                    <div>
+                                        <table style=" margin-left: 25%; margin-top: 25%;">
+                                            
+                                            <tr>
+                                                <td colspan="3">
+                                                    태벽이는 쉬는 중이야!
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+                    </div>
                
                 </div>
                 <!-- /.container-fluid -->
@@ -2532,11 +2607,11 @@
             
             
             // 운명 카드 자체수급_조각부터 (최저가-운명의 지팡이 카드-자체수급-조각부터)
-            // [(물이든병1 + 발화석2) *32] + [(밀랍1 + 보석1 + (플록스*50)) *3]
-            let 운명_검_조각_자체수급Price = ((물이든병_금액 + 2104) *32) + (밀랍_금액 + 루비_금액 + (폴룩스_금액*50)*4);
-            let 운명_동전_조각_자체수급Price = ((물이든병_금액 + 2104) *32) + (밀랍_금액 + 에메랄드_금액 + (폴룩스_금액*50)*4);
-            let 운명_잔_조각_자체수급Price = ((물이든병_금액 + 2104) *32) + (밀랍_금액 + 스타사파이어_금액 + (폴룩스_금액*50)*4);
-            let 운명_지팡이_조각_자체수급Price = ((물이든병_금액 + 2104) *32) + (밀랍_금액 + 가넷_금액 + (폴룩스_금액*50)*4);
+            // [(물이든병1 + 발화석2) *32] + [(밀랍1 + 보석1 + (플록스*50)) *3] + [(질긴실*10) + (폴룩스*100) + 10]
+            let 운명_검_조각_자체수급Price = ((물이든병_금액 + 2104) *32) + (밀랍_금액 + 루비_금액 + (폴룩스_금액*50)*4) + ((최저가_질긴실*10) + (폴룩스_금액*100) + 10);
+            let 운명_동전_조각_자체수급Price = ((물이든병_금액 + 2104) *32) + (밀랍_금액 + 에메랄드_금액 + (폴룩스_금액*50)*4) + ((최저가_질긴실*10) + (폴룩스_금액*100) + 10);
+            let 운명_잔_조각_자체수급Price = ((물이든병_금액 + 2104) *32) + (밀랍_금액 + 스타사파이어_금액 + (폴룩스_금액*50)*4) + ((최저가_질긴실*10) + (폴룩스_금액*100) + 10);
+            let 운명_지팡이_조각_자체수급Price = ((물이든병_금액 + 2104) *32) + (밀랍_금액 + 가넷_금액 + (폴룩스_금액*50)*4) + ((최저가_질긴실*10) + (폴룩스_금액*100) + 10);
 
             let 운명_검_조각부터_자체수급Div = document.getElementById(`최저가-운명의 검 카드-자체수급-조각부터`); 
             운명_검_조각부터_자체수급Div.innerHTML= `${formatGold(운명_검_조각_자체수급Price)}`;
@@ -2552,11 +2627,11 @@
 
 
             // 운명 카드 자체수급_결정부터(최저가-운명의 지팡이 카드-자체수급-결정부터)
-            // (밀랍1 + 보석1 + (플록스*50)) *3
-            let 운명_검_결정_자체수급Price = (밀랍_금액 + 루비_금액 + (폴룩스_금액*50))*3;
-            let 운명_동전_결정_자체수급Price = (밀랍_금액 + 에메랄드_금액 + (폴룩스_금액*50))*3;
-            let 운명_잔_결정_자체수급Price = (밀랍_금액 + 스타사파이어_금액 + (폴룩스_금액*50))*3;
-            let 운명_지팡이_결정_자체수급Price = (밀랍_금액 + 가넷_금액 + (폴룩스_금액*50))*3;
+            // [(밀랍1 + 보석1 + (플록스*50)) *3] + [(질긴실*10) + (폴룩스*100) + 10]
+            let 운명_검_결정_자체수급Price = (밀랍_금액 + 루비_금액 + (폴룩스_금액*50))*3 + ((최저가_질긴실*10) + (폴룩스_금액*100) + 10);
+            let 운명_동전_결정_자체수급Price = (밀랍_금액 + 에메랄드_금액 + (폴룩스_금액*50))*3 + ((최저가_질긴실*10) + (폴룩스_금액*100) + 10);
+            let 운명_잔_결정_자체수급Price = (밀랍_금액 + 스타사파이어_금액 + (폴룩스_금액*50))*3 + ((최저가_질긴실*10) + (폴룩스_금액*100) + 10);
+            let 운명_지팡이_결정_자체수급Price = (밀랍_금액 + 가넷_금액 + (폴룩스_금액*50))*3 + ((최저가_질긴실*10) + (폴룩스_금액*100) + 10);
 
             let 운명_검_결정부터_자체수급Div = document.getElementById(`최저가-운명의 검 카드-자체수급-결정부터`); 
             운명_검_결정부터_자체수급Div.innerHTML= `${formatGold(운명_검_결정_자체수급Price)}`;
@@ -2871,6 +2946,17 @@
         tooltipTriggerList.forEach(function (tooltipTriggerEl) {
             new bootstrap.Tooltip(tooltipTriggerEl);
         });
+
+
+        // 도우미감자
+        function 도우미감자계산하기() {
+            let 조각개수 = document.getElementById("도우미감자_조각개수").value;
+
+            let 결과_결정개수 = Math.floor(조각개수 / 15);
+            let 결과_발화석개수 = 결과_결정개수*2;
+
+            document.getElementById("도우미감자_문구출력").innerHTML = `<br><strong>${결과_결정개수.toLocaleString()}개</strong>의 결정을 만들 수 있어!<br>물이 든 병 ${결과_결정개수.toLocaleString()}병 / 발화석 ${결과_발화석개수.toLocaleString()}개가 필요해!`;
+        }   
     </script>
 
 </body>
