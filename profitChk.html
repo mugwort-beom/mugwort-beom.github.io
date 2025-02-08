@@ -45,6 +45,44 @@
             max-width: 1000px;
             text-align: left; 
         }
+        .도우미감자_인풋:focus {
+            outline: none;
+        }
+        input.도우미감자_인풋[type="number"]::-webkit-inner-spin-button,
+        input.도우미감자_인풋[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .fixed-container {
+            position: relative; /* 부모 요소 */
+            height: 600px;
+            background-color: transparent;
+            background-image: url(도우미_감자_배경3.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+
+        .fixed-input {
+            position: absolute;
+            background: transparent;
+            top: 50%;  /* 세로 중앙 정렬 */
+            left: 68%; /* 가로 위치 조정 */
+            transform: translate(-50%, -50%); /* 정중앙 정렬 보정 */
+            width: 150px;
+            font-size: 13pt;
+        }
+
+        .fixed-output {
+            position: absolute;
+            top: 60%;  /* 출력 요소 위치 */
+            left: 58%;
+            transform: translateX(-50%);
+            width: 280px;
+            font-size: 13pt;
+        }
+
+        
     </style>
 
 </head>
@@ -688,30 +726,23 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <!-- Default Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">
-                                        결정 몇 개 만들 수 있는지 알려줄게 !
-                                    </h6>
-                                </div>
-                                <div class="card-body" style="height: 600px; background-image: url(도우미_감자_배경2.png); background-size: 100% 100%; background-repeat: no-repeat; width: 100%;">
-                                    <div>
-                                        <table style="margin-left: 35%; margin-top: 20%; width: 360px;">
-                                            <tr>
-                                                <td style="text-align: center;">조각 몇 개있어?</td>
-                                                <td><input type="number" style="width: 80px;" id="도우미감자_조각개수" oninput="도우미감자계산하기()">개</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <div id="도우미감자_문구출력" style="text-align: center;">
-                                                        
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </table>
+                            <div class="감자-박스">
+                                <div class="card mb-4" style="background-color: transparent; border: none;">
+                                    <!-- <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">
+                                            결정 몇 개 만들 수 있는지 알려줄게 !
+                                        </h6>
+                                    </div> -->
+                                    <div class="fixed-container">
+                                        <div class="fixed-input">
+                                            <input type="number" style="width: 80px; border: none; border-bottom: 1px solid;" 
+                                                   class="도우미감자_인풋" id="도우미감자_조각개수" oninput="도우미감자계산하기()"> 개 !
+                                        </div> 
+                                        <div id="도우미감자_문구출력" class="fixed-output"></div>
                                     </div>
+                                    
+                                
                                 </div>
-                            
                             </div>
                         </div>
 
@@ -2955,7 +2986,7 @@
             let 결과_결정개수 = Math.floor(조각개수 / 15);
             let 결과_발화석개수 = 결과_결정개수*2;
 
-            document.getElementById("도우미감자_문구출력").innerHTML = `<br><strong>${결과_결정개수.toLocaleString()}개</strong>의 결정을 만들 수 있어!<br>물이 든 병 ${결과_결정개수.toLocaleString()}병 / 발화석 ${결과_발화석개수.toLocaleString()}개가 필요해!`;
+            document.getElementById("도우미감자_문구출력").innerHTML = `<br><strong>${결과_결정개수.toLocaleString()}개</strong>의 결정을 만들 수 있어!<br>물이 든 병 <strong>${결과_결정개수.toLocaleString()}병</strong>과<br>발화석 <strong>${결과_발화석개수.toLocaleString()}개</strong>가 필요해!`;
         }   
     </script>
 
