@@ -58,16 +58,16 @@
             height: 600px;
             background-color: transparent;
             background-image: url(도우미_감자_배경3.png);
-            background-size: 100% 100%;
+            /* background-size: 100% 100%; */
             background-repeat: no-repeat;
-            width: 70%;
+            /* width: 70%; */
         }
 
         .fixed-input {
             position: absolute;
             background: transparent;
-            top: 50%;  /* 세로 중앙 정렬 */
-            left: 68%; /* 가로 위치 조정 */
+            top: 40%;  /* 세로 중앙 정렬 */
+            left: 56%; /* 가로 위치 조정 */
             transform: translate(-50%, -50%); /* 정중앙 정렬 보정 */
             width: 150px;
             font-size: 12pt;
@@ -75,8 +75,8 @@
 
         .fixed-output {
             position: absolute;
-            top: 60%;  /* 출력 요소 위치 */
-            left: 57%;
+            top: 50%;  /* 출력 요소 위치 */
+            left: 47%;
             transform: translateX(-50%);
             width: 200px;
             font-size: 12pt;
@@ -2986,7 +2986,7 @@
             let 결과_결정개수 = Math.floor(조각개수 / 15);
             let 결과_발화석개수 = 결과_결정개수*2;
 
-            document.getElementById("도우미감자_문구출력").innerHTML = `<br>결정 <strong>${결과_결정개수.toLocaleString()}개</strong> 만드쥬? <br>개쩔쥬? 부쟈댓쥬?<br>물이 든 병 <strong>${결과_결정개수.toLocaleString()}병</strong><br>발화석 <strong>${결과_발화석개수.toLocaleString()}개</strong> 필요하쥬?`;
+            document.getElementById("도우미감자_문구출력").innerHTML = `<br>결정 <strong>${결과_결정개수.toLocaleString()}개</strong> 만드쥬? <br>개쩔쥬? 부쟈댓쥬?<br>대신 물이 든 병 <strong>${결과_결정개수.toLocaleString()}병</strong><br>발화석 <strong>${결과_발화석개수.toLocaleString()}개</strong> 필요하쥬?`;
         }   
     </script>
 
