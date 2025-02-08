@@ -60,7 +60,7 @@
             background-image: url(도우미_감자_배경3.png);
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            width: 100%;
+            width: 70%;
         }
 
         .fixed-input {
@@ -70,16 +70,16 @@
             left: 68%; /* 가로 위치 조정 */
             transform: translate(-50%, -50%); /* 정중앙 정렬 보정 */
             width: 150px;
-            font-size: 13pt;
+            font-size: 12pt;
         }
 
         .fixed-output {
             position: absolute;
             top: 60%;  /* 출력 요소 위치 */
-            left: 58%;
+            left: 57%;
             transform: translateX(-50%);
-            width: 280px;
-            font-size: 13pt;
+            width: 200px;
+            font-size: 12pt;
         }
 
         
@@ -2986,7 +2986,7 @@
             let 결과_결정개수 = Math.floor(조각개수 / 15);
             let 결과_발화석개수 = 결과_결정개수*2;
 
-            document.getElementById("도우미감자_문구출력").innerHTML = `<br><strong>${결과_결정개수.toLocaleString()}개</strong>의 결정을 만들 수 있어!<br>물이 든 병 <strong>${결과_결정개수.toLocaleString()}병</strong>과<br>발화석 <strong>${결과_발화석개수.toLocaleString()}개</strong>가 필요해!`;
+            document.getElementById("도우미감자_문구출력").innerHTML = `<br>결정 <strong>${결과_결정개수.toLocaleString()}개</strong> 만드쥬? <br>개쩔쥬? 부쟈댓쥬?<br>물이 든 병 <strong>${결과_결정개수.toLocaleString()}병</strong><br>발화석 <strong>${결과_발화석개수.toLocaleString()}개</strong> 필요하쥬?`;
         }   
     </script>
 
