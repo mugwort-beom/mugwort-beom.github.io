@@ -62,6 +62,15 @@
             background-repeat: no-repeat;
             /* width: 70%; */ 
         }
+        .fixed-container-켠킬 {
+            position: relative; /* 부모 요소 */
+            height: 600px;
+            background-color: transparent;
+            background-image: url(도우미_켠킬2.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            /* width: 70%; */ 
+        }
 
         .fixed-input {
             position: absolute;
@@ -73,6 +82,16 @@
             font-size: 12pt;
         }
 
+        .fixed-input-켠킬 {
+            position: absolute;
+            background: transparent;
+            top: 28%;  /* 세로 중앙 정렬 */
+            left: 79%; /* 가로 위치 조정 */
+            transform: translate(-50%, -50%); /* 정중앙 정렬 보정 */
+            width: 100px;
+            font-size: 10pt;
+        }
+
         .fixed-output {
             position: absolute;
             top: 57%;  /* 출력 요소 위치 */
@@ -81,7 +100,34 @@
             width: 200px;
             font-size: 12pt;
         }
-
+        .fixed-output-모켠 {
+            position: absolute;
+            top: 38%;  /* 출력 요소 위치 */
+            left: 30%;
+            transform: translateX(-50%);
+            width: 180px;
+            font-size: 10pt;
+        }
+        .fixed-output-킬브 {
+            position: absolute;
+            top: 38%;  /* 출력 요소 위치 */
+            left: 71%;
+            transform: translateX(-50%);
+            width: 200px;
+            font-size: 10pt;
+        }
+        #도우미킬브-카드선택{
+            width: 130px;
+            height: 40px;
+            text-align: center;
+            text-align-last: center;
+            border-radius: 5px;
+            border: none;
+            background-color: transparent;
+            font-weight: bold;
+            outline: none;
+        }
+  
         
     </style>
 
@@ -748,23 +794,30 @@
 
                         <div class="col-lg-4">
                             <!-- Default Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">계산도우미 모켠/킬브</h6>
-                                </div>
-                                <div class="card-body" style="height: 600px; background-image: url(도우미_모켠킬브_배경.png); background-size: 100% 100%; background-repeat: no-repeat; width: 100%;">
-                                    <div>
-                                        <table style=" margin-left: 30%; margin-top: 30%;">
-                                            
-                                            <tr>
-                                                <td colspan="3" style="color: #000;">
-                                                    모켠이랑 킬부는 쉬는 중이야!
-                                                </td>
-                                            </tr>
-                                        </table>
+                            <div class="켠킬-박스">
+                                <div class="card mb-4" style="background-color: transparent; border: none;">
+                                    <!-- <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">
+                                            결정 몇 개 만들 수 있는지 알려줄게 !
+                                        </h6>
+                                    </div> -->
+                                    <div class="fixed-container-켠킬">
+                                        <div id="도우미모켠_문구출력" class="fixed-output-모켠"></div>
+                                        
+                                        <div class="fixed-input-켠킬">
+                                            <select id="도우미킬브-카드선택" style="color: #f39538;">
+                                                <option value="킬브-검선택" style="color: #f39538;">프로키온(검)</option>
+                                                <option value="킬브-동전선택" style="color: #a474e1;">카노푸스(동전)</option>
+                                                <option value="킬브-잔선택" style="color: #f341b2;">리겔(잔)</option>
+                                                <option value="킬브-지팡이선택" style="color: #4d67e7;">알타이르(지팡이)</option>
+                                            </select>
+                                        </div> 
+                                        <div id="도우미킬브_문구출력" class="fixed-output-킬브"></div>
                                     </div>
+                                    
+                                    
+                                
                                 </div>
-                            
                             </div>
                         </div>
 
@@ -774,7 +827,7 @@
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary" style="text-align: center;">계산도우미 태벽</h6>
                                 </div>
-                                <div class="card-body" style="height: 600px; background-image: url(도우미_태벽_배경.png); background-size: 100% 100%; background-repeat: no-repeat; width: 100%;">
+                                <div class="card-body" style="height: 600px; background-image: url(도우미_태벽_배경3.png); background-size: 100% 100%; background-repeat: no-repeat; width: 100%;">
                                     <div>
                                         <table style=" margin-left: 25%; margin-top: 25%;">
                                             
@@ -2980,14 +3033,80 @@
 
 
         // 도우미감자
-        function 도우미감자계산하기() {
-            let 조각개수 = document.getElementById("도우미감자_조각개수").value;
+        document.getElementById("도우미킬브-카드선택").addEventListener("change", 도우미감자계산하기);
+        document.getElementById("도우미감자_조각개수").addEventListener("input", 도우미감자계산하기);
 
+        function 도우미감자계산하기() {
+            let 조각개수 = Number(document.getElementById("도우미감자_조각개수").value);
+            
             let 결과_결정개수 = Math.floor(조각개수 / 15);
-            let 결과_발화석개수 = 결과_결정개수*2;
+            let 결과_발화석개수 = 결과_결정개수 * 2;
+            
+            let 모켠_허름카드개수 = Math.floor(조각개수 / 8);
+            let 모켠_일반카드개수 = Math.floor((조각개수 / 15) / 5);
+            let 모켠_운명카드개수 = Math.floor((조각개수 / 15) / 24);
+
+            let 킬브_선택된카드 = document.getElementById("도우미킬브-카드선택").value;
+            let 플록스현재금액 = parseGold(document.getElementById("최저가-폴룩스").innerText);
+            
+
+            let 허름경매장 = 0;
+            let 일반경매장 = 0;
+            let 운명경매장 = 0;
+            let 운명경매장_플록스제외 = (플록스현재금액 * 300)*모켠_운명카드개수;
+            console.log('운명경매장_플록스제외 -->', 운명경매장_플록스제외);
+
+            if (킬브_선택된카드 === "킬브-검선택") {
+                허름경매장 = parseGold(document.getElementById("최저가-허름한 검 카드").innerText);
+                일반경매장 = parseGold(document.getElementById("최저가-검 카드").innerText);
+                운명경매장 = parseGold(document.getElementById("최저가-운명의 검 카드").innerText);
+
+            } else if (킬브_선택된카드 === "킬브-동전선택") {
+                허름경매장 = parseGold(document.getElementById("최저가-허름한 동전 카드").innerText);
+                일반경매장 = parseGold(document.getElementById("최저가-동전 카드").innerText);
+                운명경매장 = parseGold(document.getElementById("최저가-운명의 동전 카드").innerText);
+            } else if (킬브_선택된카드 === "킬브-잔선택") {
+                허름경매장 = parseGold(document.getElementById("최저가-허름한 잔 카드").innerText);
+                일반경매장 = parseGold(document.getElementById("최저가-잔 카드").innerText);
+                운명경매장 = parseGold(document.getElementById("최저가-운명의 잔 카드").innerText);
+            } else if (킬브_선택된카드 === "킬브-지팡이선택") {
+                허름경매장 = parseGold(document.getElementById("최저가-허름한 지팡이 카드").innerText);
+                일반경매장 = parseGold(document.getElementById("최저가-지팡이 카드").innerText);
+                운명경매장 = parseGold(document.getElementById("최저가-운명의 지팡이 카드").innerText);
+            }
+
+            let 킬브_허름카드수익 = formatGold((모켠_허름카드개수 * 허름경매장) * 0.96);
+            let 킬브_일반카드수익 = formatGold((모켠_일반카드개수 * 일반경매장) * 0.96);
+            let 킬브_운명카드수익 = formatGold((모켠_운명카드개수 * 운명경매장) * 0.96);
+            let 킬브_운명카드수익_플록스제외 = formatGold((운명경매장*모켠_운명카드개수) - 운명경매장_플록스제외);
 
             document.getElementById("도우미감자_문구출력").innerHTML = `<br>결정 <strong>${결과_결정개수.toLocaleString()}개</strong> 만드쥬? <br>개쩔쥬? 부쟈댓쥬?<br>대신 물이 든 병 <strong>${결과_결정개수.toLocaleString()}병</strong><br>발화석 <strong>${결과_발화석개수.toLocaleString()}개</strong> 필요하쥬?`;
-        }   
+
+            document.getElementById("도우미모켠_문구출력").innerHTML = `만들 수 있는 카드는...<br>
+                                                                        허름 카드 <strong>${모켠_허름카드개수.toLocaleString()}장</strong><br>
+                                                                        일반 카드 <strong>${모켠_일반카드개수.toLocaleString()}장</strong><br>
+                                                                        운명 카드 <strong>${모켠_운명카드개수.toLocaleString()}장</strong><br><br><br>
+                                                                        <span style="display: block; text-align: center; color: #2f2364; font-weight: bold; font-style: italic; font-size: 8pt; margin-left: 35%;">아크투르스 삭제좀</span>`;
+
+            document.getElementById("도우미킬브_문구출력").innerHTML = `네가 손에 쥐게 될 골드는...<br>
+                                                                        허름 <strong>${킬브_허름카드수익} 골드</strong><br>
+                                                                        일반 <strong>${킬브_일반카드수익} 골드</strong><br>
+                                                                        운명 <strong>${킬브_운명카드수익} 골드</strong><br>
+                                                                        운명<span style="font-size: 8pt;">(-플룩스) </span><strong>${킬브_운명카드수익_플록스제외} 골드</strong><br><br>
+                                                                        
+                                                                        <span style="text-align: center; color: red; font-weight: bold; font-style: italic; font-size: 8pt;">프로키온 결정 뿌수고싶다</span>`;
+        }
+
+        // select 기본설정
+        let selectBox = document.getElementById("도우미킬브-카드선택");
+        // 기본 색상을 프로키온(검)색상으로 설정
+        selectBox.style.color = "#f39538"; 
+
+        selectBox.addEventListener("change", function() {
+            let selectedOption = this.options[this.selectedIndex]; 
+            this.style.color = selectedOption.style.color; // 선택된 옵션의 색상 반영
+        });
+  
     </script>
 
 </body>
