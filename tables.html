@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:title" content="웹사이트 제목ㅇㅇ">
+  <meta property="og:image" content="남범.png">
   <title>자캐 공홈</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -14,21 +16,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
-      width: 1200px;
-      max-width: 95%;
+      width: 90%;
+      max-width: 1200px;
       height: 700px;
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
       background: linear-gradient(to bottom right, #4c493d, #6a665a);
       position: relative;
-      transition: all 0.3s ease;
+      transition: width 0.3s ease, height 0.3s ease;
+      margin: 0 auto;
+      flex-direction: row;
     }
 
     .container::before {
@@ -74,7 +77,7 @@
     .right-info {
       display: flex;
       flex-direction: column;
-      width: 75%;
+      width: 65%;
       justify-content: center;
       align-items: center;
     }
@@ -108,20 +111,20 @@
       background-color: #6a665a;
     }
 
+    /* 겹치는 캐릭터 박스 */
     .fixed-character-box {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      margin: 10px auto;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      max-width: 600px;
-      width: 100%;
-      padding: 10px;
     }
-
+  
     .character {
-      width: 45%;
-      max-width: 200px;
-      height: auto;
+      position: absolute;
+      width: 400px;
       cursor: pointer;
       transition: transform 0.3s ease, filter 0.3s ease;
       filter: drop-shadow(0 0 0 transparent);
@@ -137,13 +140,16 @@
       filter: drop-shadow(0 0 6px rgba(255, 255, 180, 0.5));
     }
 
-    #characterSection img {
-      width: 45%;
-      max-width: 300px;
-      height: auto;
+    .character-left {
+      left: 0;
+      z-index: 1;
     }
 
-    /* 모달 */
+    .character-right {
+      left: 30%; /* 겹쳐서 오른쪽 캐릭터는 조금 더 오른쪽에 위치 */
+      z-index: 2;
+    }
+
     .modal {
       display: none;
       position: fixed;
@@ -181,7 +187,7 @@
     }
 
     /* 반응형 */
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
       .container {
         flex-direction: column;
         height: auto;
@@ -190,15 +196,23 @@
       .profile {
         width: 100%;
         border-right: none;
+        margin-bottom: 20px;
       }
 
       .right-info {
         width: 100%;
       }
 
+      .buttonMain {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
       .profile img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
       }
 
       .profile h2 {
@@ -206,18 +220,15 @@
       }
 
       .buttonMain {
-        width: 100%;
-        padding: 8px;
+        padding: 8px 16px;
       }
 
       .character {
-        width: 40%;
-        max-width: 150px;
+        width: 45%;
       }
 
-      #characterSection img {
-        width: 40%;
-        max-width: 150px;
+      .character-right {
+        left: 33%;
       }
     }
   </style>
@@ -233,20 +244,22 @@
 
     <div class="right-info">
       <div class="top-info">
-        <button class="buttonMain" onclick="showSection('hunt')">사냥</button>
-        <button class="buttonMain" onclick="showSection('character')">자캐</button>
+        <h2>
+          <button class="buttonMain" onclick="showSection('hunt')">사냥</button>
+          <button class="buttonMain" onclick="showSection('character')">자캐</button>
+        </h2>
       </div>
 
       <div class="bottom-info">
         <div id="huntSection" class="fixed-character-box">
-          <img src="여캐쑥범.png" alt="캐릭터1" class="character" onclick="openModal('modal1')">
-          <img src="남캐쑥범.png" alt="캐릭터2" class="character" onclick="openModal('modal2')">
+          <img src="여캐쑥범.png" alt="캐릭터1" class="character character-left" onclick="openModal('modal1')">
+          <img src="남캐쑥범.png" alt="캐릭터2" class="character character-right" onclick="openModal('modal2')">
         </div>
 
         <div id="characterSection" style="display: none;">
-          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-            <img src="남범.png" alt="남자 자캐">
-            <img src="여범.png" alt="여자 자캐">
+          <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <img src="남범.png" width="300px">
+            <img src="여범.png" width="300px">
           </div>
         </div>
       </div>
@@ -257,7 +270,7 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal1')">&times;</span>
-      <h2><img src="닼메.png" alt="모달 이미지1"></h2>
+      <h2><img src="닼메.png"></h2>
       <p>마공1684 / 나브무기 / 블리안셋</p>
     </div>
   </div>
@@ -266,7 +279,7 @@
   <div id="modal2" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal2')">&times;</span>
-      <h2><img src="세바.png" alt="모달 이미지2"></h2>
+      <h2><img src="세바.png"></h2>
       <p>충흡 / 피저 / 보호100 / 힐링650~</p>
       <p>전장64 / 행진63 / 비바61</p>
     </div>
@@ -285,8 +298,13 @@
       const hunt = document.getElementById("huntSection");
       const character = document.getElementById("characterSection");
 
-      hunt.style.display = (section === "hunt") ? "flex" : "none";
-      character.style.display = (section === "character") ? "flex" : "none";
+      if (section === "hunt") {
+        hunt.style.display = "block";
+        character.style.display = "none";
+      } else if (section === "character") {
+        hunt.style.display = "none";
+        character.style.display = "block";
+      }
     }
   </script>
 
