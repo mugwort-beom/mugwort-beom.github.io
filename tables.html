@@ -121,7 +121,7 @@
       justify-content: center;
       gap: 20px;
     }
-  
+
     .character {
       position: absolute;
       width: 400px;
@@ -230,6 +230,42 @@
       .character-right {
         left: 33%;
       }
+
+      .right-info {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .buttonMain {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+
+      .fixed-character-box {
+        width: 100%;
+        height: auto;
+      }
+
+      .character {
+        width: 60%;
+      }
+
+      .character-left, .character-right {
+        left: 0;
+        z-index: 1;
+      }
+    }
+
+    /* 이미지 반응형 설정 */
+    .profile img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* 모바일에서 버튼 크기 조정 */
+    .buttonMain {
+      font-size: 1.2rem;
     }
   </style>
 </head>
