@@ -16,22 +16,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh; /* 화면 높이에 맞게 확장 */
+      flex-direction: column;
     }
 
     .container {
       display: flex;
       width: 90%;
       max-width: 1200px;
-      height: 700px;
+      min-height: 700px; /* 최소 높이를 지정해줌 */
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
       background: linear-gradient(to bottom right, #4c493d, #6a665a);
       position: relative;
-      transition: width 0.3s ease, height 0.3s ease;
+      transition: width 0.3s ease, min-height 0.3s ease;
       margin: 0 auto;
       flex-direction: row;
+      justify-content: space-between;
+      padding: 20px;
     }
 
     .container::before {
@@ -190,7 +193,7 @@
     @media screen and (max-width: 1200px) {
       .container {
         flex-direction: column;
-        height: auto;
+        min-height: auto; /* 세로가 더 이상 짤리지 않도록 */
       }
 
       .profile {
