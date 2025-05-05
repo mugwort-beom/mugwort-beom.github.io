@@ -214,9 +214,33 @@
     }
 
     @media screen and (max-width: 768px) {
+       
+
+      .container {
+        flex-direction: column;
+        min-height: auto; /* 세로가 더 이상 짤리지 않도록 */
+      }
+
+      .profile {
+        width: 100%;
+        border-right: none;
+        margin-bottom: 20px;
+      }
+
+      .right-info {
+        width: 100%;
+      }
+
+      .buttonMain {
+        width: 100%;
+        text-align: center;
+      
+
+
       .profile img {
         width: 120px;
         height: 120px;
+        
       }
 
       .profile h2 {
@@ -228,11 +252,11 @@
       }
 
       .character {
-        width: 45%;
+        width: 20%;
       }
 
       .character-right {
-        left: 33%;
+        left: 23%;
       }
 
       .right-info {
@@ -261,16 +285,7 @@
       }
     }
 
-    /* 이미지 반응형 설정 */
-    .profile img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    /* 모바일에서 버튼 크기 조정 */
-    .buttonMain {
-      font-size: 1.2rem;
-    }
+  
   </style>
 </head>
 <body>
