@@ -229,12 +229,13 @@
 
       .right-info {
         width: 100%;
+        min-height: auto; /* 세로가 더 이상 짤리지 않도록 */
       }
 
       .buttonMain {
         width: 100%;
         text-align: center;
-      
+      }
 
 
       .profile img {
@@ -270,19 +271,15 @@
         padding: 12px 24px;
       }
 
-      .fixed-character-box {
-        width: 100%;
-        height: auto;
-      }
-
+ 
       .character {
-        width: 60%;
+        width: 50%;
+      }
+      .cht {
+        width: 50%;
       }
 
-      .character-left, .character-right {
-        left: 0;
-        z-index: 1;
-      }
+   
     }
 
   
@@ -313,8 +310,8 @@
 
         <div id="characterSection" style="display: none;">
           <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-            <img src="남범.png" width="300px">
-            <img src="여범.png" width="300px">
+            <img src="남범.png" class="cht" width="300px">
+            <img src="여범.png" class="cht" width="300px">
           </div>
         </div>
       </div>
