@@ -7,7 +7,30 @@
   <meta property="og:image" content="남범.png">
   <title>자캐 공홈</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
+    .twitter-icon i {
+      color: #1DA1F2; /* 트위터 블루 */
+      font-size: 24px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .twitter-icon i:hover {
+      color: #0d8ddb;
+      transform: scale(1.2);
+    }
+
+    .leaf-icon i {
+      color: #a8a390;
+      font-size: 24px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .leaf-icon i:hover {
+      color: #a8a390;
+      transform: scale(1.2);
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -56,6 +79,7 @@
 
     .profile {
       width: 25%;
+      height: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -75,7 +99,7 @@
     .profile h2 {
       margin: 0;
       font-size: 1.5rem;
-      color: #f7f6f2;
+      color: #ede7ea;
     }
 
     .right-info {
@@ -105,7 +129,7 @@
       cursor: pointer;
       margin: 10px;
       background-color: #4c493d;
-      color: white;
+      color: #ede7ea;
       border: none;
       border-radius: 5px;
       transition: background-color 0.3s;
@@ -190,98 +214,78 @@
       to { opacity: 1; transform: scale(1); }
     }
 
-    /* 반응형 */
-    @media screen and (max-width: 1200px) {
-      .container {
-        flex-direction: column;
-        min-height: auto; /* 세로가 더 이상 짤리지 않도록 */
-      }
-
-      .profile {
-        width: 100%;
-        border-right: none;
-        margin-bottom: 20px;
-      }
-
-      .right-info {
-        width: 100%;
-      }
-
-      .buttonMain {
-        width: 100%;
-        text-align: center;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-       
-
-      .container {
-        flex-direction: column;
-        min-height: auto; /* 세로가 더 이상 짤리지 않도록 */
-      }
-
-      .profile {
-        width: 100%;
-        border-right: none;
-        margin-bottom: 20px;
-      }
-
-      .right-info {
-        width: 100%;
-        min-height: auto; /* 세로가 더 이상 짤리지 않도록 */
-      }
-
-      .buttonMain {
-        width: 100%;
-        text-align: center;
-      }
 
 
-      .profile img {
-        width: 120px;
-        height: 120px;
-        
-      }
-
-      .profile h2 {
-        font-size: 1.2rem;
-      }
-
-      .buttonMain {
-        padding: 8px 16px;
-      }
-
-      .character {
-        width: 20%;
-      }
-
-      .character-right {
-        left: 23%;
-      }
-
-      .right-info {
-        width: 100%;
+	  /* 모바일 버전 */
+    @media (max-width: 767px) {
+      body {
+        overflow: auto; /* 모바일에서는 스크롤 허용 */
         padding: 10px;
       }
 
-      .buttonMain {
+      .container {
+        flex-direction: column;
         width: 100%;
-        font-size: 1rem;
-        padding: 12px 24px;
+        min-height: auto;
+        padding: 15px;
+        border-radius: 10px;
       }
 
- 
+      .profile {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      .right-info {
+        width: 100%;
+        align-items: flex-start;
+        padding: 0;
+      }
+
+      .fixed-character-box {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        position: relative;
+      }
+
       .character {
-        width: 50%;
-      }
-      .cht {
-        width: 20%;
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
       }
 
-   
+      .character-left, .character-right {
+        left: auto;
+        z-index: auto;
+      }
+
+      .modal-content {
+        width: 90%;
+      }
     }
 
+
+    /* 테블릿 세로 */
+    @media (min-width: 768px) and (max-width: 991px) {
+      
+    }
+
+    /* 테블릿 가로 */
+    @media (min-width: 992px) and (max-width: 1199px) {
+      
+    }
+
+    /* 테스크탑 일반
+    @media (min-width: 1200px) {
+        
+    }
+     */
   
   </style>
 </head>
@@ -291,7 +295,16 @@
     <div class="profile">
       <img src="쑥범.png" alt="자캐 프로필 이미지" />
       <h2>범</h2>
-      <div>트위터 아이콘 / 간단정보?</div>
+      <div style="text-align: center; color: #ede7ea;">
+        류트서버 / 성인여성<br><br>
+        <a href="https://x.com/beom_lt" target="_blank" class="twitter-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        &nbsp;
+        <a class="leaf-icon" onclick="openModal('modal3')">
+          <i class="fas fa-leaf"></i>
+        </a>
+      </div>
     </div>
 
     <div class="right-info">
@@ -337,6 +350,21 @@
     </div>
   </div>
 
+  <!-- 모달창 3 -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2><img src="쑥범아이템1.png"></h2>
+      <p>˙ BL = HL > GL</p>
+      <p>˙ 크바 30 ~ 100 / 테흐 두인</p>
+      <p>˙ 글렌 매어(저장작) / 브리레흐 1관(트라이 예정)</p>
+      <p>˙ 마비노기 위주(석상, 의장, 사냥, 저널) & 모바노기 가끔</p>
+      <p>˙ 지뢰는 알아서 피해갑니다</p>
+      <!-- <p>˙ 추가</p> -->
+    </div>
+  </div>
+
+  <!-- 스크립트 -->
   <script>
     function openModal(id) {
       document.getElementById(id).style.display = "flex";
